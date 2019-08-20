@@ -11,6 +11,7 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
+use Joomla\CMS\Uri\Uri;
 
 /** @var JDocumentHtml $this */
 
@@ -27,17 +28,6 @@ $cpanel     = $option === 'com_cpanel';
 $hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
-// Template params
-$siteLogo  = $this->params->get('siteLogo')
-	? JUri::root() . $this->params->get('siteLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-joomla-blue.svg';
-$smallLogo = $this->params->get('smallLogo')
-	? JUri::root() . $this->params->get('smallLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-blue.svg';
-
-$logoAlt = htmlspecialchars($this->params->get('altSiteLogo', ''), ENT_COMPAT, 'UTF-8');
-$logoSmallAlt = htmlspecialchars($this->params->get('altSmallLogo', ''), ENT_COMPAT, 'UTF-8');
-
 // Load specific template related JS
 HTMLHelper::_('script', 'templates/' . $this->template . '/js/template.es6.js', ['version' => 'auto']);
 
@@ -46,6 +36,16 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#1c3d5c');
 
 $monochrome = (bool) $this->params->get('monochrome');
+
+HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
+
+$cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
+
+foreach (array_keys($this->_styleSheets) as $style) {
+	unset($this->_styleSheets[$style]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -66,14 +66,11 @@ $monochrome = (bool) $this->params->get('monochrome');
 		<jdoc:include type="modules" name="menu" style="none" />
 
 		<div class="nav-scroller bg-white shadow-sm">
-		  <nav class="nav nav-underline">
-			<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="<?php echo $logoSmallAlt; ?>">
+		  <nav class="nav nav-underline justify-content-between">
 			<jdoc:include type="modules" name="title" />
-			<a class="nav-link" href="#">
-			  Friends
-			  <span class="badge badge-pill bg-light align-text-bottom">27</span>
-			</a>
-			<jdoc:include type="modules" name="status" style="none" />
+			<div class="d-flex justify-content-end">
+				<jdoc:include type="modules" name="status" style="none" />
+			</div>
 		  </nav>
 		</div>
 	</header>
@@ -84,8 +81,7 @@ $monochrome = (bool) $this->params->get('monochrome');
 		<div class="container-fluid container-main">
 			<?php if (!$cpanel) : ?>
 				<?php // Subheader ?>
-				<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse"
-					data-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
+				<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse" data-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
 					<span class="icon-chevron-down" aria-hidden="true"></span></button>
 				<div id="subhead" class="subhead mb-3">
 					<div id="container-collapse" class="container-collapse"></div>
@@ -122,13 +118,7 @@ $monochrome = (bool) $this->params->get('monochrome');
 	<jdoc:include type="scripts" />
 
 	<script>
-		const styles = [
-			'templates/<?php echo $this->template; ?>/css/bootstrap.min.css',
-			'templates/<?php echo $this->template; ?>/css/fontawesome.min.css',
-			'templates/<?php echo $this->template; ?>/css/template.css',
-			'administrator/language/<?php echo $lang->getTag(); ?>/<?php echo $lang->getTag(); ?>.css',
-			'templates/<?php echo $this->template; ?>/css/custom.css',
-		];
+		const styles = <?php echo $cachesStyleSheets; ?>;
 
 		styles.forEach(file => {
 			const link = document.body.appendChild(document.createElement('link'));

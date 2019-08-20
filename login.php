@@ -11,6 +11,7 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
+use Joomla\CMS\Uri\Uri;
 
 /** @var JDocumentHtml $this */
 
@@ -29,7 +30,7 @@ $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.s
 
 // Template params
 $loginLogo = $this->params->get('loginLogo')
-	? JUri::root() . $this->params->get('loginLogo')
+	? Uri::root() . $this->params->get('loginLogo')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo-blue.svg';
 
 // Load specific template related JS
@@ -40,6 +41,16 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#1c3d5c');
 
 $monochrome = (bool) $this->params->get('monochrome');
+
+HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
+
+$cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
+
+foreach (array_keys($this->_styleSheets) as $style) {
+	unset($this->_styleSheets[$style]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -80,13 +91,7 @@ $monochrome = (bool) $this->params->get('monochrome');
 	<jdoc:include type="scripts" />
 
 	<script>
-		const styles = [
-			'templates/<?php echo $this->template; ?>/css/bootstrap.min.css',
-			'templates/<?php echo $this->template; ?>/css/fontawesome.min.css',
-			'templates/<?php echo $this->template; ?>/css/template.css',
-			'administrator/language/<?php echo $lang->getTag(); ?>/<?php echo $lang->getTag(); ?>.css',
-			'templates/<?php echo $this->template; ?>/css/custom.css',
-		];
+		const styles = <?php echo $cachesStyleSheets; ?>;
 
 		styles.forEach(file => {
 			const link = document.body.appendChild(document.createElement('link'));

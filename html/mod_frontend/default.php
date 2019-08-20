@@ -18,6 +18,6 @@ use Joomla\CMS\Uri\Uri;
 	target="_blank">
 	<div class="align-items-center tiny">
 		<span class="fa fa-external-link-alt" aria-hidden="true"></span>
-		<?php echo HTMLHelper::_('string.truncate', $sitename, 28, false, false); ?>
+		<span class="sr-only"><?php echo HTMLHelper::_('string.truncate', $sitename, 28, false, false); ?></span>
 	</div>
 </a>

@@ -4,7 +4,7 @@
 @import "../../../../../media/vendor/fontawesome-free/scss/brands";
 
 // B/C for Icomoon
-@import "../../../../../build/media_source/system/scss/icomoon";
+@import "icomoon";
 
 // RTL override
 html[dir=rtl] .pull-right {

@@ -9,22 +9,25 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\Uri\Uri;
+
+$siteLogo  = Uri::root(true) . '/administrator/templates/' .Factory::getApplication()->getTemplate() . '/images/logo-white.svg';
 
 // Recurse through children of root node if they exist
-if ($root->hasChildren())
-{
-	echo '<nav class="navbar navbar-expand-lg navbar-dark" aria-label="' . Text::_('MOD_MENU_ARIA_MAIN_MENU') . '" style="background-color:#59005b;">';
-	echo '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>';
-	echo '<div class="collapse navbar-collapse" id="navbarSupportedContent">';
-	echo '<ul id="menu" class="navbar-nav mr-auto">';
-
-	// WARNING: Do not use direct 'include' or 'require' as it is important to isolate the scope for each call
-	$menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu'), $root);
-
-	echo '</ul>';
-	echo '</div>';
-	echo '</nav>';
-}
+if ($root->hasChildren()) : ?>
+	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>" style="background-color:#59005b;">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<a class="navbar-brand" href="#">
+			<img src="<?php echo $siteLogo; ?>" width="30" height="30" alt="Logo">
+		</a>
+		<div class="collapse navbar-collapse" id="topMenu">
+			<ul id="menu" class="navbar-nav mr-auto">
+				<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu'), $root); ?>
+			</ul>
+		</div>
+	</nav>
+<?php endif; ?>
