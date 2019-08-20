@@ -1,6 +1,16 @@
 // Variables
 @import "../../../../media/vendor/bootstrap/scss/functions";
 
+// Colours
+$primary:                     #383b5f;
+$secondary:                   #eef0f6;
+$tertiary:                    #f9f9fb;
+$border-colour:               #e6e6f2;
+
+$link-color:                  $primary;
+$body-color:                  $primary;
+
+
 // Headings
 $h1-font-size:                $font-size-base * 1.5;
 $h2-font-size:                $font-size-base * 1.2;
@@ -8,11 +18,23 @@ $h3-font-size:                $font-size-base * 1.75;
 $h4-font-size:                $font-size-base * 1.5;
 $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
+$headings-color:              $primary;
+$headings-margin-bottom:      0;
 
 // Form
-$input-max-width:                  240px;
+$input-max-width:             240px;
 
 // Treeselect
-$treeselect-line-height:           2.2rem;
-$treeselect-indent:                40px;
+$treeselect-line-height:      2.2rem;
+$treeselect-indent:           40px;
 
+// Cards
+$card-cap-bg:                 #fff;
+$card-spacer-y:               .25rem;
+$card-border-color:           $border-colour;
+
+// Buttons
+$btn-link-color:              $primary;
+
+// Dropdown
+$dropdown-link-color:         $primary;

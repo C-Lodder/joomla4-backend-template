@@ -1,5 +1,9 @@
 // Global
 
 body {
-  background-color: #eeeded;
+  background-color: $secondary;
+}
+
+.navbar {
+  background-color: $primary;
 }

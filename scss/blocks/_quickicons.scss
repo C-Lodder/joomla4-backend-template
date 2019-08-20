@@ -1,5 +1,9 @@
 // Quick Icons
 
+.card-columns {
+  column-count: 2;
+}
+
 .quick-icons {
   display: flex;
   flex-wrap: wrap;
@@ -9,19 +13,25 @@
   list-style: none;
 }
 
+.quickicon-group,
+.quickicon {
+    flex: 0 0;
+}
+
 .quickicon a {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  width: 130px;
-  min-height: 105px;
+  width: 8.5rem;
+  min-height: 6.5rem;
   padding: 15px 10px;
-  background: #59005b;
-  color: #fff;
+  background: $tertiary;
+  color: $primary;
   text-align: center;
   transition: all .2s ease-in-out;
+  border: 1px solid $border-colour;
 
   &:hover,
   &:focus {
@@ -31,7 +41,8 @@
   }
 
   &.success {
-    background: #005b22;
+    color: #005b22;
+    border: 1px solid #005b22;
   }
 }
 

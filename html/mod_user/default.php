@@ -23,7 +23,7 @@ $hideLinks = $app->input->getBool('hidemainmenu');
 			<?php echo Text::_('MOD_USER_MENU'); ?>
 		</div>
 	</a>
-	<div class="dropdown-menu dropdown-menu-right icons-left">
+	<div class="dropdown-menu dropdown-menu-right ">
 		<div class="dropdown-header"><?php echo $user->name; ?></div>
 		<?php $uri   = Uri::getInstance(); ?>
 		<?php $route = 'index.php?option=com_users&task=user.edit&id=' . $user->id . '&return=' . base64_encode($uri); ?>

@@ -19,7 +19,7 @@ $siteLogo  = Uri::root(true) . '/administrator/templates/' .Factory::getApplicat
 
 // Recurse through children of root node if they exist
 if ($root->hasChildren()) : ?>
-	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>" style="background-color:#59005b;">
+	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<a class="navbar-brand" href="#">
 			<img src="<?php echo $siteLogo; ?>" width="30" height="30" alt="Logo">

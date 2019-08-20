@@ -66,12 +66,12 @@ foreach (array_keys($this->_styleSheets) as $style) {
 		<jdoc:include type="modules" name="menu" style="none" />
 
 		<div class="nav-scroller bg-white shadow-sm">
-		  <nav class="nav nav-underline justify-content-between">
-			<jdoc:include type="modules" name="title" />
-			<div class="d-flex justify-content-end">
-				<jdoc:include type="modules" name="status" style="none" />
-			</div>
-		  </nav>
+			<nav class="nav nav-underline justify-content-between mb-3">
+				<jdoc:include type="modules" name="title" />
+				<div class="d-flex justify-content-end">
+					<jdoc:include type="modules" name="status" style="none" />
+				</div>
+			</nav>
 		</div>
 	</header>
 
