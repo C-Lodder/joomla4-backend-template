@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  Templates.Atum
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @package     Bettum
+ * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
- * @since       4.0
  */
 
 defined('_JEXEC') or die;
@@ -41,11 +39,10 @@ $logoAlt = htmlspecialchars($this->params->get('altSiteLogo', ''), ENT_COMPAT, '
 $logoSmallAlt = htmlspecialchars($this->params->get('altSmallLogo', ''), ENT_COMPAT, 'UTF-8');
 
 // Load specific template related JS
-HTMLHelper::_('script', 'media/templates/' . $this->template . '/js/template.min.js', ['version' => 'auto']);
+HTMLHelper::_('script', 'templates/' . $this->template . '/js/template.es6.js', ['version' => 'auto']);
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-// @TODO sync with _variables.scss
 $this->setMetaData('theme-color', '#1c3d5c');
 
 $monochrome = (bool) $this->params->get('monochrome');
@@ -56,7 +53,6 @@ $monochrome = (bool) $this->params->get('monochrome');
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-
 <body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
 
 	<noscript>
@@ -67,59 +63,29 @@ $monochrome = (bool) $this->params->get('monochrome');
 
 	<?php // Header ?>
 	<header id="header" class="header">
-		<div class="d-flex">
-			<div class="header-title d-flex">
-				<div class="d-flex">
-					<?php // No home link in edit mode (so users can not jump out) and control panel (for a11y reasons) ?>
-					<?php if ($hiddenMenu || $cpanel) : ?>
-						<div class="logo">
-						<img src="<?php echo $siteLogo; ?>" alt="<?php echo $logoAlt; ?>">
-						<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="<?php echo $logoSmallAlt; ?>">
-						</div>
-					<?php else : ?>
-						<a class="logo" href="<?php echo Route::_('index.php'); ?>"
-							aria-label="<?php echo Text::_('TPL_BACK_TO_CONTROL_PANEL'); ?>">
-							<img src="<?php echo $siteLogo; ?>" alt="">
-							<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="">
-						</a>
-					<?php endif; ?>
-				</div>
-				<jdoc:include type="modules" name="title" />
-			</div>
-			<div class="header-items d-flex">
-				<jdoc:include type="modules" name="status" style="header-item" />
-			</div>
+		<jdoc:include type="modules" name="menu" style="none" />
+
+		<div class="nav-scroller bg-white shadow-sm">
+		  <nav class="nav nav-underline">
+			<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="<?php echo $logoSmallAlt; ?>">
+			<jdoc:include type="modules" name="title" />
+			<a class="nav-link" href="#">
+			  Friends
+			  <span class="badge badge-pill bg-light align-text-bottom">27</span>
+			</a>
+			<jdoc:include type="modules" name="status" style="none" />
+		  </nav>
 		</div>
 	</header>
 
 	<?php // Wrapper ?>
 	<div id="wrapper" class="d-flex wrapper<?php echo $hiddenMenu ? '0' : ''; ?>">
-
-		<?php // Sidebar ?>
-		<?php if (!$hiddenMenu) : ?>
-			<button class="navbar-toggler toggler-burger collapsed" type="button" data-toggle="collapse" data-target="#sidebar-wrapper" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div id="sidebar-wrapper" class="sidebar-wrapper sidebar-menu" <?php echo $hiddenMenu ? 'data-hidden="' . $hiddenMenu . '"' : ''; ?>>
-				<div id="sidebarmenu">
-					<div class="sidebar-toggle">
-						<a id="menu-collapse" href="#">
-							<span id="menu-collapse-icon" class="fa-fw fa fa-toggle-off" aria-hidden="true"></span>
-							<span class="sidebar-item-title"><?php echo Text::_('TPL_ATUM_TOGGLE_SIDEBAR'); ?></span>
-						</a>
-					</div>
-					<jdoc:include type="modules" name="menu" style="none" />
-				</div>
-			</div>
-		<?php endif; ?>
-
 		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<?php if (!$cpanel) : ?>
 				<?php // Subheader ?>
 				<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse"
-					data-target=".subhead"><?php echo Text::_('TPL_ATUM_TOOLBAR'); ?>
+					data-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
 					<span class="icon-chevron-down" aria-hidden="true"></span></button>
 				<div id="subhead" class="subhead mb-3">
 					<div id="container-collapse" class="container-collapse"></div>
@@ -159,7 +125,7 @@ $monochrome = (bool) $this->params->get('monochrome');
 		const styles = [
 			'templates/<?php echo $this->template; ?>/css/bootstrap.min.css',
 			'templates/<?php echo $this->template; ?>/css/fontawesome.min.css',
-			'templates/<?php echo $this->template; ?>/css/template.min.css',
+			'templates/<?php echo $this->template; ?>/css/template.css',
 			'administrator/language/<?php echo $lang->getTag(); ?>/<?php echo $lang->getTag(); ?>.css',
 			'templates/<?php echo $this->template; ?>/css/custom.css',
 		];

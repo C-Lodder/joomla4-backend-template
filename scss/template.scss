@@ -4,11 +4,38 @@
 // Atum Variables
 @import "variables";
 
-// Mixins
-@import "mixin";
-
-// Bootstrap other
-@import "vendor/bootstrap";
+// Bootstrap
+@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "../../../../media/vendor/bootstrap/scss/mixins";
+@import "../../../../media/vendor/bootstrap/scss/root";
+@import "../../../../media/vendor/bootstrap/scss/print";
+@import "../../../../media/vendor/bootstrap/scss/reboot";
+@import "../../../../media/vendor/bootstrap/scss/type";
+@import "../../../../media/vendor/bootstrap/scss/images";
+@import "../../../../media/vendor/bootstrap/scss/code";
+@import "../../../../media/vendor/bootstrap/scss/grid";
+@import "../../../../media/vendor/bootstrap/scss/tables";
+@import "../../../../media/vendor/bootstrap/scss/forms";
+@import "../../../../media/vendor/bootstrap/scss/buttons";
+@import "../../../../media/vendor/bootstrap/scss/transitions";
+@import "../../../../media/vendor/bootstrap/scss/dropdown";
+@import "../../../../media/vendor/bootstrap/scss/button-group";
+@import "../../../../media/vendor/bootstrap/scss/input-group";
+@import "../../../../media/vendor/bootstrap/scss/custom-forms";
+@import "../../../../media/vendor/bootstrap/scss/nav";
+@import "../../../../media/vendor/bootstrap/scss/navbar";
+@import "../../../../media/vendor/bootstrap/scss/card";
+@import "../../../../media/vendor/bootstrap/scss/pagination";
+@import "../../../../media/vendor/bootstrap/scss/badge";
+@import "../../../../media/vendor/bootstrap/scss/alert";
+@import "../../../../media/vendor/bootstrap/scss/progress";
+@import "../../../../media/vendor/bootstrap/scss/media";
+@import "../../../../media/vendor/bootstrap/scss/list-group";
+@import "../../../../media/vendor/bootstrap/scss/close";
+@import "../../../../media/vendor/bootstrap/scss/modal";
+@import "../../../../media/vendor/bootstrap/scss/tooltip";
+@import "../../../../media/vendor/bootstrap/scss/popover";
+@import "../../../../media/vendor/bootstrap/scss/utilities";
 
 // Fonts
 @import "../../../../media/vendor/roboto-fontface/scss/roboto/sass/roboto-fontface";
@@ -21,54 +48,7 @@
 @import "../../../../build/media_source/system/scss/jquery-minicolors";
 
 // Blocks
-@import "blocks/global"; // Leave this first
-@import "blocks/alerts";
-@import "blocks/edit";
-@import "blocks/header";
-@import "blocks/form";
-@import "blocks/icons";
-@import "blocks/iframe";
-@import "blocks/layout";
-@import "blocks/login";
-@import "blocks/modals";
-@import "blocks/quickicons";
-@import "blocks/searchtools";
-@import "blocks/lists";
-@import "blocks/sidebar";
-@import "blocks/sidebar-nav";
-@import "blocks/system-message";
-@import "blocks/toolbar";
 @import "blocks/treeselect";
-@import "blocks/utilities";
-@import "blocks/tabs";
 
-// Vendor overrides
-@import "vendor/awesomplete";
-@import "vendor/bootstrap/badge";
-@import "vendor/bootstrap/buttons";
-@import "vendor/bootstrap/card";
-@import "vendor/bootstrap/custom-forms";
-@import "vendor/bootstrap/collapse";
-@import "vendor/bootstrap/dropdown";
-@import "vendor/bootstrap/form";
-@import "vendor/bootstrap/lists";
-@import "vendor/bootstrap/modal";
-@import "vendor/bootstrap/nav";
-@import "vendor/bootstrap/pagination";
-@import "vendor/bootstrap/table";
-@import "vendor/codemirror";
-@import "vendor/chosen";
-@import "vendor/choicesjs";
-@import "vendor/dragula";
-@import "vendor/minicolors";
-@import "vendor/tinymce";
-
-// Page specifics
-@import "pages/com_admin";
-@import "pages/com_config";
-@import "pages/com_content";
-@import "pages/com_cpanel";
-@import "pages/com_tags";
-@import "pages/com_privacy";
-@import "pages/com_templates";
-@import "pages/com_users";
+// Vendor Overrides
+@import "vendor";

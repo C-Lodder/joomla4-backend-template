@@ -1,9 +1,7 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  Templates.Atum
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @package     Bettum
+ * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -18,17 +16,6 @@ $lang = Factory::getLanguage();
 
 // Add JavaScript Frameworks
 HTMLHelper::_('script', 'vendor/focus-visible/focus-visible.min.js', ['version' => 'auto', 'relative' => true]);
-
-// Load template CSS file
-HTMLHelper::_('stylesheet', 'bootstrap.css', ['version' => 'auto', 'relative' => true]);
-HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
-HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
-
-// Load custom CSS file
-HTMLHelper::_('stylesheet', 'user.css', array('version' => 'auto', 'relative' => true));
-
-// Load specific language related CSS
-HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', array('version' => 'auto'));
 ?>
 
 <!DOCTYPE html>
@@ -39,5 +26,20 @@ HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . 
 <body class="contentpane component">
 	<jdoc:include type="message" />
 	<jdoc:include type="component" />
+	<script>
+		const styles = [
+			'templates/<?php echo $this->template; ?>/css/bootstrap.min.css',
+			'templates/<?php echo $this->template; ?>/css/fontawesome.min.css',
+			'templates/<?php echo $this->template; ?>/css/template.min.css',
+			'administrator/language/<?php echo $lang->getTag(); ?>/<?php echo $lang->getTag(); ?>.css',
+			'templates/<?php echo $this->template; ?>/css/custom.css',
+		];
+
+		styles.forEach(file => {
+			const link = document.body.appendChild(document.createElement('link'));
+			link.rel = 'stylesheet';
+			link.href = file;
+		});
+	</script>
 </body>
 </html>
