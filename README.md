@@ -1,1 +1,0 @@
-# joomla4-backend-template
