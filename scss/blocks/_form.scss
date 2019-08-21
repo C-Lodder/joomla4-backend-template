@@ -46,3 +46,8 @@
     max-width: none;
   }
 }
+
+.form-control-feedback {
+  display: block;
+  color: $danger;
+}

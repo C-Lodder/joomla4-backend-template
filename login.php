@@ -53,12 +53,12 @@ foreach (array_keys($this->_styleSheets) as $style) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" class="h-100">
 <head>
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
 
 	<noscript>
 		<div class="alert alert-danger" role="alert">
@@ -66,26 +66,18 @@ foreach (array_keys($this->_styleSheets) as $style) {
 		</div>
 	</noscript>
 
-	<div id="wrapper" class="d-flex wrapper">
-		<div class="container-fluid container-main">
-			<section id="content" class="content h-100">
-				<main class="d-flex justify-content-center align-items-center h-100">
-					<div class="login">
-						<div class="main-brand text-center">
-							<h1><?php echo Text::_('TPL_BETTUM_BACKEND_LOGIN'); ?></h1>
-							<img src="<?php echo $loginLogo; ?>"
-								 alt="<?php echo htmlspecialchars($this->params->get('altLoginLogo', ''), ENT_COMPAT, 'UTF-8'); ?>">
-						</div>
-						<jdoc:include type="component" />
-					</div>
-				</main>
-			</section>
-
-			<div class="notify-alerts">
-				<jdoc:include type="message" />
+	<main class="content d-flex align-items-center justify-content-center h-100">
+		<div class="login">
+			<div class="main-brand text-center">
+				<img class="logo" src="<?php echo $loginLogo; ?>" alt="<?php echo htmlspecialchars($this->params->get('altLoginLogo', ''), ENT_COMPAT, 'UTF-8'); ?>">
+				<h1 class="mb-4"><?php echo Text::_('TPL_BETTUM_BACKEND_LOGIN'); ?></h1>
 			</div>
+			<jdoc:include type="component" />
 		</div>
-	</div>
+		<div class="notify-alerts">
+			<jdoc:include type="message" />
+		</div>
+	</main>
 
 	<jdoc:include type="modules" name="debug" style="none" />
 	<jdoc:include type="scripts" />
