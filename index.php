@@ -41,7 +41,7 @@ HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : 
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
-$this->addStyleDeclaration('.no-fouc {display: none;}');
+//$this->addStyleDeclaration('.no-fouc {display: none;}');
 
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
@@ -128,9 +128,9 @@ foreach (array_keys($this->_styleSheets) as $style) {
 			link.href = file;
 		});
 
-		window.addEventListener('load', () => {
-			document.body.classList.remove('no-fouc');
-		});
+		// window.addEventListener('load', () => {
+			// document.body.classList.remove('no-fouc');
+		// });
 	</script>
 </body>
 </html>
