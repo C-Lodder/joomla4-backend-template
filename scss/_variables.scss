@@ -1,16 +1,12 @@
 // Variables
-@import "../../../../media/vendor/bootstrap/scss/functions";
 
-$enable-rounded: false;
+$enable-rounded:              false;
 
 // Colours
 $primary:                     #383b5f;
 $secondary:                   #eef0f6;
 $tertiary:                    #f9f9fb;
 $border-color:                #e6e6f2;
-
-$link-color:                  $primary;
-$body-color:                  $primary;
 
 $theme-colors: (
   primary: $primary,
@@ -22,6 +18,10 @@ $theme-colors: (
   light: $tertiary,
   dark: $gray-800
 );
+
+$link-color:                  $primary;
+$body-color:                  $primary;
+$component-active-bg:         $primary;
 
 // Headings
 $h1-font-size:                $font-size-base * 1.5;
@@ -50,12 +50,16 @@ $btn-link-color:              $primary;
 
 // Dropdown
 $dropdown-link-color:         $primary;
+$dropdown-link-active-bg:     $component-active-bg;
 
 // Tables
 $table-bg:                    #fff;
 $table-border-color:          $border-color;
 $table-color:                 $body-color;
-$table-accent-bg:             $secondary;
+$table-accent-bg:             $tertiary;
 
 // Pagination
 $pagination-color:            $primary;
+
+// Alerts
+$zindex-alerts:               1080;

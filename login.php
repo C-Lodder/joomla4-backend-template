@@ -24,8 +24,6 @@ $option     = $input->get('option', '');
 $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
-$cpanel     = $option === 'com_cpanel';
-$hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 // Template params
@@ -46,6 +44,8 @@ HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : 
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
+$this->addStyleDeclaration('.no-fouc {display: none;}');
+
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
 foreach (array_keys($this->_styleSheets) as $style) {
@@ -58,7 +58,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin no-fouc h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
 
 	<noscript>
 		<div class="alert alert-danger" role="alert">
@@ -89,6 +89,10 @@ foreach (array_keys($this->_styleSheets) as $style) {
 			const link = document.body.appendChild(document.createElement('link'));
 			link.rel = 'stylesheet';
 			link.href = file;
+		});
+
+		window.addEventListener('load', () => {
+			document.body.classList.remove('no-fouc');
 		});
 	</script>
 </body>

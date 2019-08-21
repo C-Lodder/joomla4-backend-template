@@ -41,6 +41,8 @@ HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : 
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
+$this->addStyleDeclaration('.no-fouc {display: none;}');
+
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
 foreach (array_keys($this->_styleSheets) as $style) {
@@ -53,7 +55,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin no-fouc <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
 
 	<noscript>
 		<div class="alert alert-danger" role="alert">
@@ -68,7 +70,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 		<div class="nav-scroller bg-white shadow-sm">
 			<nav class="nav nav-underline justify-content-between mb-3">
 				<jdoc:include type="modules" name="title" />
-				<div class="d-flex justify-content-end">
+				<div class="d-flex align-items-center justify-content-end px-3">
 					<jdoc:include type="modules" name="status" style="none" />
 				</div>
 			</nav>
@@ -124,6 +126,10 @@ foreach (array_keys($this->_styleSheets) as $style) {
 			const link = document.body.appendChild(document.createElement('link'));
 			link.rel = 'stylesheet';
 			link.href = file;
+		});
+
+		window.addEventListener('load', () => {
+			document.body.classList.remove('no-fouc');
 		});
 	</script>
 </body>

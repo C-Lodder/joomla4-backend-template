@@ -48,6 +48,7 @@
 
 // Blocks
 @import "blocks/global";
+@import "blocks/alerts";
 @import "blocks/form";
 @import "blocks/treeselect";
 @import "blocks/quickicons";
@@ -64,3 +65,4 @@
 // Pages
 @import "pages/login";
 @import "pages/dashboard";
+@import "pages/system";
