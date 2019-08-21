@@ -48,8 +48,12 @@
 
 // Blocks
 @import "blocks/global";
+@import "blocks/form";
 @import "blocks/treeselect";
 @import "blocks/quickicons";
+@import "blocks/table";
+@import "blocks/tooltip";
+@import "blocks/toolbar";
 
 // Vendor Overrides
 @import "vendor/bootstrap";

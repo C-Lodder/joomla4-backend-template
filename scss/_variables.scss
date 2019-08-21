@@ -1,15 +1,27 @@
 // Variables
 @import "../../../../media/vendor/bootstrap/scss/functions";
 
+$enable-rounded: false;
+
 // Colours
 $primary:                     #383b5f;
 $secondary:                   #eef0f6;
 $tertiary:                    #f9f9fb;
-$border-colour:               #e6e6f2;
+$border-color:                #e6e6f2;
 
 $link-color:                  $primary;
 $body-color:                  $primary;
 
+$theme-colors: (
+  primary: $primary,
+  secondary: darken($secondary, 6%),
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $tertiary,
+  dark: $gray-800
+);
 
 // Headings
 $h1-font-size:                $font-size-base * 1.5;
@@ -31,10 +43,19 @@ $treeselect-indent:           40px;
 // Cards
 $card-cap-bg:                 #fff;
 $card-spacer-y:               .25rem;
-$card-border-color:           $border-colour;
+$card-border-color:           $border-color;
 
 // Buttons
 $btn-link-color:              $primary;
 
 // Dropdown
 $dropdown-link-color:         $primary;
+
+// Tables
+$table-bg:                    #fff;
+$table-border-color:          $border-color;
+$table-color:                 $body-color;
+$table-accent-bg:             $secondary;
+
+// Pagination
+$pagination-color:            $primary;

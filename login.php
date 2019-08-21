@@ -34,7 +34,7 @@ $loginLogo = $this->params->get('loginLogo')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo-blue.svg';
 
 // Load specific template related JS
-HTMLHelper::_('script', 'templates/' . $this->template . '/js/template.es6.js', ['version' => 'auto']);
+HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');

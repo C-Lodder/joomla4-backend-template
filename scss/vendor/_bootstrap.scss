@@ -16,7 +16,8 @@
   }
 }
 
-.navbar-nav li:hover > ul.dropdown-menu {
+.navbar-nav.navbar-hover > li:hover > .dropdown-menu,
+.dropdown-menu li:hover > ul.dropdown-menu {
   display: block;
 }
 .dropdown-submenu {
@@ -39,4 +40,12 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+}
+
+.table thead td,
+.table thead th {
+  font-size: .85rem;
+  color: var(--atum-text-dark);
+  border: 0;
+  white-space: nowrap;
 }

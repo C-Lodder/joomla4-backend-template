@@ -29,7 +29,7 @@ $hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 // Load specific template related JS
-HTMLHelper::_('script', 'templates/' . $this->template . '/js/template.es6.js', ['version' => 'auto']);
+HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
