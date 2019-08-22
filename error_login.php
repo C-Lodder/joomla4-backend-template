@@ -28,16 +28,7 @@ $cpanel     = $option === 'com_cpanel';
 $hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
-// Template params
-$siteLogo  = $this->params->get('siteLogo')
-	? Uri::root() . $this->params->get('siteLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-joomla-blue.svg';
-$smallLogo = $this->params->get('smallLogo')
-	? Uri::root() . $this->params->get('smallLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-blue.svg';
-
-$logoAlt = htmlspecialchars($this->params->get('altSiteLogo', ''), ENT_COMPAT, 'UTF-8');
-$logoSmallAlt = htmlspecialchars($this->params->get('altSmallLogo', ''), ENT_COMPAT, 'UTF-8');
+HTMLHelper::_('bootstrap.framework');
 
 // Load specific template related JS
 HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
@@ -72,37 +63,24 @@ foreach (array_keys($this->_styleSheets) as $style) {
 		</div>
 	</noscript>
 
+	<?php // Header ?>
 	<header id="header" class="header">
-		<div class="d-flex">
-			<div class="header-title d-flex mr-auto">
-				<div class="d-flex">
-					<?php // No home link in edit mode (so users can not jump out) and control panel (for a11y reasons) ?>
-					<div class="logo">
-						<img src="<?php echo $siteLogo; ?>" alt="<?php echo $logoAlt; ?>">
-						<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="<?php echo $logoSmallAlt; ?>">
-					</div>
+		<jdoc:include type="modules" name="menu" style="none" />
+
+		<div class="nav-scroller bg-white shadow-sm">
+			<nav class="nav nav-underline justify-content-between mb-3">
+				<jdoc:include type="modules" name="title" />
+				<div class="d-flex align-items-center justify-content-end px-3">
+					<jdoc:include type="modules" name="status" style="none" />
 				</div>
-				<jdoc:include type="modules" name="title"/>
-			</div>
-			<div class="header-items d-flex ml-auto">
-				<jdoc:include type="modules" name="status" style="header-element"/>
-			</div>
+			</nav>
 		</div>
 	</header>
 
-	<div id="wrapper" class="d-flex wrapper">
+	<?php // Wrapper ?>
+	<div id="wrapper" class="d-flex">
 
-		<?php // Sidebar ?>
-		<div id="sidebar-wrapper" class="sidebar-wrapper">
-			<div id="main-brand" class="main-brand">
-				<h2><?php echo $sitename; ?></h2>
-				<a href="<?php echo Uri::root(); ?>"><?php echo Text::_('TPL_BETTUM_LOGIN_SIDEBAR_VIEW_WEBSITE'); ?></a>
-			</div>
-			<div id="sidebar">
-				<jdoc:include type="modules" name="sidebar" style="body" />
-			</div>
-		</div>
-
+		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<section id="content" class="content h-100">
 				<?php // Begin Content ?>
@@ -110,12 +88,12 @@ foreach (array_keys($this->_styleSheets) as $style) {
 					<div id="element-box" class="card">
 						<div class="card-body">
 							<div class="main-brand d-flex align-items-center justify-content-center">
-								<img src="<?php echo $loginLogo; ?>" alt="">
+								<img src="<?php echo $joomlaLogo; ?>" alt="">
 							</div>
 							<h1><?php echo Text::_('JERROR_AN_ERROR_HAS_OCCURRED'); ?></h1>
 							<jdoc:include type="message" />
 							<blockquote class="blockquote">
-								<span class="badge badge-secondary"><?php echo $this->error->getCode(); ?></span>
+								<span class="badge badge-danger"><?php echo $this->error->getCode(); ?></span>
 								<?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
 							</blockquote>
 							<?php if ($this->debug) : ?>

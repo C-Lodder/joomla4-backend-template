@@ -80,7 +80,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	</header>
 
 	<?php // Wrapper ?>
-	<div id="wrapper" class="d-flex wrapper<?php echo $hiddenMenu ? '0' : ''; ?>">
+	<div id="wrapper" class="d-flex">
 		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<?php if (!$cpanel) : ?>

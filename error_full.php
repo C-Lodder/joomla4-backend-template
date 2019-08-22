@@ -28,16 +28,7 @@ $cpanel     = $option === 'com_cpanel';
 $hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
-// Template params
-$siteLogo  = $this->params->get('siteLogo')
-	? Uri::root() . $this->params->get('siteLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-joomla-blue.svg';
-$smallLogo = $this->params->get('smallLogo')
-	? Uri::root() . $this->params->get('smallLogo')
-	: $this->baseurl . '/templates/' . $this->template . '/images/logo-blue.svg';
-
-$logoAlt = htmlspecialchars($this->params->get('altSiteLogo', ''), ENT_COMPAT, 'UTF-8');
-$logoSmallAlt = htmlspecialchars($this->params->get('altSmallLogo', ''), ENT_COMPAT, 'UTF-8');
+HTMLHelper::_('bootstrap.framework');
 
 // Load specific template related JS
 HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
@@ -74,43 +65,27 @@ foreach (array_keys($this->_styleSheets) as $style) {
 
 	<?php // Header ?>
 	<header id="header" class="header">
-		<div class="d-flex">
-			<div class="header-title d-flex">
-				<div class="d-flex">
-					<a class="logo" href="<?php echo Route::_('index.php'); ?>"
-					   aria-label="<?php echo Text::_('TPL_BACK_TO_CONTROL_PANEL'); ?>">
-						<img src="<?php echo $siteLogo; ?>" alt="">
-						<img class="logo-small" src="<?php echo $smallLogo; ?>" alt="">
-					</a>
-				</div>
+		<jdoc:include type="modules" name="menu" style="none" />
+
+		<div class="nav-scroller bg-white shadow-sm">
+			<nav class="nav nav-underline justify-content-end mb-3">
 				<jdoc:include type="modules" name="title" />
-			</div>
-			<div class="header-items d-flex">
-				<jdoc:include type="modules" name="status" style="header-item" />
-			</div>
+				<div class="d-flex align-items-center justify-content-end px-3">
+					<jdoc:include type="modules" name="status" style="none" />
+				</div>
+			</nav>
 		</div>
 	</header>
 
 	<?php // Wrapper ?>
-	<div id="wrapper" class="d-flex wrapper<?php echo $hiddenMenu ? '0' : ''; ?>">
-
-		<?php // Sidebar ?>
-		<?php if (!$hiddenMenu) : ?>
-			<div id="sidebar-wrapper" class="sidebar-wrapper" <?php echo $hiddenMenu ? 'data-hidden="' . $hiddenMenu . '"' : ''; ?>>
-				<jdoc:include type="modules" name="menu" style="none" />
-				<div id="main-brand" class="main-brand d-flex align-items-center justify-content-center">
-					<img src="<?php echo $joomlaLogo; ?>" alt="">
-				</div>
-			</div>
-		<?php endif; ?>
+	<div id="wrapper" class="d-flex">
 
 		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<?php if (!$cpanel) : ?>
 				<?php // Subheader ?>
-				<a class="btn btn-subhead d-md-none d-lg-none d-xl-none" data-toggle="collapse"
-				   data-target=".subhead-collapse"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
-					<span class="icon-wrench"></span></a>
+				<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse" data-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
+					<span class="icon-chevron-down" aria-hidden="true"></span></button>
 				<div id="subhead" class="subhead mb-3">
 					<div id="container-collapse" class="container-collapse"></div>
 					<div class="row">
@@ -127,7 +102,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 					<div class="col-md-12">
 						<h1><?php echo Text::_('JERROR_AN_ERROR_HAS_OCCURRED'); ?></h1>
 						<blockquote class="blockquote">
-							<span class="badge badge-secondary"><?php echo $this->error->getCode(); ?></span>
+							<span class="badge badge-danger"><?php echo $this->error->getCode(); ?></span>
 							<?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
 						</blockquote>
 						<?php if ($this->debug) : ?>
@@ -151,7 +126,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 							</div>
 						<?php endif; ?>
 						<p>
-							<a href="<?php echo $this->baseurl; ?>" class="btn btn-secondary">
+							<a href="<?php echo $this->baseurl; ?>" class="btn btn-primary">
 								<span class="fa fa-dashboard" aria-hidden="true"></span>
 								<?php echo Text::_('JGLOBAL_TPL_CPANEL_LINK_TEXT'); ?></a>
 						</p>
