@@ -4,3 +4,14 @@
   background: #fff;
   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}

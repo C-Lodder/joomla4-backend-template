@@ -60,12 +60,16 @@ if (!$this->enabled)
 if ($current->hasChildren())
 {
 	$linkClass[] = 'dropdown-toggle';
-	$dataToggle  = ' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
 }
 
 if ($current->level == 1)
 {
 	$linkClass[] = 'nav-link';
+	
+	if ($current->hasChildren())
+	{
+		$dataToggle  = ' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
+	}
 }
 else if ($current->level > 1)
 {

@@ -29,12 +29,6 @@
   margin-top: -6px;
 }
 
-// rotate caret on hover
-.dropdown-menu > li > a:hover:after {
-  text-decoration: underline;
-  transform: rotate(-90deg);
-}
-
 .card-header {
   display: flex;
   flex-direction: row-reverse;
