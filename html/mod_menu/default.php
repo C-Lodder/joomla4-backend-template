@@ -11,15 +11,19 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 
-$siteLogo  = Uri::root(true) . '/administrator/templates/' .Factory::getApplication()->getTemplate() . '/images/logo-white.svg';
+$siteLogo  = Uri::root(true) . '/administrator/templates/' . Factory::getApplication()->getTemplate() . '/images/logo-white.svg';
+
+$hideLinks = Factory::getApplication()->input->getBool('hidemainmenu');
+$href = $hideLinks ? '#' : Route::_('index.php');
 
 // Recurse through children of root node if they exist
 if ($root->hasChildren()) : ?>
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="<?php echo $href; ?>">
 			<img src="<?php echo $siteLogo; ?>" width="30" height="30" alt="Logo">
 		</a>
 		<div class="collapse navbar-collapse" id="topMenu">

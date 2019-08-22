@@ -20,11 +20,7 @@ use Joomla\CMS\Router\Route;
 $class   = '';
 
 // Build the CSS class suffix
-if (!$this->enabled)
-{
-	$class = ' class="disabled"';
-}
-elseif ($current->type === 'separator')
+if ($current->type === 'separator')
 {
 	$class = $current->title ? ' class="menuitem-group"' : ' class="dropdown-divider"';
 }
@@ -55,6 +51,11 @@ else
 // Print a link if it exists
 $linkClass  = [];
 $dataToggle = '';
+
+if (!$this->enabled)
+{
+	$linkClass[] = 'disabled';
+}
 
 if ($current->hasChildren())
 {

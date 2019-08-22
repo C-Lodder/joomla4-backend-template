@@ -16,7 +16,7 @@ $hideLinks = $app->input->getBool('hidemainmenu');
 ?>
 
 <div class="dropdown">
-	<a class="nav-link dropdown-toggle <?php echo ($hideLinks ? 'disabled' : ''); ?>" data-toggle="dropdown" href="#" <?php echo ($hideLinks ? 'disabled' : ''); ?>
+	<a class="nav-link dropdown-toggle <?php echo $hideLinks ? 'disabled' : ''; ?>" data-toggle="dropdown" href="#" <?php echo $hideLinks ? 'disabled' : ''; ?>
 		title="<?php echo Text::_('MOD_USER_MENU'); ?>">
 		<span class="fa fa-user-circle" aria-hidden="true"></span>
 		<div class="sr-only">
