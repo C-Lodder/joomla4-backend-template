@@ -21,4 +21,12 @@
     border: 1px solid $primary;
     border-radius: 50%;
   }
+
+  &.disabled {
+    [class*=" icon-"],
+    [class^="icon-"] {
+      color: $gray-400;
+      border-color: $gray-400;
+    }
+  }
 }

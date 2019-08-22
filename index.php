@@ -28,6 +28,8 @@ $cpanel     = $option === 'com_cpanel';
 $hiddenMenu = $app->input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
+HTMLHelper::_('bootstrap.framework');
+
 // Load specific template related JS
 HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
 
