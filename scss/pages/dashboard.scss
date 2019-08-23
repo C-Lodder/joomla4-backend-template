@@ -7,3 +7,12 @@
 .cpanel-modules.cpanel-quickicons .card-body {
   padding: $card-spacer-x;
 }
+
+.cpanel-add-module {
+  margin-bottom: 2rem;
+  border: 2px dashed $primary;
+
+  .fa {
+    font-size: 40px;
+  }
+}

@@ -2,10 +2,10 @@
 
 body {
   background-color: $secondary;
-}
 
-.navbar {
-  background-color: $primary;
+  &.component {
+    background: none;
+  }
 }
 
 .content {
