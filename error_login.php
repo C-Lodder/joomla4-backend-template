@@ -56,13 +56,6 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="styles" />
 </head>
 <body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($monochrome ? ' monochrome' : ''); ?>">
-
-	<noscript>
-		<div class="alert alert-danger" role="alert">
-			<?php echo Text::_('JGLOBAL_WARNJAVASCRIPT'); ?>
-		</div>
-	</noscript>
-
 	<?php // Header ?>
 	<header id="header" class="header">
 		<jdoc:include type="modules" name="menu" style="none" />

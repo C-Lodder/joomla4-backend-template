@@ -59,13 +59,6 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="styles" />
 </head>
 <body class="admin no-fouc h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
-
-	<noscript>
-		<div class="alert alert-danger" role="alert">
-			<?php echo Text::_('JGLOBAL_WARNJAVASCRIPT'); ?>
-		</div>
-	</noscript>
-
 	<main class="content d-flex align-items-center justify-content-center h-100">
 		<div class="login">
 			<div class="main-brand text-center">
