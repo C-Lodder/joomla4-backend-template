@@ -44,7 +44,7 @@ $class = !empty($tmp) ? 'class="' . implode(' ', array_unique($tmp)) . '"' : '';
 
 ?>
 <?php // If it is a button with two links: make it a list ?>
-<li class="quickicon quickicon-single col mb-3">
+<li class="quickicon quickicon-single">
 	<a <?php echo $id . $class; ?> href="<?php echo $displayData['link']; ?>"<?php echo $target . $onclick . $title; ?>>
 		<?php if (isset($displayData['image'])): ?>
 			<div class="quickicon-icon d-flex align-items-end">
