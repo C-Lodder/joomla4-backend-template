@@ -1,7 +1,7 @@
 // Variables
 
 .btn-group .dropdown-menu {
-  background: #fff;
+  background: $secondary;
   min-width: 100%;
 
   [class^='icon-'],
@@ -42,4 +42,8 @@
   color: var(--atum-text-dark);
   border: 0;
   white-space: nowrap;
+}
+
+.btn-primary {
+  border-color: $border-color;
 }

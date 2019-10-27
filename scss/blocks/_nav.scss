@@ -1,7 +1,7 @@
 // Nav
 
 .navbar {
-  background-color: $primary;
+  background-color: $tertiary;
 
   .nav-link {
     padding-left: .65rem;
@@ -10,7 +10,7 @@
 }
 
 .nav-scroller {
-  background: #fff;
+  background: $primary;
   box-shadow: $shadow-default;
 
   > nav {

@@ -25,12 +25,15 @@
       // });
     // });
 	
-    const firstCpanelAccordion = document.getElementById('cpanelAccordion').querySelector('.card');
-    firstCpanelAccordion.querySelectorAll('[aria-expanded]').forEach((aria) => {
-      aria.setAttribute('aria-expanded', true);
-    });
+    const cpanelAccordion = document.getElementById('cpanelAccordion');
+    if (cpanelAccordion) {
+      const firstCpanelAccordion = cpanelAccordion.querySelector('.card');
+      firstCpanelAccordion.querySelectorAll('[aria-expanded]').forEach((aria) => {
+        aria.setAttribute('aria-expanded', true);
+      });
 
-    firstCpanelAccordion.querySelector('.collapse').classList.add('show');
+      firstCpanelAccordion.querySelector('.collapse').classList.add('show');
+    }
 
   });
 

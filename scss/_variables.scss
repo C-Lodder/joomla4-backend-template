@@ -3,10 +3,11 @@
 $enable-rounded:              false;
 
 // Colours
-$primary:                     #383b5f;
-$secondary:                   #eef0f6;
-$tertiary:                    #f9f9fb;
-$border-color:                #e1e2ea;
+$primary:                     #38383d;
+$secondary:                   #2a2a2e;
+$tertiary:                    #1c1c1c;
+$border-color:                #4c4c51;
+$dark-text-color:             #ccc;
 
 $theme-colors: (
   primary: $primary,
@@ -19,10 +20,10 @@ $theme-colors: (
   dark: $gray-800
 );
 
-$link-color:                  $primary;
-$body-color:                  $primary;
-$link-hover-color:            #664d95;
-$component-active-bg:         $primary;
+$link-color:                  $dark-text-color;
+$body-color:                  $dark-text-color;
+$link-hover-color:            lighten($body-color, 10%);
+$component-active-bg:         $tertiary;
 
 // Headings
 $h1-font-size:                $font-size-base * 1.5;
@@ -31,39 +32,65 @@ $h3-font-size:                $font-size-base * 1.75;
 $h4-font-size:                $font-size-base * 1.5;
 $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
-$headings-color:              $primary;
+$headings-color:              $body-color;
 $headings-margin-bottom:      0;
 
 // Form
-$input-max-width:             240px;
+$input-max-width:               240px;
+$input-bg:                      $primary;
+$input-focus-bg:                $primary;
+$input-color:                   $body-color;
+$input-focus-color:             $body-color;
+$input-border-color:            $border-color;
+$custom-select-bg:              $input-bg;
+$custom-select-color:           $input-color;
+$custom-select-border-color:    $border-color;
+$custom-select-indicator-color: $body-color;
+$custom-select-indicator:       str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23");
+$custom-select-background:      $custom-select-indicator no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
 
 // Treeselect
 $treeselect-line-height:      2.2rem;
 $treeselect-indent:           40px;
 
 // Cards
-$card-cap-bg:                 #fff;
+$card-cap-bg:                 $secondary;
+$card-bg:                     $secondary;
+$card-cap-color:              $body-color;
 $card-spacer-y:               .25rem;
 $card-border-color:           $border-color;
+$card-border-width:           0;
 
 // Buttons
-$btn-link-color:              $primary;
+$btn-link-color:              $body-color;
 
 // Dropdown
-$dropdown-link-color:         $primary;
+$dropdown-bg:                 $secondary;
+$dropdown-border-color:       $border-color;
+$dropdown-link-color:         $body-color;
 $dropdown-link-active-bg:     $component-active-bg;
+$dropdown-link-hover-bg:      $primary;
+$dropdown-link-hover-color:   $body-color;
+$dropdown-divider-bg:         $border-color;
+
+// List group
+
+$list-group-color:            $body-color;
+$list-group-bg:               $secondary;
+$list-group-border-color:     $border-color;
 
 // Tables
-$table-bg:                    #fff;
+$table-bg:                    $secondary;
 $table-border-color:          $border-color;
 $table-color:                 $body-color;
-$table-accent-bg:             $tertiary;
+$table-accent-bg:             $primary;
 
 // Pagination
-$pagination-color:            $primary;
+$pagination-color:            $body-color;
 
 // Alerts
 $zindex-alerts:               1080;
 
 // Shadows
-$shadow-default:               0 .125rem .35rem rgba(0, 0, 0, .03);
+$shadow-default:              0 .125rem .35rem rgba(0, 0, 0, .03);
+$box-shadow-sm:               0 .125rem .25rem $primary;
