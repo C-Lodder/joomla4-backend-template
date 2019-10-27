@@ -6,7 +6,7 @@ $enable-rounded:              false;
 $primary:                     #383b5f;
 $secondary:                   #eef0f6;
 $tertiary:                    #f9f9fb;
-$border-color:                #e6e6f2;
+$border-color:                #e1e2ea;
 
 $theme-colors: (
   primary: $primary,
@@ -64,3 +64,6 @@ $pagination-color:            $primary;
 
 // Alerts
 $zindex-alerts:               1080;
+
+// Shadows
+$shadow-default:               0 .125rem .35rem rgba(0, 0, 0, .03);

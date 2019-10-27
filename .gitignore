@@ -25,3 +25,6 @@ Desktop.ini
 # Only apply this rule to the main repository's gitignore files
 !/.gitignore
 !/build/.gitignore
+
+.css
+.min.css

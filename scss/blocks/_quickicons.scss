@@ -5,12 +5,16 @@
 }
 
 .quick-icons {
-  display: flex;
-  flex-wrap: wrap;
-}
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr ) );
+  grid-gap: 1rem;
 
-.quick-icons li {
-  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 .quickicon-group,
@@ -24,10 +28,8 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  width: 8.5rem;
   min-height: 6.5rem;
-  padding: 15px 10px;
-  background: $tertiary;
+  background-color: $tertiary;
   color: $primary;
   text-align: center;
   transition: all .2s ease-in-out;
@@ -41,8 +43,8 @@
   }
 
   &.success {
-    color: #005b22;
-    border: 1px solid #005b22;
+    color: #648016;
+    border: 1px solid #648016;
   }
 }
 

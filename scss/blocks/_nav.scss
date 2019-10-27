@@ -2,11 +2,20 @@
 
 .navbar {
   background-color: $primary;
+
+  .nav-link {
+    padding-left: .65rem;
+    padding-right: .65rem;
+  }
 }
 
 .nav-scroller {
   background: #fff;
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+  box-shadow: $shadow-default;
+
+  > nav {
+    border-bottom: 1px solid $border-color;
+  }
 }
 
 .navbar-nav .dropdown-menu .dropdown-item {
