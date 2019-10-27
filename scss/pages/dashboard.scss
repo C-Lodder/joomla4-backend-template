@@ -1,0 +1,19 @@
+// Dashboard
+
+.cpanel-accordion .card-body,
+.cpanel-modules .card-body {
+  padding: 0;
+}
+
+.cpanel-modules.cpanel-quickicons .card-body {
+  padding: $card-spacer-x;
+}
+
+.cpanel-add-module {
+  margin-bottom: 2rem;
+  border: 2px dashed $primary;
+
+  .fa {
+    font-size: 40px;
+  }
+}

@@ -12,7 +12,7 @@ use Joomla\CMS\Router\Route;
 
 $hideLinks = $app->input->getBool('hidemainmenu');
 ?>
-<?php if ($user->authorise('core.manage', 'com_postinstall')) : ?>
+<?php if ($app->getIdentity()->authorise('core.manage', 'com_postinstall')) : ?>
 <div class="dropdown">
 	<a class="nav-link dropdown-toggle <?php echo ($hideLinks ? 'disabled' : ''); ?>" data-toggle="dropdown" href="#" <?php echo ($hideLinks ? 'disabled' : ''); ?>
 		title="<?php echo Text::_('MOD_POST_INSTALLATION_MESSAGES'); ?>">
@@ -25,7 +25,7 @@ $hideLinks = $app->input->getBool('hidemainmenu');
 		<?php endif; ?>
 	</a>
 	<?php if (!$hideLinks) : ?>
-	<div class="dropdown-menu dropdown-menu-right dropdown-notifications border-0">
+	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">
 			<?php echo Text::_('MOD_POST_INSTALLATION_MESSAGES'); ?>
 		</div>

@@ -1,9 +1,7 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  mod_menu
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @package     Bettum
+ * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -22,11 +20,7 @@ use Joomla\CMS\Router\Route;
 $class   = '';
 
 // Build the CSS class suffix
-if (!$this->enabled)
-{
-	$class = ' class="disabled"';
-}
-elseif ($current->type === 'separator')
+if ($current->type === 'separator')
 {
 	$class = $current->title ? ' class="menuitem-group"' : ' class="dropdown-divider"';
 }
@@ -58,15 +52,24 @@ else
 $linkClass  = [];
 $dataToggle = '';
 
+if (!$this->enabled)
+{
+	$linkClass[] = 'disabled';
+}
+
 if ($current->hasChildren())
 {
 	$linkClass[] = 'dropdown-toggle';
-	$dataToggle  = ' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
 }
 
 if ($current->level == 1)
 {
 	$linkClass[] = 'nav-link';
+	
+	if ($current->hasChildren())
+	{
+		$dataToggle  = ' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
+	}
 }
 else if ($current->level > 1)
 {

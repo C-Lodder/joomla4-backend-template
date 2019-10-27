@@ -16,20 +16,30 @@
   }
 }
 
-.navbar-nav li:hover > ul.dropdown-menu {
-    display: block;
+.navbar-nav.navbar-hover > li:hover > .dropdown-menu,
+.dropdown-menu li:hover > ul.dropdown-menu {
+  display: block;
 }
 .dropdown-submenu {
-    position:relative;
+  position: relative;
 }
-.dropdown-submenu>.dropdown-menu {
-    top:0;
-    left:100%;
-    margin-top:-6px;
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
 }
 
-/* rotate caret on hover */
-.dropdown-menu > li > a:hover:after {
-    text-decoration: underline;
-    transform: rotate(-90deg);
-} 
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table thead td,
+.table thead th {
+  font-size: .85rem;
+  color: var(--atum-text-dark);
+  border: 0;
+  white-space: nowrap;
+}

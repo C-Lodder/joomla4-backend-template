@@ -1,9 +1,7 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  mod_frontend
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @package     Bettum
+ * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -18,6 +16,6 @@ use Joomla\CMS\Uri\Uri;
 	target="_blank">
 	<div class="align-items-center tiny">
 		<span class="fa fa-external-link-alt" aria-hidden="true"></span>
-		<?php echo HTMLHelper::_('string.truncate', $sitename, 28, false, false); ?>
+		<span class="sr-only"><?php echo HTMLHelper::_('string.truncate', $sitename, 28, false, false); ?></span>
 	</div>
 </a>

@@ -9,6 +9,7 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Uri\Uri;
 
 /** @var JDocumentHtml $this */
 
@@ -16,6 +17,15 @@ $lang = Factory::getLanguage();
 
 // Add JavaScript Frameworks
 HTMLHelper::_('script', 'vendor/focus-visible/focus-visible.min.js', ['version' => 'auto', 'relative' => true]);
+
+HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
+
+$cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
+
+foreach (array_keys($this->_styleSheets) as $style) {
+	unset($this->_styleSheets[$style]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,14 +36,9 @@ HTMLHelper::_('script', 'vendor/focus-visible/focus-visible.min.js', ['version' 
 <body class="contentpane component">
 	<jdoc:include type="message" />
 	<jdoc:include type="component" />
+
 	<script>
-		const styles = [
-			'templates/<?php echo $this->template; ?>/css/bootstrap.min.css',
-			'templates/<?php echo $this->template; ?>/css/fontawesome.min.css',
-			'templates/<?php echo $this->template; ?>/css/template.min.css',
-			'administrator/language/<?php echo $lang->getTag(); ?>/<?php echo $lang->getTag(); ?>.css',
-			'templates/<?php echo $this->template; ?>/css/custom.css',
-		];
+		const styles = <?php echo $cachesStyleSheets; ?>;
 
 		styles.forEach(file => {
 			const link = document.body.appendChild(document.createElement('link'));

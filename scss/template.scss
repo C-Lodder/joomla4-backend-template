@@ -1,12 +1,12 @@
-// Bootstrap functions
+// Bootstrap core
 @import "../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "../../../../media/vendor/bootstrap/scss/mixins";
 
 // Atum Variables
 @import "variables";
 
 // Bootstrap
-@import "../../../../media/vendor/bootstrap/scss/variables";
-@import "../../../../media/vendor/bootstrap/scss/mixins";
 @import "../../../../media/vendor/bootstrap/scss/root";
 @import "../../../../media/vendor/bootstrap/scss/print";
 @import "../../../../media/vendor/bootstrap/scss/reboot";
@@ -35,10 +35,14 @@
 @import "../../../../media/vendor/bootstrap/scss/modal";
 @import "../../../../media/vendor/bootstrap/scss/tooltip";
 @import "../../../../media/vendor/bootstrap/scss/popover";
-@import "../../../../media/vendor/bootstrap/scss/utilities";
+//@import "../../../../media/vendor/bootstrap/scss/utilities";
+@import "../../../../media/vendor/bootstrap/scss/utilities/clearfix";
+@import "../../../../media/vendor/bootstrap/scss/utilities/display";
+@import "../../../../media/vendor/bootstrap/scss/utilities/flex";
+@import "../../../../media/vendor/bootstrap/scss/utilities/overflow";
+@import "../../../../media/vendor/bootstrap/scss/utilities/screenreaders";
 
 // Fonts
-@import "../../../../media/vendor/roboto-fontface/scss/roboto/sass/roboto-fontface";
 @import "fonts/fontawesome";
 
 // Alert
@@ -48,7 +52,26 @@
 @import "../../../../build/media_source/system/scss/jquery-minicolors";
 
 // Blocks
+@import "blocks/global";
+@import "blocks/alerts";
+@import "blocks/form";
+@import "blocks/nav";
+@import "blocks/iframe";
+@import "blocks/modal";
 @import "blocks/treeselect";
+@import "blocks/quickicons";
+@import "blocks/table";
+@import "blocks/tooltip";
+@import "blocks/toolbar";
+@import "blocks/utilities";
 
 // Vendor Overrides
-@import "vendor";
+@import "vendor/bootstrap";
+@import "vendor/codemirror";
+@import "vendor/dragula";
+@import "vendor/minicolors";
+
+// Pages
+@import "pages/login";
+@import "pages/dashboard";
+@import "pages/system";

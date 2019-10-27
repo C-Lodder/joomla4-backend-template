@@ -6,5 +6,9 @@
  */
 
 defined('_JEXEC') or die;
-
-echo $module->content;
+?>
+<?php if (!empty($title)) : ?>
+<div class="d-flex align-items-center px-3 my-2">
+	<?php echo $title; ?>
+</div>
+<?php endif; ?>
