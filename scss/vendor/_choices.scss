@@ -1,0 +1,20 @@
+// Choices
+
+.choices__inner {
+  background-color: $primary;
+  border-color: $border-color;
+}
+
+.choices__input {
+  color: $input-color;
+  background-color: $primary;
+}
+
+.choices__list--dropdown {
+  background-color: $primary;
+  border-color: $border-color;
+
+  .choices__item--selectable.is-highlighted {
+    background-color: $primary;
+  }
+}

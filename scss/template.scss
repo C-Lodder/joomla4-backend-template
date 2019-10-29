@@ -60,7 +60,9 @@
 @import "blocks/modal";
 @import "blocks/treeselect";
 @import "blocks/quickicons";
+@import "blocks/switcher";
 @import "blocks/table";
+@import "blocks/tabs";
 @import "blocks/tooltip";
 @import "blocks/toolbar";
 @import "blocks/utilities";
@@ -70,6 +72,7 @@
 @import "vendor/codemirror";
 @import "vendor/dragula";
 @import "vendor/minicolors";
+@import "vendor/choices";
 
 // Pages
 @import "pages/login";

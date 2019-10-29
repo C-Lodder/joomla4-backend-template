@@ -35,7 +35,7 @@ HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => t
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-$this->setMetaData('theme-color', '#1c3d5c');
+$this->setMetaData('theme-color', '#495057');
 
 $monochrome = (bool) $this->params->get('monochrome');
 

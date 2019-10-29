@@ -18,13 +18,6 @@
   display: block;
 }
 
-joomla-toolbar-button {
-  .dropdown-item:focus,
-  .dropdown-item:hover {
-    color: $tertiary;
-  }
-}
-
 .subhead .btn.dropdown-toggle {
   @extend .btn-primary;
 }

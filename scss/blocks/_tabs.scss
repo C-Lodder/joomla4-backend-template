@@ -1,0 +1,32 @@
+// Tabs
+
+joomla-tab {
+  > section {
+    background-color: $secondary;
+    border-color: $border-color;
+  }
+
+  > ul {
+    background-color: $primary;
+    border-color: $border-color $border-color currentcolor;
+    box-shadow: none;
+  }
+
+  a[role="tab"] {
+    color: $body-color;
+  }
+
+  a[role="tab"][active]::after {
+    background-color: $blue;
+  }
+
+  &[orientation="vertical"] a {
+    color: $body-color;
+    border-color: $border-color;
+
+    &[active] {
+      background-color: rgba($black, .03);
+      box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
+    }
+  }
+}
