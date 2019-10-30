@@ -2,6 +2,8 @@
 
 $enable-rounded:              false;
 
+
+
 // Colours
 $primary:                     #38383d;
 $secondary:                   #2a2a2e;
@@ -25,6 +27,8 @@ $body-color:                  $dark-text-color;
 $link-hover-color:            lighten($body-color, 10%);
 $component-active-bg:         $tertiary;
 
+
+
 // Headings
 $h1-font-size:                $font-size-base * 1.5;
 $h2-font-size:                $font-size-base * 1.2;
@@ -34,6 +38,8 @@ $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 $headings-color:              $body-color;
 $headings-margin-bottom:      0;
+
+
 
 // Form
 $input-max-width:               240px;
@@ -55,9 +61,13 @@ $input-group-addon-color:        $body-color;
 $input-group-addon-bg:           $primary;
 $input-group-addon-border-color: $border-color;
 
+
+
 // Treeselect
 $treeselect-line-height:      2.2rem;
 $treeselect-indent:           40px;
+
+
 
 // Cards
 $card-cap-bg:                 $secondary;
@@ -67,8 +77,12 @@ $card-spacer-y:               .25rem;
 $card-border-color:           $border-color;
 $card-border-width:           0;
 
+
+
 // Buttons
 $btn-link-color:              $body-color;
+
+
 
 // Dropdown
 $dropdown-bg:                 $secondary;
@@ -79,11 +93,13 @@ $dropdown-link-hover-bg:      $primary;
 $dropdown-link-hover-color:   $body-color;
 $dropdown-divider-bg:         $border-color;
 
-// List group
 
+// List group
 $list-group-color:            $body-color;
 $list-group-bg:               $secondary;
 $list-group-border-color:     $border-color;
+
+
 
 // Tables
 $table-bg:                    $secondary;
@@ -91,11 +107,31 @@ $table-border-color:          $border-color;
 $table-color:                 $body-color;
 $table-accent-bg:             $primary;
 
+
+
 // Pagination
-$pagination-color:            $body-color;
+$pagination-color:                  $link-color;
+$pagination-bg:                     $secondary;
+$pagination-border-color:           $border-color;
+
+$pagination-hover-color:            $link-hover-color;
+$pagination-hover-bg:               $primary;
+$pagination-hover-border-color:     $border-color;
+
+$pagination-active-color:           $component-active-color;
+$pagination-active-bg:              $component-active-bg;
+$pagination-active-border-color:    $pagination-active-bg;
+
+$pagination-disabled-color:         $link-color;
+$pagination-disabled-bg:            $tertiary;
+$pagination-disabled-border-color:  $border-color;
+
+
 
 // Alerts
 $zindex-alerts:               1080;
+
+
 
 // Shadows
 $shadow-default:              0 .125rem .35rem rgba(0, 0, 0, .03);
