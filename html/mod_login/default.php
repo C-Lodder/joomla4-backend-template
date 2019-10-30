@@ -38,6 +38,7 @@ Text::script('MESSAGE');
 				type="text"
 				class="form-control"
 				required="required"
+				autocomplete="current-username"
 				autofocus
 			>
 		</div>
@@ -52,6 +53,7 @@ Text::script('MESSAGE');
 					type="password"
 					class="form-control"
 					required="required"
+					autocomplete="current-password"
 				>
 				<span class="input-group-append">
 					<button type="button" class="input-group-text icon-eye input-password-toggle">
