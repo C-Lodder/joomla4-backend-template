@@ -93,23 +93,18 @@ foreach (array_keys($this->_styleSheets) as $style) {
 				<?php // Begin Content ?>
 				<jdoc:include type="modules" name="top" style="xhtml" />
 				<div class="row">
-					<div class="<?php echo $cpanel && $this->countModules('cpanel-accordion') ? 'col-md-8' : 'col-md-12'; ?>">
+					<?php if ($cpanel) : ?>
+						<div class="col-md-4">
+							<?php if ($this->countModules('cpanel-left')) : ?>
+								<jdoc:include type="modules" name="cpanel-left" style="well" />
+							<?php endif; ?>
+						</div>
+					<?php endif; ?>
+					<div class="<?php echo $cpanel && $this->countModules('cpanel-left') ? 'col-md-8' : 'col-md-12'; ?>">
 						<main>
 							<jdoc:include type="component" />
 						</main>
 					</div>
-					<?php if ($cpanel) : ?>
-						<div class="col-md-4">
-							<?php if ($this->countModules('cpanel-right')) : ?>
-								<jdoc:include type="modules" name="cpanel-right" style="well" />
-							<?php endif; ?>
-							<?php if ($this->countModules('cpanel-accordion')) : ?>
-								<div class="accordion cpanel-accordion" id="cpanelAccordion">
-									<jdoc:include type="modules" name="cpanel-accordion" style="accordion" />
-								</div>
-							<?php endif; ?>
-						</div>
-					<?php endif; ?>
 					<?php if ($this->countModules('bottom')) : ?>
 						<jdoc:include type="modules" name="bottom" style="xhtml" />
 					<?php endif; ?>

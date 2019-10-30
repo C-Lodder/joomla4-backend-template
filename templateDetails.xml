@@ -40,7 +40,7 @@
 		<position>toolbar</position>
 		<!-- used directly in a component and included here so the position will appear in the list of available positions -->
 		<position>cpanel</position>
-		<position>cpanel-accordion</position>
+		<position>cpanel-left</position>
 		<position>icon</position>
 		<position>login</position>
 	</positions>
@@ -53,16 +53,6 @@
 	<config>
 		<fields name="params">
 			<fieldset name="colors" label="TPL_BETTUM_SETTINGS">
-				<field
-					name="monochrome"
-					type="radio"
-					label="TPL_BETTUM_COLORS_SETTINGS_MONOCHROME_LABEL"
-					class="switcher"
-					default="0"
-					>
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
 				<field
 					name="siteLogo"
 					type="media"
