@@ -16,6 +16,10 @@
   }
 }
 
+.navbar-nav.navbar-hover > li > .dropdown-menu {
+  display: none;
+}
+
 .navbar-nav.navbar-hover > li:hover > .dropdown-menu,
 .dropdown-menu li:hover > ul.dropdown-menu {
   display: block;

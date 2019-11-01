@@ -18,13 +18,17 @@
   }
 }
 
-.navbar-nav .dropdown-menu .dropdown-item {
-  position: relative;
+.navbar-nav .dropdown-menu {
+  margin: 0;
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: .5rem;
-    transform: translateY(-50%) rotate(-90deg);
+  .dropdown-item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      transform: translateY(-50%) rotate(-90deg);
+    }
   }
 }
