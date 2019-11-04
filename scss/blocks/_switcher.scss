@@ -1,6 +1,6 @@
 // Switcher
 
-.col-md-9 .control-group .switcher__legend,
-.col-md-12 .control-group .switcher__legend {
-  margin-left: 0;
+.switcher__legend {
+  float: none !important;
+  margin-left: 0 !important;
 }

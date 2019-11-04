@@ -51,3 +51,13 @@
   display: block;
   color: $danger;
 }
+
+
+// Custom select modifiers
+.custom-select-success {
+  border-color: $green;
+}
+
+.custom-select-danger {
+  border-color: $red;
+}

@@ -18,3 +18,16 @@
     background-color: $primary;
   }
 }
+
+.choices__button_joomla {
+  font-size: 0px;
+  border: 0;
+  background: none;
+
+  &::after {
+    font-size: 1rem;
+    color: $white;
+    line-height: 1;
+    content: "×";
+  }
+}
