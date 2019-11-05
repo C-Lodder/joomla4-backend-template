@@ -43,7 +43,7 @@
 .table thead td,
 .table thead th {
   font-size: .85rem;
-  color: var(--atum-text-dark);
+  color: $body-color;
   border: 0;
   white-space: nowrap;
 }
