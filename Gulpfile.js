@@ -17,6 +17,12 @@ gulp.task('sass', () =>
 		.pipe(gulp.dest(`./css`))
 );
 
+gulp.task('sass-joomla', () =>
+	gulp.src([`./scss/joomla/installer.scss`])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/com_installer`))
+);
+
 // Additional tasks to run on the compiled CSS file
 gulp.task('postcss', () =>
 	gulp.src(`./css/**/*.css`)
@@ -29,5 +35,6 @@ gulp.task('postcss', () =>
 
 gulp.task('build', gulp.series(
 	'sass',
+	'sass-joomla',
 	'postcss',
 ));
