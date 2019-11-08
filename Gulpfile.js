@@ -29,6 +29,12 @@ gulp.task('sass-vendor-minicolors', () =>
 		.pipe(gulp.dest(`./css/vendor/minicolors`))
 );
 
+gulp.task('sass-vendor-choices', () =>
+	gulp.src([`./scss/vendor/choices.scss`])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/vendor/choicesjs`))
+);
+
 // Additional tasks to run on the compiled CSS file
 gulp.task('postcss', () =>
 	gulp.src(`./css/**/*.css`)
@@ -43,5 +49,6 @@ gulp.task('build', gulp.series(
 	'sass',
 	'sass-joomla-installer',
 	'sass-vendor-minicolors',
+	'sass-vendor-choices',
 	'postcss',
 ));
