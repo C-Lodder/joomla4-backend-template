@@ -27,16 +27,16 @@ cd <path>
 ```
 - Checkout a new branch:
 ```bash
-git checkout -b <brand name>
+git checkout -b <branch name>
 ```
 - Install npm packages:
 ```bash
 npm i
 ```
 
-Gulp build tasks:
+## Gulp build tasks:
 
-- Compile SCSS
+- Compile SCSS and minify CSS
 ```bash
 gulp build
 ```
