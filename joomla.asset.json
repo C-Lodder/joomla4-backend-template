@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "bettum",
+  "version": "1.0.0",
+  "description": "Bettum is a Joomla 4 administrator template",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "package": "choices.js",
+      "name": "choicesjs",
+      "type": "style",
+      "uri": "administrator/templates/bettum/css/vendor/choicesjs/choices.css"
+    },
+    {
+      "package": "choices.js",
+      "name": "choicesjs",
+      "type": "preset",
+      "dependencies": [
+        "choicesjs#style",
+        "choicesjs#script"
+      ]
+    }
+  ]
+}

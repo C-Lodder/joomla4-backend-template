@@ -6,11 +6,17 @@
 // Bettum Variables
 @import "../variables";
 
+
+joomla-field-fancy-select {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 // Choices
 .choices {
   position: relative;
   margin-bottom: 24px;
-  font-size: 16px;
+  font-size: 1rem;
 
   &:focus {
     outline: none;
@@ -78,7 +84,7 @@
       height: 0;
       width: 0;
       border-style: solid;
-      border-color: #333333 transparent transparent transparent;
+      border-color: $border-color transparent transparent transparent;
       border-width: 5px;
       position: absolute;
       right: 11.5px;
@@ -88,7 +94,7 @@
     }
 
     &.is-open::after {
-      border-color: transparent transparent #333333 transparent;
+      border-color: transparent transparent $border-color transparent;
       margin-top: -7.5px;
     }
 
@@ -126,7 +132,6 @@
     width: 8px;
     line-height: 1;
     opacity: .75;
-    border-radius: 0;
   }
 
   &[data-type*="select-multiple"] .choices__button {
@@ -147,25 +152,19 @@
   vertical-align: top;
   width: 100%;
   background-color: $primary;
-  padding: 7.5px 7.5px 3.75px;
+  padding: $input-padding-y $input-padding-x;
   border: 1px solid $border-color;
-  border-radius: 2.5px;
-  font-size: 14px;
-  min-height: 44px;
+  font-size: 1rem;
+  min-height: $input-height;
   overflow: hidden;
 }
 
 .is-focused .choices__inner {
-  border-color: #b7b7b7;
+  border-color: $border-color;
 }
 
 .is-open .choices__inner {
-  border-color: #b7b7b7;
-  border-radius: 2.5px 2.5px 0 0;
-}
-
-.is-flipped.is-open .choices__inner {
-  border-radius: 0 0 2.5px 2.5px;
+  border-color: $border-color;
 }
 
 .choices__list {
@@ -200,11 +199,9 @@
     font-size: 12px;
     font-weight: 500;
     margin-right: 3.75px;
-    margin-bottom: 3.75px;
-    background-color: #00BCD4;
-    border: 1px solid #00a5bb;
+    background-color: $blue;
     color: $white;
-    word-break: break-all;
+    white-space: nowrap;
 
     &[data-deletable] {
       padding-right: 5px;
@@ -219,27 +216,25 @@
 
 .choices__list--multiple .choices__item.is-highlighted {
   background-color: #00a5bb;
-  border: 1px solid #008fa1;
+  border: 1px solid $border-color;
 }
 
 .is-disabled .choices__list--multiple .choices__item {
   background-color: #aaaaaa;
-  border: 1px solid #919191;
+  border: 1px solid $border-color;
 }
 
 .choices__list--dropdown {
   display: none;
   z-index: 1;
   position: absolute;
-  width: 100%;
-  background-color: $white;
+  width: auto;
+  background-color: $primary;
   border: 1px solid $border-color;
   top: 100%;
   margin-top: -1px;
-  border-bottom-left-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
   overflow: hidden;
-  word-break: break-all;
+  white-space: nowrap;
 
   &.is-active {
     display: block;
@@ -255,7 +250,6 @@
   bottom: 100%;
   margin-top: 0;
   margin-bottom: -1px;
-  border-radius: .25rem .25rem 0 0;
 }
 
 .choices__list--dropdown {
@@ -270,7 +264,7 @@
   .choices__item {
     position: relative;
     padding: 10px;
-    font-size: 14px;
+    font-size: 1rem;
   }
 }
 
@@ -306,7 +300,8 @@
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: $primary;
+  background-color: $blue;
+  color: $white;
 
   &::after {
     opacity: .5;
@@ -331,8 +326,8 @@
   font-weight: 600;
   font-size: 12px;
   padding: 10px;
-  border-bottom: 1px solid #f7f7f7;
-  color: gray;
+  border-bottom: 1px solid $body-color;
+  color: $link-color;
 }
 
 .choices__button {
@@ -354,12 +349,11 @@
   display: inline-block;
   vertical-align: baseline;
   background-color: $primary;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 1rem;
   border: 0;
-  border-radius: 0;
   max-width: 100%;
-  padding: 4px 0 4px 2px;
+  padding: 0;
+  color: $link-color;
 
   &:focus {
     outline: 0;
