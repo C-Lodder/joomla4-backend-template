@@ -1,14 +1,18 @@
 /* IcoMoon Conversion */
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+
+  &:before {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     speak: none;
-}
-[class^="icon-"].disabled,
-[class*=" icon-"].disabled {
+  }
+
+  .disabled {
     font-weight: normal;
+  }
 }
 
 .icon-generic:before {

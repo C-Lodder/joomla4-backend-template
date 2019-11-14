@@ -12,25 +12,31 @@ sass.compiler = require('node-sass');
 
 // Compile the SCSS
 gulp.task('sass', () =>
-	gulp.src([`./scss/template.scss`, `./scss/fonts/_fontawesome.scss`, `./scss/vendor/_bootstrap.scss`])
+	gulp.src([
+		`./scss/template.scss`,
+		`./scss/fonts/fontawesome.scss`,
+		`./scss/pages/login.scss`,
+		`./scss/pages/dashboard.scss`,
+		`./scss/pages/system.scss`,
+	])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(`./css`))
 );
 
 gulp.task('sass-joomla-installer', () =>
-	gulp.src([`./scss/joomla/installer.scss`])
+	gulp.src(`./scss/joomla/installer.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(`./css/com_installer`))
 );
 
 gulp.task('sass-vendor-minicolors', () =>
-	gulp.src([`./scss/vendor/minicolors.scss`])
+	gulp.src(`./scss/vendor/minicolors.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(`./css/vendor/minicolors`))
 );
 
 gulp.task('sass-vendor-choices', () =>
-	gulp.src([`./scss/vendor/choices.scss`])
+	gulp.src(`./scss/vendor/choices.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(`./css/vendor/choicesjs`))
 );

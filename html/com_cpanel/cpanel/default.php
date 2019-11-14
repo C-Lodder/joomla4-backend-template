@@ -20,6 +20,12 @@ Text::script('COM_CPANEL_UNPUBLISH_MODULE_SUCCESS');
 Text::script('COM_CPANEL_UNPUBLISH_MODULE_ERROR');
 
 HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', array('version' => 'auto', 'relative' => true));
+HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', array('version' => 'auto'));
+
+$input = Factory::getApplication()->input;
+if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') === 'system') {
+	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/system.css', array('version' => 'auto'));
+}
 
 $user = Factory::getUser();
 HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true]);

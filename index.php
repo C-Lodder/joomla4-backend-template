@@ -25,7 +25,7 @@ $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
 $cpanel     = $option === 'com_cpanel';
-$hiddenMenu = $app->input->get('hidemainmenu');
+$hiddenMenu = $input->get('hidemainmenu');
 $joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 HTMLHelper::_('bootstrap.framework');
@@ -40,6 +40,7 @@ $this->setMetaData('theme-color', '#495057');
 $monochrome = (bool) $this->params->get('monochrome');
 
 HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
@@ -123,6 +124,8 @@ foreach (array_keys($this->_styleSheets) as $style) {
 
 	<script>
 		const styles = <?php echo $cachesStyleSheets; ?>;
+		
+		console.log(styles);
 
 		styles.forEach(file => {
 			const link = document.body.appendChild(document.createElement('link'));

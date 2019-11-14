@@ -41,9 +41,6 @@
 @import "../../../../media/vendor/bootstrap/scss/utilities/overflow";
 @import "../../../../media/vendor/bootstrap/scss/utilities/screenreaders";
 
-// Fonts
-@import "fonts/fontawesome";
-
 // Alert
 @import "../../../../build/media_source/system/scss/jalert";
 
@@ -67,8 +64,3 @@
 @import "vendor/bootstrap";
 @import "vendor/codemirror";
 @import "vendor/dragula";
-
-// Pages
-@import "pages/login";
-@import "pages/dashboard";
-@import "pages/system";
