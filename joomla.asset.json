@@ -9,7 +9,7 @@
       "package": "choices.js",
       "name": "choicesjs",
       "type": "style",
-      "uri": "administrator/templates/bettum/css/vendor/choicesjs/choices.css"
+      "uri": "vendor/choicesjs/choices.min.css"
     },
     {
       "package": "choices.js",
