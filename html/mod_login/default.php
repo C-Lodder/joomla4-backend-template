@@ -56,7 +56,7 @@ Text::script('MESSAGE');
 					autocomplete="current-password"
 				>
 				<span class="input-group-append">
-					<button type="button" class="input-group-text icon-eye input-password-toggle">
+					<button type="button" class="input-group-text icon-eye input-password-toggle d-flex">
 						<span class="sr-only"><?php echo Text::_('JSHOW'); ?></span>
 					</button>
 				</span>

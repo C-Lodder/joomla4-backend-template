@@ -40,7 +40,6 @@ $this->setMetaData('theme-color', '#495057');
 
 $monochrome = (bool) $this->params->get('monochrome');
 
-HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'login.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
