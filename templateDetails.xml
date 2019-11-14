@@ -20,6 +20,7 @@
 		<filename>templateDetails.xml</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
+		<filename>joomla.asset.json</filename>
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
