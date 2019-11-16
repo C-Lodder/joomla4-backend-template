@@ -1,7 +1,7 @@
 // Bootstrap core
 @import "../../../../../media/vendor/bootstrap/scss/functions";
 @import "../../../../../media/vendor/bootstrap/scss/variables";
-@import "../../../../../media/vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/mixins";
 
 // Bettum Variables
 @import "../variables";
@@ -12,8 +12,7 @@
 @import "../../../../../media/vendor/bootstrap/scss/type";
 @import "../../../../../media/vendor/bootstrap/scss/images";
 @import "../../../../../media/vendor/bootstrap/scss/forms";
-@import "../../../../../media/vendor/bootstrap/scss/buttons";
-@import "../../../../../media/vendor/bootstrap/scss/transitions";
+@import "../vendor/bootstrap/buttons";
 @import "../../../../../media/vendor/bootstrap/scss/input-group";
 @import "../../../../../media/vendor/bootstrap/scss/custom-forms";
 @import "../../../../../media/vendor/bootstrap/scss/utilities/clearfix";

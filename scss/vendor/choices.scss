@@ -1,7 +1,7 @@
 // Bootstrap core
 @import "../../../../../media/vendor/bootstrap/scss/functions";
 @import "../../../../../media/vendor/bootstrap/scss/variables";
-@import "../../../../../media/vendor/bootstrap/scss/mixins";
+@import "bootstrap/mixins";
 
 // Bettum Variables
 @import "../variables";
@@ -175,7 +175,8 @@ joomla-field-fancy-select {
 
 .choices__list--single {
   display: inline-block;
-  padding: 4px 16px 4px 4px;
+  padding-right: 16px;
+  padding-left: 4px;
   width: 100%;
 }
 
@@ -199,7 +200,7 @@ joomla-field-fancy-select {
     font-size: 12px;
     font-weight: 500;
     margin-right: 3.75px;
-    background-color: $blue;
+    background-color: $blue-bg;
     color: $white;
     white-space: nowrap;
 
@@ -300,7 +301,7 @@ joomla-field-fancy-select {
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: $blue;
+  background-color: $blue-bg;
   color: $white;
 
   &::after {

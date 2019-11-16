@@ -1,0 +1,42 @@
+// Bootstrap core
+@import "../../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../../media/vendor/bootstrap/scss/variables";
+@import "bootstrap/mixins";
+
+// Bettum Variables
+@import "../variables";
+
+
+// Dragula
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: $zindex-popover !important;
+  cursor: move;
+  opacity: .8;
+  background-color: $teal;
+
+  &.table {
+    display: table;
+
+    td {
+      display: table-cell;
+    }
+  }
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: .2;
+}
+
+.js-draggable .sortable-handler {
+  cursor: move;
+}

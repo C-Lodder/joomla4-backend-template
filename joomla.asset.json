@@ -19,6 +19,11 @@
         "choicesjs#style",
         "choicesjs#script"
       ]
+    },
+    {
+      "name": "switcher",
+      "type": "style",
+      "uri": "system/fields/switcher.min.css"
     }
   ]
 }

@@ -1,7 +1,7 @@
 // Bootstrap core
 @import "../../../../media/vendor/bootstrap/scss/functions";
 @import "../../../../media/vendor/bootstrap/scss/variables";
-@import "../../../../media/vendor/bootstrap/scss/mixins";
+@import "vendor/bootstrap/mixins";
 
 // Bettum Variables
 @import "variables";
@@ -15,7 +15,7 @@
 @import "../../../../media/vendor/bootstrap/scss/grid";
 @import "../../../../media/vendor/bootstrap/scss/tables";
 @import "../../../../media/vendor/bootstrap/scss/forms";
-@import "../../../../media/vendor/bootstrap/scss/buttons";
+@import "vendor/bootstrap/buttons";
 @import "../../../../media/vendor/bootstrap/scss/transitions";
 @import "../../../../media/vendor/bootstrap/scss/dropdown";
 @import "../../../../media/vendor/bootstrap/scss/button-group";
@@ -34,6 +34,7 @@
 @import "../../../../media/vendor/bootstrap/scss/modal";
 @import "../../../../media/vendor/bootstrap/scss/tooltip";
 @import "../../../../media/vendor/bootstrap/scss/popover";
+@import "vendor/bootstrap/utilities";
 @import "../../../../media/vendor/bootstrap/scss/utilities/clearfix";
 @import "../../../../media/vendor/bootstrap/scss/utilities/display";
 @import "../../../../media/vendor/bootstrap/scss/utilities/flex";
@@ -52,12 +53,10 @@
 @import "blocks/modal";
 @import "blocks/treeselect";
 @import "blocks/quickicons";
-@import "blocks/switcher";
 @import "blocks/table";
 @import "blocks/tabs";
 @import "blocks/tooltip";
 @import "blocks/toolbar";
-@import "blocks/utilities";
 
 // Vendor Overrides
 @import "vendor/bootstrap";

@@ -29,6 +29,24 @@ gulp.task('sass-joomla-installer', () =>
 		.pipe(gulp.dest(`./css/com_installer`))
 );
 
+gulp.task('sass-joomla-media', () =>
+	gulp.src(`./scss/joomla/joomla-field-media.scss`)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/system/fields`))
+);
+
+gulp.task('sass-joomla-switcher', () =>
+	gulp.src(`./scss/joomla/switcher.scss`)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/system/fields`))
+);
+
+gulp.task('sass-joomla-calendar', () =>
+	gulp.src(`./scss/joomla/calendar.scss`)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/system/fields`))
+);
+
 gulp.task('sass-vendor-minicolors', () =>
 	gulp.src(`./scss/vendor/minicolors.scss`)
 		.pipe(sass().on('error', sass.logError))
@@ -39,6 +57,12 @@ gulp.task('sass-vendor-choices', () =>
 	gulp.src(`./scss/vendor/choices.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest(`./css/vendor/choicesjs`))
+);
+
+gulp.task('sass-vendor-dragula', () =>
+	gulp.src(`./scss/vendor/dragula.scss`)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/vendor/dragula`))
 );
 
 // Additional tasks to run on the compiled CSS file
@@ -54,7 +78,11 @@ gulp.task('postcss', () =>
 gulp.task('build', gulp.series(
 	'sass',
 	'sass-joomla-installer',
+	'sass-joomla-media',
+	'sass-joomla-switcher',
+	'sass-joomla-calendar',
 	'sass-vendor-minicolors',
 	'sass-vendor-choices',
+	'sass-vendor-dragula',
 	'postcss',
 ));

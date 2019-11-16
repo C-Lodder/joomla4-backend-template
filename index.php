@@ -124,8 +124,6 @@ foreach (array_keys($this->_styleSheets) as $style) {
 
 	<script>
 		const styles = <?php echo $cachesStyleSheets; ?>;
-		
-		console.log(styles);
 
 		styles.forEach(file => {
 			const link = document.body.appendChild(document.createElement('link'));
