@@ -43,8 +43,13 @@
   }
 
   &.success {
-    color: $green;
-    border: 1px solid $green;
+    color: $success;
+    border: 1px solid $success;
+  }
+
+  &.danger {
+    color: $danger;
+    border: 1px solid $danger;
   }
 }
 
