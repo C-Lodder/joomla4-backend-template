@@ -65,6 +65,12 @@ gulp.task('sass-vendor-dragula', () =>
 		.pipe(gulp.dest(`./css/vendor/dragula`))
 );
 
+gulp.task('sass-vendor-tabs', () =>
+	gulp.src(`./scss/vendor/custom-elements/joomla-tab.scss`)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(`./css/vendor/joomla-custom-elements`))
+);
+
 // Additional tasks to run on the compiled CSS file
 gulp.task('postcss', () =>
 	gulp.src(`./css/**/*.css`)
@@ -84,5 +90,6 @@ gulp.task('build', gulp.series(
 	'sass-vendor-minicolors',
 	'sass-vendor-choices',
 	'sass-vendor-dragula',
+	'sass-vendor-tabs',
 	'postcss',
 ));
