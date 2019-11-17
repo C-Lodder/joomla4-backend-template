@@ -18,8 +18,9 @@
     },
     {
       "name": "switcher",
-      "type": "style",
-      "uri": "system/fields/switcher.min.css"
+      "css": [
+        "system/fields/switcher.min.css"
+      ]
     }
   ]
 }
