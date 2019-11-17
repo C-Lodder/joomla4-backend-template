@@ -24,10 +24,7 @@ $option     = $input->get('option', '');
 $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
-$joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
-
-// Template params
-$loginLogo = $this->params->get('loginLogo')
+$logo       = $this->params->get('loginLogo')
 	? Uri::root() . $this->params->get('loginLogo')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
@@ -36,16 +33,12 @@ HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => t
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-$this->setMetaData('theme-color', '#495057');
-
-$monochrome = (bool) $this->params->get('monochrome');
+$this->setMetaData('theme-color', '#38383d');
 
 HTMLHelper::_('stylesheet', 'login.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
-
-$this->addStyleDeclaration('.no-fouc {display: none;}');
 
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
@@ -59,12 +52,12 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin no-fouc h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
 	<main class="content d-flex align-items-center justify-content-center h-100">
 		<div class="login">
 			<div class="main-brand text-center">
-				<img class="logo" src="<?php echo $loginLogo; ?>" alt="<?php echo htmlspecialchars($this->params->get('altLoginLogo', ''), ENT_COMPAT, 'UTF-8'); ?>">
-				<h1 class="mb-4"><?php echo Text::_('TPL_BETTUM_BACKEND_LOGIN'); ?></h1>
+				<img class="logo" src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_LOGIN_LOGO_LABEL'); ?>">
+				<h1><?php echo Text::_('TPL_BETTUM_BACKEND_LOGIN'); ?></h1>
 			</div>
 			<jdoc:include type="component" />
 		</div>
@@ -83,10 +76,6 @@ foreach (array_keys($this->_styleSheets) as $style) {
 			const link = document.body.appendChild(document.createElement('link'));
 			link.rel = 'stylesheet';
 			link.href = file;
-		});
-
-		window.addEventListener('load', () => {
-			document.body.classList.remove('no-fouc');
 		});
 	</script>
 </body>

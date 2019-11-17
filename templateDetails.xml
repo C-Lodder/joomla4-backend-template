@@ -60,30 +60,10 @@
 					label="TPL_BETTUM_SITE_LOGO_LABEL"
 				/>
 				<field
-					name="smallLogo"
-					type="media"
-					label="TPL_BETTUM_SITE_LOGO_SMALL_LABEL"
-				/>
-				<field
 					name="loginLogo"
 					type="media"
 					label="TPL_BETTUM_LOGIN_LOGO_LABEL"
 				 />
-				<field
-					name="altSiteLogo"
-					type="text"
-					label="TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL"
-				/>
-				<field
-					name="altSmallLogo"
-					type="text"
-					label="TPL_BETTUM_ALTTEXT_SMALL_LOGO_LABEL"
-				/>
-				<field
-					name="altLoginLogo"
-					type="text"
-					label="TPL_BETTUM_ALTTEXT_LOGIN_LOGO_LABEL"
-				/>
 			</fieldset>
 		</fields>
 	</config>
