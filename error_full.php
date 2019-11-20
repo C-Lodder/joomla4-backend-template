@@ -24,9 +24,6 @@ $option     = $input->get('option', '');
 $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
-$cpanel     = $option === 'com_cpanel';
-$hiddenMenu = $app->input->get('hidemainmenu');
-$joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 HTMLHelper::_('bootstrap.framework');
 
@@ -35,9 +32,7 @@ HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => t
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-$this->setMetaData('theme-color', '#495057');
-
-$monochrome = (bool) $this->params->get('monochrome');
+$this->setMetaData('theme-color', '#38383d');
 
 HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
@@ -56,7 +51,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
 	<?php // Header ?>
 	<header id="header" class="header">
 		<jdoc:include type="modules" name="menu" style="none" />

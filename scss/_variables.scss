@@ -3,11 +3,21 @@
 $enable-rounded:              false;
 
 
-
 // Colours
-$blue:                        #0056B3;
+$blue-bg:                     #0071eb;
+$red-bg:                      #cd2337;
+$green-bg:                    #1f7F37;
+$cyan-bg:                     #117c8d;
+
+$blue:                        #52a5ff;
+$red:                         #ea8591;
+$green:                       #2db950;
+$cyan:                        #19b4cc;
+
 $primary:                     #38383d;
 $secondary:                   #2a2a2e;
+$danger:                      $red;
+$success:                     $green;
 $tertiary:                    #1c1c1c;
 $border-color:                #4c4c51;
 $dark-text-color:             #ccc;
@@ -15,10 +25,10 @@ $dark-text-color:             #ccc;
 $theme-colors: (
   primary: $primary,
   secondary: darken($secondary, 6%),
-  success: $green,
-  info: $cyan,
+  success: $green-bg,
+  info: $cyan-bg,
   warning: $yellow,
-  danger: $red,
+  danger: $red-bg,
   light: $tertiary,
   dark: $gray-800
 );
@@ -29,8 +39,14 @@ $link-hover-color:            lighten($body-color, 10%);
 $component-active-bg:         $tertiary;
 
 
+// Customize the light and dark text colors for use in the YIQ color contrast function
+//$yiq-contrasted-threshold:    100;
+//$yiq-text-dark:               $primary;
+//$yiq-text-light:              $white;
+
 
 // Headings
+$content-font-size:           .875rem;
 $h1-font-size:                $font-size-base * 1.5;
 $h2-font-size:                $font-size-base * 1.2;
 $h3-font-size:                $font-size-base * 1.75;
@@ -120,7 +136,7 @@ $pagination-hover-bg:               $primary;
 $pagination-hover-border-color:     $border-color;
 
 $pagination-active-color:           $component-active-color;
-$pagination-active-bg:              $blue;
+$pagination-active-bg:              $blue-bg;
 $pagination-active-border-color:    $border-color;
 
 $pagination-disabled-color:         $link-color;
@@ -136,6 +152,21 @@ $modal-content-border-color:        $border-color;
 
 $modal-header-border-color:         $border-color;
 $modal-footer-border-color:         $border-color;
+
+
+
+// Popovers
+$popover-font-size:                 $font-size-sm;
+$popover-bg:                        $primary;
+$popover-border-color:              $border-color;
+
+$popover-header-bg:                 $secondary;
+$popover-header-color:              $body-color;
+
+$popover-body-color:                $body-color;
+
+$popover-arrow-color:               $body-color;
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05);
 
 
 

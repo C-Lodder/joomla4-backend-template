@@ -1,0 +1,153 @@
+// Bootstrap core
+@import "../../../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../../../media/vendor/bootstrap/scss/variables";
+@import "../bootstrap/mixins";
+
+// Bettum Variables
+@import "../../variables";
+
+
+joomla-tab {
+  display: flex;
+  flex-direction: column;
+
+  > ul {
+    display: flex;
+    background-color: $primary;
+    border-color: $border-color $border-color currentcolor;
+    border-image: none;
+    border-radius: .25rem .25rem 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    margin: 0;
+    padding: 0;
+    list-style: outside none none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  a[role=tab] {
+    display: block;
+    color: $body-color;
+    padding: .75em 1em;
+    position: relative;
+    box-shadow: 1px 0 0 rgba($black, .05);
+    text-decoration: none;
+
+    &[active] {
+      background-color: rgba($black, .03);
+      background-image: linear-gradient(to bottom, transparent, rgba($black, .05) 100%);
+      border-left: 0 none;
+      border-right: 0 none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
+
+      &::after {
+        background-color: $blue;
+        bottom: -1px;
+        content: "";
+        height: 5px;
+        left: 0;
+        opacity: .8;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  > section {
+    position: relative;
+    display: none;
+    background-color: $secondary;
+    border: 1px solid $border-color;
+    border-radius: 0 0 .25rem .25rem;
+    box-shadow: 0 0 3px rgba($black, .04);
+    padding: 15px;
+
+    &[active] {
+      display: block;
+    }
+  }
+}
+
+joomla-tab[orientation=vertical] {
+  flex-direction: row;
+  align-items: flex-start;
+
+  > ul {
+    flex-direction: column;
+    min-width: 30%;
+    height: auto;
+    border: 1px solid $border-color;
+    border-radius: .25rem;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  li:last-of-type a {
+    border-bottom: 0;
+  }
+
+  a {
+    display: block;
+    color: $body-color;
+    padding: .75em 1em;
+    position: relative;
+    border-bottom: 1px solid $border-color;
+    box-shadow: none;
+    text-decoration: none;
+
+    &[active] {
+      border-left: 0 none;
+      border-right: 0 none;
+      background-color: rgba($black, .03);
+      background-image: none;
+      box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
+
+      &::after {
+        left: -1px;
+        width: 5px;
+        height: auto;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  > section {
+    border: 0 none;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  > ul {
+    flex-direction: column;
+    border-radius: .25rem;
+    white-space: normal;
+    box-shadow: 0 1px $white inset, 0 0 3px rgba($black, .04);
+  }
+}
+
+
+joomla-tab[view=accordion] section {
+  display: none;
+  padding: 15px;
+
+  &[active] {
+    display: block;
+    border-bottom: 1px solid $border-color;
+  }
+
+  a[role=tab] {
+    border-bottom: 1px solid $border-color;
+
+	&[active]:after {
+      width: 5px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

@@ -29,4 +29,20 @@
       border-color: $gray-400;
     }
   }
+
+  .icon-featured {
+    color: $yellow !important;
+    border-color: $yellow !important;
+  }
+
+  .icon-unpublish,
+  .icon-checkedout {
+    color: $red !important;
+    border-color: $red !important;
+  }
+
+  .icon-publish {
+    color: $green !important;
+    border-color: $green !important;
+  }
 }

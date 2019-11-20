@@ -14,9 +14,12 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 
-$siteLogo  = Uri::root(true) . '/administrator/templates/' . Factory::getApplication()->getTemplate() . '/images/logo-white.svg';
+$app  = Factory::getApplication();
+$logo = $app->getTemplate(true)->params->get('siteLogo')
+	? Uri::root() . $app->getTemplate(true)->params->get('siteLogo')
+	: Uri::root(true) . '/administrator/templates/' . $app->getTemplate() . '/images/logo-sm.svg';
 
-$hideLinks = Factory::getApplication()->input->getBool('hidemainmenu');
+$hideLinks = $app->input->getBool('hidemainmenu');
 $href = $hideLinks ? '#' : Route::_('index.php');
 
 // Recurse through children of root node if they exist
@@ -24,7 +27,7 @@ if ($root->hasChildren()) : ?>
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<a class="navbar-brand" href="<?php echo $href; ?>">
-			<img src="<?php echo $siteLogo; ?>" width="30" height="30" alt="Logo">
+			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<div class="collapse navbar-collapse" id="topMenu">
 			<ul id="menu" class="navbar-nav mr-auto">

@@ -26,9 +26,14 @@ gulp.task('sass-core', () =>
 // Vendor and other CSS overrides
 gulp.task('sass-vendor', async () => {
 	const files = {
-		'./scss/joomla/installer.scss'  : './css/com_installer',
+		'./scss/joomla/joomla-field-media.scss' : './css/system/fields',
+		'./scss/joomla/switcher.scss' : './css/system/fields',
+		'./scss/joomla/calendar.scss' : './css/system/fields',
+		'./scss/joomla/installer.scss' : './css/com_installer',
 		'./scss/vendor/minicolors.scss' : './css/vendor/minicolors',
-		'./scss/vendor/choices.scss'    : './css/vendor/choicesjs',
+		'./scss/vendor/choices.scss' : './css/vendor/choicesjs',
+		'./scss/vendor/dragula.scss' : './css/vendor/dragula',
+		'./scss/vendor/custom-elements/joomla-tab.scss' : './css/vendor/joomla-custom-elements',
 	};
 
 	return Object.entries(files).forEach(([file, dist]) => {

@@ -24,9 +24,9 @@ $option     = $input->get('option', '');
 $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
-$cpanel     = $option === 'com_cpanel';
-$hiddenMenu = $app->input->get('hidemainmenu');
-$joomlaLogo = $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
+$logo       = $this->params->get('loginLogo')
+	? Uri::root() . $this->params->get('loginLogo')
+	: $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 HTMLHelper::_('bootstrap.framework');
 
@@ -35,9 +35,7 @@ HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => t
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
-$this->setMetaData('theme-color', '#495057');
-
-$monochrome = (bool) $this->params->get('monochrome');
+$this->setMetaData('theme-color', '#38383d');
 
 HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
@@ -56,7 +54,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="metas" />
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($monochrome ? ' monochrome' : ''); ?>">
+<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout; ?>">
 	<?php // Header ?>
 	<header id="header" class="header">
 		<jdoc:include type="modules" name="menu" style="none" />
@@ -82,7 +80,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 					<div id="element-box" class="card">
 						<div class="card-body">
 							<div class="main-brand d-flex align-items-center justify-content-center">
-								<img src="<?php echo $joomlaLogo; ?>" alt="">
+								<img class="logo" src="<?php echo $loginLogo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_LOGIN_LOGO_LABEL'); ?>">
 							</div>
 							<h1><?php echo Text::_('JERROR_AN_ERROR_HAS_OCCURRED'); ?></h1>
 							<jdoc:include type="message" />

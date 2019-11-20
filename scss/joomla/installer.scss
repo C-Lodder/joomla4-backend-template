@@ -1,12 +1,13 @@
 // Bootstrap core
 @import "../../../../../media/vendor/bootstrap/scss/functions";
 @import "../../../../../media/vendor/bootstrap/scss/variables";
-@import "../../../../../media/vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/mixins";
 
 // Bettum Variables
 @import "../variables";
 
 
+// Installer
 #loading {
   position: fixed;
   background-image: url(../../system/images/ajax-loader.gif);
