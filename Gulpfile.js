@@ -10,7 +10,13 @@ const cssnano      = require('cssnano');
 
 sass.compiler = require('node-sass');
 
-// Compile the SCSS
+const postcssPipe = () => 
+	postcss([
+		autoprefixer(),
+		cssnano()
+	]);
+
+// Compile the core template SCSS
 gulp.task('sass-core', () =>
 	gulp.src([
 		`./scss/template.scss`,
@@ -20,11 +26,12 @@ gulp.task('sass-core', () =>
 		`./scss/pages/system.scss`,
 	])
 		.pipe(sass().on('error', sass.logError))
+		.pipe(postcssPipe())
 		.pipe(gulp.dest(`./css`))
 );
 
-// Vendor and other CSS overrides
-gulp.task('sass-vendor', async () => {
+// Compile vendor and Joomla SCSS overrides
+gulp.task('sass-vendor', async() => {
 	const files = {
 		'./scss/joomla/joomla-field-media.scss' : './css/system/fields',
 		'./scss/joomla/switcher.scss' : './css/system/fields',
@@ -36,25 +43,16 @@ gulp.task('sass-vendor', async () => {
 		'./scss/vendor/custom-elements/joomla-tab.scss' : './css/vendor/joomla-custom-elements',
 	};
 
-	return Object.entries(files).forEach(([file, dist]) => {
-		return gulp.src(`${file}`)
+	return Object.entries(files).forEach(([file, dest]) =>
+		gulp.src(`${file}`)
 			.pipe(sass().on('error', sass.logError))
-			.pipe(gulp.dest(`${dist}`))
-	});
+			.pipe(postcssPipe())
+			.pipe(gulp.dest(`${dest}`))
+	);
 });
 
-// Additional tasks to run on the compiled CSS file
-gulp.task('postcss', () =>
-	gulp.src(`./css/**/*.css`)
-		.pipe(postcss([
-			autoprefixer(),
-			cssnano()
-		]))
-		.pipe(gulp.dest(`./css`))
-);
-
+// Global build task consisting of all sub-tasks
 gulp.task('build', gulp.series(
 	'sass-core',
 	'sass-vendor',
-	'postcss',
 ));
