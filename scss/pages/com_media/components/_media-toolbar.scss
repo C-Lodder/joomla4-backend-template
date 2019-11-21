@@ -7,8 +7,9 @@
   border-radius: $border-radius $border-radius 0 0;
   input {
     padding: .375rem .75rem;
-    color: #495057;
-    border: 1px solid #ced4da;
+    color: $input-color;
+    border: 1px solid $input-border-color;
+    background-color: $input-bg;
   }
 }
 
@@ -17,12 +18,11 @@
   width: $toolbar-icon-width;
   font-size: 1.3rem;
   line-height: $toolbar-height;
-  color: #464a4c;
+  color: $body-color;
   text-align: center;
   background-color: transparent;
   border: 0;
   border-left: 1px solid $border-color;
-  box-shadow: 1px 0 #fefefe inset;
   &:hover {
     background-color: $toolbar-icon-bg-hover;
     box-shadow: none;

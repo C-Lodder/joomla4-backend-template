@@ -17,7 +17,7 @@
     line-height: $info-title-height;
     word-wrap: break-word;
     background-color: $info-title-bg;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $border-color;
   }
   dl {
     display: flex;
@@ -34,7 +34,7 @@
   }
   dt {
     font-weight: normal;
-    color: rgba(0, 0, 0, .54);
+    color: $body-color;
   }
 }
 
@@ -62,8 +62,8 @@
   margin: 20px auto 15px;
   font-size: 2rem;
   line-height: calc(4rem - 4px);
-  color: #ccc;
-  border: 2px solid #ccc;
+  color: $body-color;
+  border: 2px solid $border-color;
   border-radius: 50%;
 }
 

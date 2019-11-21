@@ -98,7 +98,7 @@ ul.media-tree {
 .media-tree-item.active > a {
   &:hover {
     text-decoration: none;
-    background-color: $sidebar-tree-item-hover-bg;
+    color: $link-hover-color;
   }
 }
 

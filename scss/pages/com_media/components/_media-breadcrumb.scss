@@ -30,6 +30,9 @@
     &::after {
       border-left-color: $breadcrumbs-current-bg;
     }
+    a {
+      color: $white;
+    }
   }
   &:hover {
     color: $highlight-color;
@@ -82,7 +85,7 @@ html[dir=rtl] .media-breadcrumb-item {
 }
 
 html[dir=rtl] .media-breadcrumb-item::before {
-  border-right-color: #fafafa;
+  border-right-color: $border-color;
 }
 
 html[dir=rtl] .media-breadcrumb-item:first-of-type {
@@ -91,5 +94,5 @@ html[dir=rtl] .media-breadcrumb-item:first-of-type {
 }
 
 html[dir=rtl] .media-breadcrumb-item:last-of-type::after {
-  border-right: 10px solid #fff;
+  border-right: 10px solid $border-color;
 }
