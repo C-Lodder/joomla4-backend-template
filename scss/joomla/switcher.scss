@@ -8,15 +8,15 @@
 
 
 // Switcher
-$off-background-colour: lightgrey;
-$on-background-colour: #2f7d32;
+$off-background-colour: #f0f0f0;
+$on-background-colour: $green;
 $switcher-width:  62px;
-$switcher-height: 28px;
+$switcher-height: 32px;
 
 .switcher {
   position: relative;
   width: 18rem;
-  height: 28px;
+  height: $switcher-height;
   float: left;
 }
 
@@ -79,12 +79,13 @@ $switcher-height: 28px;
 .switcher .toggle-outside {
   height: 100%;
   overflow: hidden;
-  transition: 0.2s ease all;
+  transition: .2s ease all;
   background: $off-background-colour;
   position: absolute;
-  width: 58px;
+  width: $switcher-width;
   box-sizing: border-box;
   border: 1px solid rgba($black, .18);
+  border-radius: 2rem;
   left: 0;
 
   [dir=rtl] & {
@@ -98,16 +99,19 @@ $switcher-height: 28px;
 }
 
 .switcher .toggle-inside {
-  height: $switcher-height;
+  height: $switcher-height - 4;
   width: ($switcher-width - 6) / 2;
-  background: $white;
+  background: $secondary;
   position: absolute;
-  left: 0;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
   transition: .4s ease all;
 }
 
 .switcher input ~ input:checked ~ .toggle-outside .toggle-inside {
-  left: ($switcher-width / 2) - 1;
+  left: $switcher-width / 2;
+  background: $white;
 }
 
 .switcher__legend {
