@@ -41,6 +41,7 @@ gulp.task('sass-vendor', async() => {
 		'./scss/vendor/choices.scss' : './css/vendor/choicesjs',
 		'./scss/vendor/dragula.scss' : './css/vendor/dragula',
 		'./scss/vendor/custom-elements/joomla-tab.scss' : './css/vendor/joomla-custom-elements',
+		'./scss/pages/com_media/mediamanager.scss' : './css/com_media',
 	};
 
 	return Object.entries(files).forEach(([file, dest]) =>
