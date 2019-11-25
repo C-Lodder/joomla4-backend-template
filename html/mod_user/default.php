@@ -31,10 +31,6 @@ $hideLinks = $app->input->getBool('hidemainmenu');
 			<span class="fa fa-user"></span>
 			<?php echo Text::_('MOD_USER_EDIT_ACCOUNT'); ?>
 		</a>
-		<a class="dropdown-item" href="#">
-			<span class="fa fa-universal-access"></span>
-			<?php echo Text::_('MOD_USER_ACCESSIBILITY_SETTINGS'); ?>
-		</a>
 		<?php $route = 'index.php?option=com_login&task=logout&amp;' . Session::getFormToken() . '=1'; ?>
 		<a class="dropdown-item" href="<?php echo Route::_($route); ?>">
 			<span class="fa fa-power-off"></span>
