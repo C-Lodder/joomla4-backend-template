@@ -56,7 +56,7 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<header id="header" class="header">
 		<jdoc:include type="modules" name="menu" style="none" />
 
-		<div class="nav-scroller bg-white shadow-sm">
+		<div class="nav-scroller">
 			<nav class="nav nav-underline justify-content-end mb-3">
 				<jdoc:include type="modules" name="title" />
 				<div class="d-flex align-items-center justify-content-end px-3">
