@@ -19,12 +19,12 @@ HTMLHelper::_('behavior.core');
 Text::script('COM_CPANEL_UNPUBLISH_MODULE_SUCCESS');
 Text::script('COM_CPANEL_UNPUBLISH_MODULE_ERROR');
 
-HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', array('version' => 'auto', 'relative' => true));
-HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', array('version' => 'auto'));
+HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', ['version' => 'auto']);
 
 $input = Factory::getApplication()->input;
 if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') === 'system') {
-	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/system.css', array('version' => 'auto'));
+	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/system.css', ['version' => 'auto']);
 }
 
 $user = Factory::getUser();
@@ -38,8 +38,8 @@ echo HTMLHelper::_(
 		'title'       => Text::_('COM_CPANEL_ADD_MODULE_MODAL_TITLE'),
 		'backdrop'    => 'static',
 		'url'         => Route::_('index.php?option=com_cpanel&task=addModule&function=jSelectModuleType&position=' . $this->escape($this->position)),
-		'bodyHeight'  => '70',
-		'modalWidth'  => '80',
+		'bodyHeight'  => 70,
+		'modalWidth'  => 80,
 		'footer'      => '<button type="button" class="button-cancel btn btn-sm btn-danger" data-dismiss="modal" data-target="#closeBtn" aria-hidden="true"><span class="icon-cancel" aria-hidden="true"></span>'
 			. Text::_('JLIB_HTML_BEHAVIOR_CLOSE') . '</button>'
 			. '<button type="button" class="button-save btn btn-sm btn-success hidden" data-target="#saveBtn" aria-hidden="true"><span class="icon-save" aria-hidden="true"></span>'
@@ -49,25 +49,21 @@ echo HTMLHelper::_(
 ?>
 <div id="cpanel-modules">
 	<?php if ($this->quickicons) : ?>
-	<div class="cpanel-modules <?php echo $this->position; ?>-quickicons">
-		<?php // Display the icon position modules
-			foreach ($this->quickicons as $iconmodule)
-			{
-				echo ModuleHelper::renderModule($iconmodule, array('style' => 'well'));
-			}
-		?>
-	</div>
+		<div class="cpanel-modules <?php echo $this->position; ?>-quickicons">
+			<?php // Display the icon position modules ?>
+			<?php foreach ($this->quickicons as $iconmodule) : ?>
+				<?php echo ModuleHelper::renderModule($iconmodule, array('style' => 'well')); ?>
+			<?php endforeach; ?>
+		</div>
 	<?php endif; ?>
 
 	<div class="cpanel-modules <?php echo $this->position; ?>">
 		<div class="card-columns">
 
-		<?php
-		foreach ($this->modules as $module)
-		{
-			echo ModuleHelper::renderModule($module, array('style' => 'well'));
-		}
-		?>
+		<?php foreach ($this->modules as $module) : ?>
+			<?php echo ModuleHelper::renderModule($module, array('style' => 'well')); ?>
+		<?php endforeach; ?>
+
 		<?php if ($user->authorise('core.create', 'com_modules')) : ?>
 
 		</div>
