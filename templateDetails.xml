@@ -58,12 +58,12 @@
 				<field
 					name="menu"
 					type="radio"
-					label="Navigation position"
+					label="TPL_BETTUM_NAVIGATION_POSITION"
 					class="switcher"
 					default="1"
 					>
-					<option value="0">Top</option>
-					<option value="1">Sidebar</option>
+					<option value="0">TPL_BETTUM_NAVIGATION_TOP</option>
+					<option value="1">TPL_BETTUM_NAVIGATION_SIDEBAR</option>
 				</field>
 				<field
 					name="siteLogo"
