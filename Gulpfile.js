@@ -24,6 +24,7 @@ gulp.task('sass-core', () =>
 		`./scss/pages/login.scss`,
 		`./scss/pages/dashboard.scss`,
 		`./scss/pages/system.scss`,
+		`./scss/blocks/sidebar_nav.scss`,
 	])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcssPipe())

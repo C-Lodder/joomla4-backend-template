@@ -1,0 +1,129 @@
+// Bootstrap core
+@import "../../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../../media/vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/mixins";
+
+// Bettum Variables
+@import "../variables";
+
+
+// Sidebar Nav
+.sidebar {
+  background-color: $sidebar-bg;
+
+  @include media-breakpoint-down(md) {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: $sidebar-width;
+	height: 100%;
+	z-index: 1045;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	transform: translateX(-$sidebar-width);
+  }
+
+  @include media-breakpoint-down(md) {
+    &.show {
+      transform: translateX(-0);
+      transition: .3s ease-in-out;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: $sidebar-width;
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: .5rem .7rem;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .fa,
+    .fas {
+      margin-right: 1rem; 
+    }
+  }
+
+  .navbar-nav > li > a[aria-expanded=true],
+  .navbar-nav > li > a:hover {
+    background-color: $primary;
+    transition: background-color .3s ease-in-out;
+  }
+
+  .navbar-nav > li > a::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    content: "";
+    background-color: $sidebar-bg;
+    transition: background-color .3s ease-in-out; 
+  }
+
+  .navbar-nav > li > a[aria-expanded=true]::before,
+  .navbar-nav > li > a:hover::before {
+    background-color: $blue-bg;
+    transition: background-color .3s ease-in-out; 
+  }
+
+  .collapse-level-1 {
+    background-color: darken($secondary, 5%);
+
+    a {
+      padding-left: 2rem;
+      font-size: .95rem;
+    }
+  }
+
+  .collapse-level-2 {
+    background-color: darken($secondary, 10%);
+
+    a {
+      padding-left: 3rem;
+      font-size: .9rem;
+    }
+  }
+
+  .navbar-brand {
+    padding: 1rem;
+    margin-right: 0;
+  }
+}
+
+.navbar-toggler {
+  position: relative;
+  z-index: 1045;
+  color: $body-color;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    display: grid;
+    grid-template-columns: 0 $sidebar-width minmax($sidebar-width, 1fr);
+  }
+}

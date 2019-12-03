@@ -15,7 +15,6 @@ joomla-tab {
     display: flex;
     background-color: $primary;
     border-color: $border-color $border-color currentcolor;
-    border-image: none;
     border-radius: .25rem .25rem 0 0;
     border-style: solid solid none;
     border-width: 1px 1px 0;
@@ -132,23 +131,29 @@ joomla-tab[orientation=vertical] {
 }
 
 
-joomla-tab[view=accordion] section {
-  display: none;
-  padding: 15px;
-
-  &[active] {
-    display: block;
-    border-bottom: 1px solid $border-color;
+joomla-tab[view=accordion] {
+  ul {
+    flex-direction: column;
   }
 
-  a[role=tab] {
-    border-bottom: 1px solid $border-color;
+  section {
+    display: none;
+    padding: 15px;
 
-	&[active]:after {
-      width: 5px;
-      height: 100%;
-      top: 0;
-      left: 0;
+    &[active] {
+      display: block;
+      border-bottom: 1px solid $border-color;
+    }
+
+    a[role=tab] {
+      border-bottom: 1px solid $border-color;
+
+	  &[active]::after {
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }

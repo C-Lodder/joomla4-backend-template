@@ -11,7 +11,7 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
 ?>
-<a class="nav-link" href="<?php echo Uri::root(); ?>"
+<a class="d-none d-lg-inline-block nav-link" href="<?php echo Uri::root(); ?>"
 	title="<?php echo Text::sprintf('MOD_FRONTEND_PREVIEW', $sitename); ?>"
 	target="_blank">
 	<div class="align-items-center tiny">

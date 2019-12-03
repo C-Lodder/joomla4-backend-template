@@ -24,17 +24,19 @@
         attributeFilter: ['class']
       });
     });
-	
-	// Accordion
-    // const cpanelAccordion = document.getElementById('cpanelAccordion');
-    // if (cpanelAccordion) {
-      // const firstCpanelAccordion = cpanelAccordion.querySelector('.card');
-      // firstCpanelAccordion.querySelectorAll('[aria-expanded]').forEach((aria) => {
-        // aria.setAttribute('aria-expanded', true);
-      // });
 
-      // firstCpanelAccordion.querySelector('.collapse').classList.add('show');
-    // }
+    const navbarToggle = document.getElementById('navbar-toggler');
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        if (sidebar.classList.contains('show')) {
+          navbarToggle.setAttribute('aria-expanded', true);
+        } else {
+          navbarToggle.setAttribute('aria-expanded', false);
+        }
+      });
+    }
 
   });
 

@@ -56,6 +56,16 @@
 		<fields name="params">
 			<fieldset name="colors" label="TPL_BETTUM_SETTINGS">
 				<field
+					name="menu"
+					type="radio"
+					label="Navigation position"
+					class="switcher"
+					default="1"
+					>
+					<option value="0">Top</option>
+					<option value="1">Sidebar</option>
+				</field>
+				<field
 					name="siteLogo"
 					type="media"
 					label="TPL_BETTUM_SITE_LOGO_LABEL"
@@ -64,7 +74,7 @@
 					name="loginLogo"
 					type="media"
 					label="TPL_BETTUM_LOGIN_LOGO_LABEL"
-				 />
+				/>
 			</fieldset>
 		</fields>
 	</config>

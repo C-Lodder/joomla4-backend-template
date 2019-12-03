@@ -15,6 +15,7 @@ use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 
 $app  = Factory::getApplication();
+$isSidebarNav = $app->getTemplate(true)->params->get('menu', 1) ? true : false;
 $logo = $app->getTemplate(true)->params->get('siteLogo')
 	? Uri::root() . $app->getTemplate(true)->params->get('siteLogo')
 	: Uri::root(true) . '/administrator/templates/' . $app->getTemplate() . '/images/logo-sm.svg';
@@ -22,8 +23,21 @@ $logo = $app->getTemplate(true)->params->get('siteLogo')
 $hideLinks = $app->input->getBool('hidemainmenu');
 $href = $hideLinks ? '#' : Route::_('index.php');
 
+HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true]);
+
 // Recurse through children of root node if they exist
-if ($root->hasChildren()) : ?>
+?>
+<?php if ($isSidebarNav && $root->hasChildren()) : ?>
+	<?php HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/sidebar_nav.css', ['version' => 'auto']); ?>
+	<nav aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
+		<a class="navbar-brand text-center" href="<?php echo $href; ?>">
+			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
+		</a>
+		<ul id="collapse" class="navbar-nav">
+			<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu_sidebar'), $root); ?>
+		</ul>
+	</nav>
+<?php elseif (!$isSidebarNav && $root->hasChildren()) : ?>
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<a class="navbar-brand" href="<?php echo $href; ?>">

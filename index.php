@@ -28,9 +28,6 @@ $cpanel     = $option === 'com_cpanel';
 
 HTMLHelper::_('bootstrap.framework');
 
-// Load specific template related JS
-HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
-
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#38383d');
@@ -45,6 +42,8 @@ $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 foreach (array_keys($this->_styleSheets) as $style) {
 	unset($this->_styleSheets[$style]);
 }
+
+$isSidebarNav = $this->params->get('menu', 1) ? true : false;
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -53,22 +52,44 @@ foreach (array_keys($this->_styleSheets) as $style) {
 	<jdoc:include type="styles" />
 </head>
 <body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
-	<?php // Header ?>
-	<header id="header" class="header">
-		<jdoc:include type="modules" name="menu" style="none" />
+	<?php if (!$isSidebarNav) : ?>
+		<?php // Header ?>
+		<header id="header" class="header">
+			<jdoc:include type="modules" name="menu" style="none" />
+			<div class="nav-scroller">
+				<nav class="nav nav-underline justify-content-between mb-3">
+					<jdoc:include type="modules" name="title" />
+					<div class="d-flex align-items-center justify-content-end px-3">
+						<jdoc:include type="modules" name="status" style="none" />
+					</div>
+				</nav>
+			</div>
+		</header>
+	<?php endif; ?>
 
-		<div class="nav-scroller">
-			<nav class="nav nav-underline justify-content-between mb-3">
-				<jdoc:include type="modules" name="title" />
-				<div class="d-flex align-items-center justify-content-end px-3">
-					<jdoc:include type="modules" name="status" style="none" />
-				</div>
-			</nav>
+	<?php if ($isSidebarNav) : ?>
+		<div id="sidebar" class="sidebar">
+			<jdoc:include type="modules" name="menu" style="none" />
 		</div>
-	</header>
+	<?php endif; ?>
 
 	<?php // Wrapper ?>
-	<div id="wrapper" class="d-flex">
+	<div id="wrapper" class="wrapper<?php $isSidebarNav ? '' : ' d-flex'; ?>">
+		<?php if ($isSidebarNav) : ?>
+			<?php // Header ?>
+			<header id="header" class="header">
+				<div class="nav-scroller">
+					<nav class="nav nav-underline justify-content-between mb-3">
+						<jdoc:include type="modules" name="title" />
+						<div class="d-flex align-items-center justify-content-end px-3">
+							<jdoc:include type="modules" name="status" style="none" />
+							<button id="navbar-toggler" class="navbar-toggler d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+						</div>
+					</nav>
+				</div>
+			</header>
+		<?php endif; ?>
+
 		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<?php if (!$cpanel) : ?>
