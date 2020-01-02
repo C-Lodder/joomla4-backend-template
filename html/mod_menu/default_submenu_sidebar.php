@@ -31,7 +31,7 @@ elseif ($current->type === 'separator')
 }
 elseif ($current->hasChildren())
 {
-	if ($current->get('class') === 'scrollable-menu')
+	if ($current->class === 'scrollable-menu')
 	{
 		$class = 'dropdown scrollable-menu';
 	}
@@ -70,7 +70,7 @@ if ($current->hasChildren())
 $linkClass = ' class="' . implode(' ', $linkClass) . '" ';
 
 // Get the menu link
-$link      = $current->get('link');
+$link      = $current->link;
 
 // Get the menu icon
 $icon      = $this->getIconClass($current);
@@ -88,7 +88,7 @@ elseif ($link != '')
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }
-elseif ($current->title != '' && $current->get('class') !== 'separator')
+elseif ($current->title != '' && $current->class !== 'separator')
 {
 	echo '<a' . $linkClass . $dataToggle . '>'
 		. $iconClass

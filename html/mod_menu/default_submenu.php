@@ -32,7 +32,7 @@ elseif ($current->hasChildren())
 	{
 		$class = ' class="nav-item dropdown"';
 	}
-	elseif ($current->get('class') === 'scrollable-menu')
+	elseif ($current->class === 'scrollable-menu')
 	{
 		$class = ' class="nav-item dropdown scrollable-menu"';
 	}
@@ -80,7 +80,7 @@ else if ($current->level > 1)
 $linkClass = ' class="' . implode(' ', $linkClass) . '" ';
 
 // Get the menu link
-$link      = $current->get('link');
+$link      = $current->link;
 
 if ($link != '' && $current->target != '')
 {
@@ -90,7 +90,7 @@ elseif ($link != '')
 {
 	echo "<a" . $linkClass . $dataToggle . " href=\"" . $link . "\">" . Text::_($current->title) . '</a>';
 }
-elseif ($current->title != '' && $current->get('class') !== 'separator')
+elseif ($current->title != '' && $current->class !== 'separator')
 {
 	echo "<a" . $linkClass . $dataToggle . ">" . Text::_($current->title) . '</a>';
 }
@@ -104,7 +104,7 @@ if ($this->enabled && $current->hasChildren())
 {
 	if ($current->level > 1)
 	{
-		$id = $current->get('id') ? ' id="menu-' . strtolower($current->get('id')) . '"' : '';
+		$id = $current->id ? ' id="menu-' . strtolower($current->id) . '"' : '';
 
 		echo '<ul' . $id . ' class="dropdown-menu collapse-level-' . $current->level . '">' . "\n";
 	}
