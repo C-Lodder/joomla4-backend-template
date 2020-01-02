@@ -28,7 +28,7 @@ HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'rel
 // Recurse through children of root node if they exist
 ?>
 <?php if ($isSidebarNav && $root->hasChildren()) : ?>
-	<?php HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/sidebar_nav.css', ['version' => 'auto']); ?>
+	<?php HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/sidebar_nav' . (Factory::getDocument()->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto']); ?>
 	<nav aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<a class="navbar-brand text-center" href="<?php echo $href; ?>">
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">

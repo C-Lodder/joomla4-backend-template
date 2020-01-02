@@ -5,6 +5,7 @@
 const gulp         = require('gulp');
 const postcss      = require('gulp-postcss');
 const sass         = require('gulp-sass');
+const header       = require('gulp-header');
 const autoprefixer = require('autoprefixer');
 const cssnano      = require('cssnano');
 
@@ -26,6 +27,17 @@ gulp.task('sass-core', () =>
 		`./scss/pages/system.scss`,
 		`./scss/blocks/sidebar_nav.scss`,
 	])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(postcssPipe())
+		.pipe(gulp.dest(`./css`))
+);
+
+gulp.task('sass-rtl', () =>
+	gulp.src([
+		`./scss/template-rtl.scss`,
+		`./scss/blocks/sidebar_nav-rtl.scss`,
+	])
+		.pipe(header('$rtl: true;\n'))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcssPipe())
 		.pipe(gulp.dest(`./css`))
@@ -56,5 +68,6 @@ gulp.task('sass-vendor', async() => {
 // Global build task consisting of all sub-tasks
 gulp.task('build', gulp.series(
 	'sass-core',
+	'sass-rtl',
 	'sass-vendor',
 ));

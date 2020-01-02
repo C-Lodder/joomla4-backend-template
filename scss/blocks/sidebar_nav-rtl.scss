@@ -7,7 +7,6 @@
 @import "../mixins";
 @import "../variables";
 
-// System
-.cpanel-system .card-columns {
-  column-count: 3;
-}
+
+// Sidebar
+@import "sidebar_nav";

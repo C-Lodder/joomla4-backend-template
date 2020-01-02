@@ -3,12 +3,13 @@
 @import "../../../../media/vendor/bootstrap/scss/variables";
 @import "vendor/bootstrap/mixins";
 
-// Bettum Variables
+// Bettum Variables and Mixins
+@import "mixins";
 @import "variables";
 
 // Bootstrap
 @import "../../../../media/vendor/bootstrap/scss/root";
-@import "../../../../media/vendor/bootstrap/scss/reboot";
+@import "vendor/bootstrap/reboot";
 @import "../../../../media/vendor/bootstrap/scss/type";
 @import "../../../../media/vendor/bootstrap/scss/images";
 @import "../../../../media/vendor/bootstrap/scss/code";
@@ -17,7 +18,7 @@
 @import "../../../../media/vendor/bootstrap/scss/forms";
 @import "vendor/bootstrap/buttons";
 @import "../../../../media/vendor/bootstrap/scss/transitions";
-@import "../../../../media/vendor/bootstrap/scss/dropdown";
+@import "vendor/bootstrap/dropdown";
 @import "../../../../media/vendor/bootstrap/scss/button-group";
 @import "../../../../media/vendor/bootstrap/scss/input-group";
 @import "../../../../media/vendor/bootstrap/scss/custom-forms";
@@ -29,7 +30,7 @@
 @import "../../../../media/vendor/bootstrap/scss/alert";
 @import "../../../../media/vendor/bootstrap/scss/progress";
 @import "../../../../media/vendor/bootstrap/scss/media";
-@import "../../../../media/vendor/bootstrap/scss/list-group";
+@import "vendor/bootstrap/list-group";
 @import "../../../../media/vendor/bootstrap/scss/close";
 @import "../../../../media/vendor/bootstrap/scss/modal";
 @import "../../../../media/vendor/bootstrap/scss/tooltip";

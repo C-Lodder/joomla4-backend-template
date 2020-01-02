@@ -1,0 +1,92 @@
+// Bootstrap core
+@import "../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "vendor/bootstrap/mixins";
+
+// Bettum Variables
+@import "variables";
+
+
+// Padding
+// @include padding('left', 2rem);
+@mixin padding($position, $size) {
+  $rtl-position: null;
+  @if $position == 'left' {
+    $rtl-position: right;
+  } @else if $position == 'right' {
+    $rtl-position: left;
+  }
+
+  @if $rtl and $rtl-position != null {
+    padding-#{$rtl-position}: $size;
+  } @else {
+    padding-#{$position}: $size;
+  }
+}
+
+
+// Margin
+// @include margin('left', 2rem);
+@mixin margin($position, $size) {
+  $rtl-position: null;
+  @if $position == 'left' {
+    $rtl-position: right;
+  } @else if $position == 'right' {
+    $rtl-position: left;
+  }
+
+  @if $rtl and $rtl-position != null {
+    margin-#{$rtl-position}: $size;
+  } @else {
+    margin-#{$position}: $size;
+  }
+}
+
+
+// Position
+// @include position('left', 0);
+@mixin position($position, $size) {
+  $rtl-position: null;
+  @if $position == 'left' {
+    $rtl-position: right;
+  } @else if $position == 'right' {
+    $rtl-position: left;
+  }
+
+  @if $rtl and $rtl-position != null {
+    #{$rtl-position}: $size;
+  } @else {
+    #{$position}: $size;
+  }
+}
+
+
+// Text Align
+// @include text-align('left');
+@mixin text-align($alignment) {
+  $rtl-alignment: null;
+  @if $alignment == 'left' {
+    $rtl-alignment: right;
+  } @else if $alignment == 'right' {
+    $rtl-alignment: left;
+  }
+
+  @if $rtl and $rtl-alignment != null {
+    text-align: $rtl-alignment;
+  } @else {
+    text-align: $alignment;
+  }
+}
+
+
+// Translate
+// @include translate(0);
+@mixin translate($width) {
+  @if $rtl and $width < 0 {
+    transform: translateX(str-replace(#{$width}, "-", ""));
+  } @else if $rtl not true and $width > 0 {
+    transform: translateX($width);
+  } @else {
+    transform: translateX($width);
+  }
+}
