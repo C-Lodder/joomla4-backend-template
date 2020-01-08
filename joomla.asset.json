@@ -16,6 +16,11 @@
       "name": "switcher",
       "type": "style",
       "uri": "system/fields/switcher.min.css"
+    },
+	{
+      "name": "searchtools",
+      "type": "style",
+      "uri": "system/searchtools/searchtools.min.css"
     }
   ]
 }

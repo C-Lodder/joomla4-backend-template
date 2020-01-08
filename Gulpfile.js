@@ -50,6 +50,7 @@ gulp.task('sass-vendor', async() => {
 		'./scss/joomla/switcher.scss' : './css/system/fields',
 		'./scss/joomla/calendar.scss' : './css/system/fields',
 		'./scss/joomla/installer.scss' : './css/com_installer',
+		'./scss/joomla/searchtools.scss' : './css/system/searchtools',
 		'./scss/vendor/minicolors.scss' : './css/vendor/minicolors',
 		'./scss/vendor/choices.scss' : './css/vendor/choicesjs',
 		'./scss/vendor/dragula.scss' : './css/vendor/dragula',
