@@ -371,8 +371,8 @@ joomla-field-fancy-select {
   opacity: .5;
 }
 
-.choices__input.is-hidden {
-  display: none;
+.choices [hidden] {
+  display: none !important;
 }
 
 .choices {

@@ -8,19 +8,15 @@
 	{
       "package": "choices.js",
       "name": "choicesjs",
-      "version": "7.0.0",
-      "js": [
-        "media/vendor/choicesjs/js/choices.min.js"
-      ],
-      "css": [
-        "vendor/choicesjs/choices.min.css"
-      ]
+      "version": "9.0.0",
+      "type": "style",
+      "uri": "vendor/choicesjs/choices.min.css"
     },
     {
       "name": "switcher",
-      "css": [
-        "system/fields/switcher.min.css"
-      ]
+      "type": "style",
+      "uri": "system/fields/switcher.min.css"
     }
   ]
 }
+
