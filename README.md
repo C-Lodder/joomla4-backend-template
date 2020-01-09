@@ -63,3 +63,6 @@ gulp build
 
 ### Media Manager
 ![Media Manager](https://i.imgur.com/1OVTpRf.png)
+
+### RTL (Right to left)
+![Media Manager](https://i.imgur.com/lBcMBoV.png)
