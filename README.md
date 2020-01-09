@@ -40,3 +40,26 @@ npm i
 ```bash
 gulp build
 ```
+
+## Screenshots:
+
+### Login
+![Login](https://i.imgur.com/6d8PmMG.png)
+
+### Dashboard (Top Nav)
+![Dashboard 1](https://i.imgur.com/ckYdmcx.png)
+
+### Dashboard (Sidebar Nav)
+![Dashboard 2](https://i.imgur.com/RCP5S7y.png)
+
+### System
+![System](https://i.imgur.com/zZAUTKt.png)
+
+### Article View
+![Article View](https://i.imgur.com/GiKr5MH.png)
+
+### Article Edit
+![Article Edit](https://i.imgur.com/v41r3cz.png)
+
+### Media Manager
+![Media Manager](https://i.imgur.com/1OVTpRf.png)
