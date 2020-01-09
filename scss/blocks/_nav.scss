@@ -1,5 +1,11 @@
 // Nav
 
+.top-nav {
+  > * {
+    @include border('left', 1px solid $border-color);
+  }
+}
+
 .navbar {
   background-color: $tertiary;
 

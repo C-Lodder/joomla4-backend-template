@@ -11,7 +11,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
 
 ?>
-<div class="d-none d-lg-flex align-items-center mr-3">
+<div class="d-none d-lg-flex align-items-center nav-link">
 	<span class="fab fa-joomla mx-1" aria-hidden="true"></span>
 	<span class="sr-only"><?php echo Text::sprintf('MOD_VERSION_CURRENT_VERSION_TEXT', $version); ?></span>
 	<span aria-hidden="true"><?php echo $version; ?></span>

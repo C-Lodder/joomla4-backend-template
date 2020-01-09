@@ -15,14 +15,12 @@ use Joomla\CMS\Uri\Uri;
 $hideLinks = $app->input->getBool('hidemainmenu');
 ?>
 
-<div class="dropdown">
-	<a class="nav-link dropdown-toggle <?php echo $hideLinks ? 'disabled' : ''; ?>" data-toggle="dropdown" href="#" <?php echo $hideLinks ? 'disabled' : ''; ?>
+<div class="dropdown d-flex align-items-center">
+	<button class="btn-link nav-link dropdown-toggle <?php echo $hideLinks ? 'disabled' : ''; ?>" data-toggle="dropdown" href="#" <?php echo $hideLinks ? 'disabled' : ''; ?>
 		title="<?php echo Text::_('MOD_USER_MENU'); ?>">
 		<span class="fa fa-user-circle" aria-hidden="true"></span>
-		<div class="sr-only">
-			<?php echo Text::_('MOD_USER_MENU'); ?>
-		</div>
-	</a>
+		<div class="sr-only"><?php echo Text::_('MOD_USER_MENU'); ?></div>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right ">
 		<div class="dropdown-header"><?php echo $user->name; ?></div>
 		<?php $uri   = Uri::getInstance(); ?>

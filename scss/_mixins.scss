@@ -90,3 +90,20 @@
     transform: translateX($width);
   }
 }
+
+// Border
+// @include border('left', '1px solid $color');
+@mixin border($position, $style) {
+  $rtl-position: null;
+  @if $position == 'left' {
+    $rtl-position: right;
+  } @else if $position == 'right' {
+    $rtl-position: left;
+  }
+
+  @if $rtl and $rtl-position != null {
+    border-#{$rtl-position}: $style;
+  } @else {
+    border-#{$position}: $style;
+  }
+}

@@ -59,7 +59,7 @@ $isSidebarNav = $this->params->get('menu', 1) ? true : false;
 			<div class="nav-scroller">
 				<nav class="nav nav-underline justify-content-between mb-3">
 					<jdoc:include type="modules" name="title" />
-					<div class="d-flex align-items-center justify-content-end px-3">
+					<div class="d-flex justify-content-end px-3">
 						<jdoc:include type="modules" name="status" style="none" />
 					</div>
 				</nav>
@@ -81,9 +81,9 @@ $isSidebarNav = $this->params->get('menu', 1) ? true : false;
 				<div class="nav-scroller">
 					<nav class="nav nav-underline justify-content-between mb-3">
 						<jdoc:include type="modules" name="title" />
-						<div class="d-flex align-items-center justify-content-end px-3">
+						<div class="d-flex justify-content-end px-3 top-nav">
 							<jdoc:include type="modules" name="status" style="none" />
-							<button id="navbar-toggler" class="navbar-toggler d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+							<button id="navbar-toggler" class="btn-link nav-link d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
 						</div>
 					</nav>
 				</div>
