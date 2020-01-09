@@ -59,7 +59,7 @@ $isSidebarNav = $this->params->get('menu', 1) ? true : false;
 			<div class="nav-scroller">
 				<nav class="nav nav-underline justify-content-between mb-3">
 					<jdoc:include type="modules" name="title" />
-					<div class="d-flex justify-content-end px-3">
+					<div class="d-flex justify-content-end px-3 top-nav">
 						<jdoc:include type="modules" name="status" style="none" />
 					</div>
 				</nav>
