@@ -24,6 +24,7 @@ $option     = $input->get('option', '');
 $view       = $input->get('view', '');
 $layout     = $input->get('layout', 'default');
 $task       = $input->get('task', 'display');
+$cpanel     = $option === 'com_cpanel';
 
 HTMLHelper::_('bootstrap.framework');
 
