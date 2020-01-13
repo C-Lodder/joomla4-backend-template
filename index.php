@@ -68,7 +68,7 @@ $isSidebarNav = $this->params->get('menu', 1) ? true : false;
 	<?php endif; ?>
 
 	<?php if ($isSidebarNav) : ?>
-		<div id="sidebar" class="sidebar">
+		<div id="bettum-sidebar" class="sidebar">
 			<jdoc:include type="modules" name="menu" style="none" />
 		</div>
 	<?php endif; ?>

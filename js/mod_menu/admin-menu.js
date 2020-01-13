@@ -26,7 +26,7 @@
     });
 
     const navbarToggle = document.getElementById('navbar-toggler');
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = document.getElementById('bettum-sidebar');
     if (sidebar) {
       navbarToggle.addEventListener('click', () => {
         sidebar.classList.toggle('show');
