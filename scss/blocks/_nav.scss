@@ -38,3 +38,9 @@
     }
   }
 }
+
+.nav-pills-sm {
+  .nav-link {
+    padding: $spacer / 5 $navbar-padding-x;
+  }
+}
