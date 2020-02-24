@@ -1,6 +1,6 @@
 {
 	"name": "bettum",
-	"version": "0.0.4",
+	"version": "0.0.8",
 	"description": "Bettum Template",
 	"private": true,
 	"license": "GPL-3.0+",
@@ -9,21 +9,21 @@
 		"url": "git+https://github.com/C-Lodder/joomla4-backend-template.git"
 	},
 	"engines": {
-		"node": ">=10.16.0",
-		"npm": ">=6.4.1"
+		"node": ">=12.0.0",
+		"npm": ">=6.9.0"
 	},
 	"browserslist": [
 		"last 1 version"
 	],
 	"devDependencies": {
-		"autoprefixer": "^9.6.1",
-		"clean-css": "^4.2.1",
+		"autoprefixer": "^9.7.4",
+		"clean-css": "^4.2.3",
 		"cssnano": "^4.1.10",
 		"gulp": "^4.0.2",
 		"gulp-cli": "^2.2.0",
 		"gulp-header": "^2.0.9",
 		"gulp-postcss": "^8.0.0",
 		"gulp-sass": "^4.0.2",
-		"node-sass": "^4.12.0"
+		"node-sass": "^4.13.1"
 	}
 }
