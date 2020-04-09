@@ -1,26 +1,38 @@
 // Margin
 
-.ml-auto  { margin-left: auto; }
-.ml-right { margin-left: auto; }
+.ml-auto  { margin-inline-start: auto; }
+.ml-right { margin-inline-start: auto; }
 
 @each $prop, $abbrev in (margin: m) {
   @each $size, $length in $spacers {
-	.#{$abbrev}-#{$size} { #{$prop}: $length !important; }
-	.#{$abbrev}t-#{$size},
-	.#{$abbrev}y-#{$size} {
-	  #{$prop}-top: $length !important;
-	}
-	.#{$abbrev}r-#{$size},
-	.#{$abbrev}x-#{$size} {
-	  #{$prop}-right: $length !important;
-	}
-	.#{$abbrev}b-#{$size},
-	.#{$abbrev}y-#{$size} {
-	  #{$prop}-bottom: $length !important;
-	}
-	.#{$abbrev}l-#{$size},
-	.#{$abbrev}x-#{$size} {
-	  #{$prop}-left: $length !important;
-	}
+  	.#{$abbrev}-#{$size} {
+  	  #{$prop}: $length !important;
+  	}
+  
+  	.#{$abbrev}y-#{$size} {
+  	  #{$prop}-block-start: $length !important;
+  	  #{$prop}-block-end: $length !important;
+  	}
+  	
+  	.#{$abbrev}x-#{$size} {
+  	  #{$prop}-inline-start: $length !important;
+  	  #{$prop}-inline-end: $length !important;
+  	}
+
+  	.#{$abbrev}t-#{$size} {
+  	  #{$prop}-top: $length !important;
+  	}
+  
+  	.#{$abbrev}r-#{$size} {
+  	  #{$prop}-inline-end: $length !important;
+  	}
+  
+  	.#{$abbrev}b-#{$size} {
+  	  #{$prop}-bottom: $length !important;
+  	}
+  
+  	.#{$abbrev}l-#{$size} {
+  	  #{$prop}-inline-start: $length !important;
+  	}
   }
 }

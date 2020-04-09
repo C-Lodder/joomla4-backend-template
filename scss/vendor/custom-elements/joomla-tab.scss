@@ -38,8 +38,8 @@ joomla-tab {
     &[active] {
       background-color: rgba($black, .03);
       background-image: linear-gradient(to bottom, transparent, rgba($black, .05) 100%);
-      border-left: 0 none;
-      border-right: 0 none;
+      border-inline-start: 0 none;
+      border-inline-end: 0 none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
@@ -100,8 +100,8 @@ joomla-tab[orientation=vertical] {
     text-decoration: none;
 
     &[active] {
-      border-left: 0 none;
-      border-right: 0 none;
+      border-inline-start: 0 none;
+      border-inline-end: 0 none;
       background-color: rgba($black, .03);
       background-image: none;
       box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;

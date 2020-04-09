@@ -2,7 +2,7 @@
 
 .treeselect {
   display: block;
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
 
   .nav-header {
@@ -46,7 +46,7 @@
     }
 
     li {
-      padding-left: $treeselect-indent;
+      padding-inline-start: $treeselect-indent;
     }
   }
 
@@ -62,7 +62,7 @@
   .treeselect-toggle {
     display: inline-block;
     padding: 0;
-    margin-right: .1rem;
+    margin-inline-end: .1rem;
     text-align: center;
     cursor: pointer;
   }
@@ -77,7 +77,7 @@
     input {
       position: relative;
       top: 1px;
-      margin-right: .2rem;
+      margin-inline-end: .2rem;
     }
 
     label {
@@ -87,10 +87,10 @@
 
   .dropdown-toggle {
     padding: 0 .5rem .3rem;
-    margin-left: .5rem;
+    margin-inline-start: .5rem;
 
     &::after {
-      margin-left: 0;
+      margin-inline-start: 0;
       font-size: 1rem;
       color: $body-color;
     }
@@ -98,7 +98,7 @@
 }
 
 .treeselect-sub {
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 .tree-holder {
@@ -124,7 +124,7 @@
     line-height: 1.8rem;
 
     li {
-      padding-left: 20px;
+      padding-inline-start: 20px;
     }
   }
 }

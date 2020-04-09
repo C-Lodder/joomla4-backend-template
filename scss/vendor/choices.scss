@@ -64,7 +64,7 @@ joomla-field-fancy-select {
       top: 50%;
       right: 0;
       margin-top: -10px;
-      margin-right: 25px;
+      margin-inline-end: 25px;
       height: 20px;
       width: 20px;
       border-radius: 10em;
@@ -108,8 +108,8 @@ joomla-field-fancy-select {
       .choices__button {
         right: auto;
         left: 0;
-        margin-left: 25px;
-        margin-right: 0;
+        margin-inline-start: 25px;
+        margin-inline-end: 0;
       }
     }
   }
@@ -123,11 +123,11 @@ joomla-field-fancy-select {
     position: relative;
     display: inline-block;
     margin-top: 0;
-    margin-right: -4px;
+    margin-inline-end: -4px;
     margin-bottom: 0;
-    margin-left: 8px;
-    padding-left: 16px;
-    border-left: 1px solid #008fa1;
+    margin-inline-start: 8px;
+    padding-inline-start: 16px;
+    border-inline-start: 1px solid #008fa1;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==);
     background-size: 8px;
     width: 8px;
@@ -170,20 +170,20 @@ joomla-field-fancy-select {
 
 .choices__list {
   margin: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
 }
 
 .choices__list--single {
   display: inline-block;
-  padding-right: 16px;
-  padding-left: 4px;
+  padding-inline-end: 16px;
+  padding-inline-start: 4px;
   width: 100%;
 }
 
 [dir="rtl"] .choices__list--single {
-  padding-right: 4px;
-  padding-left: 16px;
+  padding-inline-end: 4px;
+  padding-inline-start: 16px;
 }
 
 .choices__list--single .choices__item {
@@ -200,20 +200,15 @@ joomla-field-fancy-select {
     padding: 4px 10px;
     font-size: 12px;
     font-weight: 500;
-    margin-right: 3.75px;
+    margin-inline-end: 3.75px;
     background-color: $blue-bg;
     color: $white;
     white-space: nowrap;
 
     &[data-deletable] {
-      padding-right: 5px;
+      padding-inline-end: 5px;
     }
   }
-}
-
-[dir="rtl"] .choices__list--multiple .choices__item {
-  margin-right: 0;
-  margin-left: 3.75px;
 }
 
 .choices__list--multiple .choices__item.is-highlighted {
@@ -270,13 +265,9 @@ joomla-field-fancy-select {
   }
 }
 
-[dir="rtl"] .choices__list--dropdown .choices__item {
-  text-align: right;
-}
-
 @media (min-width: 640px) {
   .choices__list--dropdown .choices__item--selectable {
-    padding-right: 100px;
+    padding-inline-end: 100px;
 
     &::after {
       content: attr(data-select-text);
@@ -290,9 +281,9 @@ joomla-field-fancy-select {
   }
 
   [dir="rtl"] .choices__list--dropdown .choices__item--selectable {
-    text-align: right;
-    padding-left: 100px;
-    padding-right: 10px;
+    text-align: end;
+    padding-inline-start: 100px;
+    padding-inline-end: 10px;
 
     &::after {
       right: auto;
@@ -360,11 +351,6 @@ joomla-field-fancy-select {
   &:focus {
     outline: 0;
   }
-}
-
-[dir="rtl"] .choices__input {
-  padding-right: 2px;
-  padding-left: 0;
 }
 
 .choices__placeholder {

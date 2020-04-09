@@ -56,7 +56,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 /* The body part -- contains all the days in month. */
 
 .calendar-container table tbody td.day { /* Cells <TD> containing month days dates */
-	text-align: right;
+	text-align: end;
 }
 
 .calendar-container table tbody td.wn {
@@ -144,7 +144,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 	min-width: 60px;
 	color: $white;
 	border: 1px solid $border-color;
-	margin-right: .5rem;
+	margin-inline-end: .5rem;
 	padding: 0 16px;
 	line-height: 2.375rem;
 	
@@ -154,7 +154,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 	}
 	
 	&:last-child {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 

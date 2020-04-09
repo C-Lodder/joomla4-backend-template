@@ -19,7 +19,7 @@
 
 .media-browser-item {
   position: relative;
-  margin-right: $grid-gutter-width;
+  margin-inline-end: $grid-gutter-width;
   margin-bottom: $grid-gutter-width;
   cursor: pointer;
   user-select: none;
@@ -178,8 +178,8 @@
 .image-browser-action {
   width: calc(#{$grid-item-icon-size} * 1.55);
   height: calc(#{$grid-item-icon-size} * 1.55);
-  margin-right: 4px;
-  margin-left: 4px;
+  margin-inline-end: 4px;
+  margin-inline-start: 4px;
   color: $grid-item-icon-color;
   text-align: center;
   cursor: pointer;
@@ -284,7 +284,7 @@
 // Table View
 .media-browser-table-head {
   .type {
-    margin-left: 1px;
+    margin-inline-start: 1px;
     &::before {
       display: none;
     }
@@ -316,7 +316,7 @@
     line-height: $table-item-height;
     text-align: center;
     background-color: $table-item-icon-bg;
-    border-right: 1px solid rgba(0, 0, 0, .03);
+    border-inline-end: 1px solid rgba(0, 0, 0, .03);
     &::before, &::after {
       transition: all .2s cubic-bezier(.4, .0, .2, 1);
     }

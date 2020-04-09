@@ -170,7 +170,7 @@
   border: solid 1px $black;
   border-radius: 10px;
   margin-top: -6px;
-  margin-left: -6px;
+  margin-inline-start: -6px;
   background: none;
 
   > div {
@@ -220,7 +220,7 @@
 }
 
 .minicolors-with-opacity .minicolors-swatches .minicolors-swatch {
-  margin-right: 7px;
+  margin-inline-end: 7px;
 }
 
 .minicolors-swatch.selected {
@@ -260,12 +260,12 @@
 
   .minicolors-input {
     float: none;
-    padding-left: 44px;
+    padding-inline-start: 44px;
   }
 
   &.minicolors-position-right .minicolors-input {
-    padding-right: 44px;
-    padding-left: 12px;
+    padding-inline-end: 44px;
+    padding-inline-start: 12px;
   }
 }
 

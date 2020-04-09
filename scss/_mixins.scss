@@ -7,41 +7,6 @@
 @import "variables";
 
 
-// Padding
-// @include padding('left', 2rem);
-@mixin padding($position, $size) {
-  $rtl-position: null;
-  @if $position == 'left' {
-    $rtl-position: right;
-  } @else if $position == 'right' {
-    $rtl-position: left;
-  }
-
-  @if $rtl and $rtl-position != null {
-    padding-#{$rtl-position}: $size;
-  } @else {
-    padding-#{$position}: $size;
-  }
-}
-
-
-// Margin
-// @include margin('left', 2rem);
-@mixin margin($position, $size) {
-  $rtl-position: null;
-  @if $position == 'left' {
-    $rtl-position: right;
-  } @else if $position == 'right' {
-    $rtl-position: left;
-  }
-
-  @if $rtl and $rtl-position != null {
-    margin-#{$rtl-position}: $size;
-  } @else {
-    margin-#{$position}: $size;
-  }
-}
-
 
 // Position
 // @include position('left', 0);
@@ -61,24 +26,6 @@
 }
 
 
-// Text Align
-// @include text-align('left');
-@mixin text-align($alignment) {
-  $rtl-alignment: null;
-  @if $alignment == 'left' {
-    $rtl-alignment: right;
-  } @else if $alignment == 'right' {
-    $rtl-alignment: left;
-  }
-
-  @if $rtl and $rtl-alignment != null {
-    text-align: $rtl-alignment;
-  } @else {
-    text-align: $alignment;
-  }
-}
-
-
 // Translate
 // @include translate(0);
 @mixin translate($width) {
@@ -88,22 +35,5 @@
     transform: translateX($width);
   } @else {
     transform: translateX($width);
-  }
-}
-
-// Border
-// @include border('left', '1px solid $color');
-@mixin border($position, $style) {
-  $rtl-position: null;
-  @if $position == 'left' {
-    $rtl-position: right;
-  } @else if $position == 'right' {
-    $rtl-position: left;
-  }
-
-  @if $rtl and $rtl-position != null {
-    border-#{$rtl-position}: $style;
-  } @else {
-    border-#{$position}: $style;
   }
 }

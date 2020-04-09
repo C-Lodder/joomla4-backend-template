@@ -60,7 +60,7 @@
 
     .fa,
     .fas {
-      @include margin('right', 1rem);
+      margin-inline-end: 1rem;
     }
   }
 
@@ -91,7 +91,7 @@
     background-color: darken($secondary, 5%);
 
     a {
-      padding-left: 2rem;
+      padding-inline-start: 2rem;
       font-size: .95rem;
     }
   }
@@ -100,14 +100,14 @@
     background-color: darken($secondary, 10%);
 
     a {
-      padding-left: 3rem;
+      padding-inline-start: 3rem;
       font-size: .9rem;
     }
   }
 
   .navbar-brand {
     padding: 1rem;
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 }
 

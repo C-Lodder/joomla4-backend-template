@@ -2,7 +2,7 @@
 
 .top-nav {
   > * {
-    @include border('left', 1px solid $border-color);
+    border-inline-start: 1px solid $border-color;
   }
 }
 
@@ -10,8 +10,8 @@
   background-color: $tertiary;
 
   .nav-link {
-    padding-left: .65rem;
-    padding-right: .65rem;
+    padding-inline-start: .65rem;
+    padding-inline-end: .65rem;
   }
 }
 
