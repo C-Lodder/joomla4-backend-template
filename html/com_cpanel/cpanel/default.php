@@ -30,11 +30,15 @@ if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') =
 $user = Factory::getUser();
 HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true]);
 
+// Dragula
+HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto']);
+HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/vendor/dragula/dragula.css', ['version' => 'auto']);
+
 // Set up the bootstrap modal that will be used for all module editors
 echo HTMLHelper::_(
 	'bootstrap.renderModal',
 	'moduleDashboardAddModal',
-	array(
+	[
 		'title'       => Text::_('COM_CPANEL_ADD_MODULE_MODAL_TITLE'),
 		'backdrop'    => 'static',
 		'url'         => Route::_('index.php?option=com_cpanel&task=addModule&function=jSelectModuleType&position=' . $this->escape($this->position)),
@@ -44,39 +48,35 @@ echo HTMLHelper::_(
 			. Text::_('JLIB_HTML_BEHAVIOR_CLOSE') . '</button>'
 			. '<button type="button" class="button-save btn btn-sm btn-success hidden" data-target="#saveBtn"><span class="icon-save" aria-hidden="true"></span>'
 			. Text::_('JSAVE') . '</button>',
-	)
+	]
 );
 ?>
-<div id="cpanel-modules">
-	<?php if ($this->quickicons) : ?>
-		<div class="cpanel-modules <?php echo $this->position; ?>-quickicons">
+<div>
+	<div id="cpanel-modules">
+		<?php if ($this->quickicons) : ?>
 			<?php // Display the icon position modules ?>
 			<?php foreach ($this->quickicons as $iconmodule) : ?>
-				<?php echo ModuleHelper::renderModule($iconmodule, array('style' => 'well')); ?>
+				<?php echo ModuleHelper::renderModule($iconmodule, ['style' => 'well']); ?>
 			<?php endforeach; ?>
-		</div>
-	<?php endif; ?>
+		<?php endif; ?>
+	</div>
 
-	<div class="cpanel-modules <?php echo $this->position; ?>">
-		<div class="card-columns">
-
+	<div id="card-columns" class="card-columns">
 		<?php foreach ($this->modules as $module) : ?>
-			<?php echo ModuleHelper::renderModule($module, array('style' => 'well')); ?>
+			<?php echo ModuleHelper::renderModule($module, ['style' => 'cpanel']); ?>
 		<?php endforeach; ?>
+	</div>
+</div>
 
-		<?php if ($user->authorise('core.create', 'com_modules')) : ?>
-
+<?php if ($user->authorise('core.create', 'com_modules')) : ?>
+	<div class="row">
+		<div class="col-md-6">
+			<a href="#moduleEditModal" data-toggle="modal" data-target="#moduleDashboardAddModal" role="button" class="cpanel-add-module text-center py-5 w-100 d-block">
+				<div class="cpanel-add-module-icon text-center">
+					<span class="fa fa-plus-square text-light mt-2"></span>
+				</div>
+				<span><?php echo Text::_('COM_CPANEL_ADD_DASHBOARD_MODULE'); ?></span>
+			</a>
 		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<a href="#moduleEditModal" data-toggle="modal" data-target="#moduleDashboardAddModal" role="button" class="cpanel-add-module text-center py-5 w-100 d-block">
-			<div class="cpanel-add-module-icon text-center">
-				<span class="fa fa-plus-square text-light mt-2"></span>
-			</div>
-			<span><?php echo Text::_('COM_CPANEL_ADD_DASHBOARD_MODULE'); ?></span>
-		</a>
-	</div>
-	<?php endif; ?>
-</div>
+<?php endif; ?>
