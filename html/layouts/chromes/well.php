@@ -50,7 +50,7 @@ if ($module->content) :
 					<?php $dropdownPosition = Factory::getLanguage()->isRTL() ? 'left' : 'right'; ?>
 					<div class="module-actions dropdown">
 						<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn" id="dropdownMenuButton-<?php echo $id; ?>">
-							<span class="fa fa-cog" aria-hidden="true"></span>
+							<span class="fas fa-cog" aria-hidden="true"></span>
 							<span class="sr-only"><?php echo Text::_('JACTION_EDIT') . ' ' . $module->title; ?></span>
 						</button>
 						<div class="dropdown-menu dropdown-menu-<?php echo $dropdownPosition; ?>" aria-labelledby="dropdownMenuButton-<?php echo $id; ?>">

@@ -23,7 +23,8 @@ HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 
 HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', ['version' => 'auto']);
 
 $input = Factory::getApplication()->input;
-if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') === 'system') {
+if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') === 'system')
+{
 	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/system.css', ['version' => 'auto']);
 }
 
@@ -31,8 +32,12 @@ $user = Factory::getUser();
 HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true]);
 
 // Dragula
-HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto']);
-HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/vendor/dragula/dragula.css', ['version' => 'auto']);
+if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') !== 'system')
+{
+	HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto']);
+	HTMLHelper::_('script', 'com_cpanel/admin-cpanel-dnd.min.js', ['version' => 'auto', 'relative' => true]);
+	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/vendor/dragula/dragula.css', ['version' => 'auto']);
+}
 
 // Set up the bootstrap modal that will be used for all module editors
 echo HTMLHelper::_(
