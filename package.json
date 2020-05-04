@@ -2,7 +2,6 @@
 	"name": "bettum",
 	"version": "0.0.8",
 	"description": "Bettum Template",
-	"private": true,
 	"license": "GPL-3.0+",
 	"repository": {
 		"type": "git",
