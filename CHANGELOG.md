@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.9
 - Add Drag and Drop support for dashboard modules
 - Prevent flash of unstyled content
 - Fix 'Add Module' modal styling
