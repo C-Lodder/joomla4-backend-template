@@ -30,28 +30,28 @@ $logo       = $this->params->get('loginLogo')
 
 HTMLHelper::_('bootstrap.framework');
 
-// Load specific template related JS
-HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
-
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#38383d');
 
-HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
-foreach (array_keys($this->_styleSheets) as $style) {
+foreach (array_keys($this->_styleSheets) as $style)
+{
 	unset($this->_styleSheets[$style]);
 }
+
+$css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="metas" />
+	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
 <body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout; ?>">

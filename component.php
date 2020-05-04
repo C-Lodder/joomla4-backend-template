@@ -24,7 +24,8 @@ HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => tr
 
 $cachesStyleSheets = json_encode(array_keys($this->_styleSheets));
 
-foreach (array_keys($this->_styleSheets) as $style) {
+foreach (array_keys($this->_styleSheets) as $style)
+{
 	unset($this->_styleSheets[$style]);
 }
 ?>
