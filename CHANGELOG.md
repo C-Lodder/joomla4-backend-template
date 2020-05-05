@@ -4,6 +4,7 @@
 - Use handle for Drag & Drop
 - Less obtrusive alerts
 - Improve alert accessibility (thanks @crystalenka)
+- Fix iframe body background colour 
 
 ## 0.0.9
 - Add Drag and Drop support for dashboard modules
