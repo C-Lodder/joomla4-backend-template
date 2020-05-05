@@ -6,6 +6,7 @@
 - Less obtrusive alerts
 - Improve alert accessibility (thanks @crystalenka)
 - Fix iframe body background colour 
+- Fix `<th>` alignment on Safari
 
 ## 0.0.9
 - Add Drag and Drop support for dashboard modules
