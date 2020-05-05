@@ -23,7 +23,7 @@ HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 
 HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', ['version' => 'auto']);
 
 $input = Factory::getApplication()->input;
-if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') === 'system')
+if ($input->get('dashboard', '') === 'system')
 {
 	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/system.css', ['version' => 'auto']);
 }
@@ -32,10 +32,10 @@ $user = Factory::getUser();
 HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true]);
 
 // Dragula
-if ($input->get('option', '') === 'com_cpanel' && $input->get('dashboard', '') !== 'system')
+if ($input->get('dashboard', '') === '')
 {
-	HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto']);
-	HTMLHelper::_('script', 'com_cpanel/admin-cpanel-dnd.min.js', ['version' => 'auto', 'relative' => true]);
+	HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto'], ['defer' => true]);
+	HTMLHelper::_('script', 'com_cpanel/admin-cpanel-dnd.min.js', ['version' => 'auto', 'relative' => true], ['defer' => true]);
 	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/vendor/dragula/dragula.css', ['version' => 'auto']);
 }
 

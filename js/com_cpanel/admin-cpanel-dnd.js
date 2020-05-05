@@ -1,13 +1,10 @@
 /**
-* PLEASE DO NOT MODIFY THIS FILE. WORK ON THE ES6 VERSION.
-* OTHERWISE YOUR CHANGES WILL BE REPLACED ON THE NEXT BUILD.
-**/
-
-/**
  * @copyright  Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
+
 ((document) => {
+  'use strict'
 
   const setModuleIds = () => {
     const modules = []
@@ -45,12 +42,13 @@
   const onBoot = () => {
     renderModules()
 
-    dragula([document.getElementById('cpanel-modules'), document.getElementById('card-columns')])
-      .on('dragend', event => setModuleIds())
+    dragula([document.getElementById('cpanel-modules'), document.getElementById('card-columns')], {
+      moves: (el, container, { classList }) => classList.contains('handle')
+    }).on('dragend', event => setModuleIds())
 
-    document.removeEventListener('DOMContentLoaded', onBoot);
-  };
+    document.removeEventListener('DOMContentLoaded', onBoot)
+  }
 
-  document.addEventListener('DOMContentLoaded', onBoot);
+  document.addEventListener('DOMContentLoaded', onBoot)
 
-})(document);
+})(document)

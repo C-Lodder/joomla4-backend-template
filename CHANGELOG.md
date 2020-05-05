@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Use handle for Drag & Drop
+
 ## 0.0.9
 - Add Drag and Drop support for dashboard modules
 - Prevent flash of unstyled content

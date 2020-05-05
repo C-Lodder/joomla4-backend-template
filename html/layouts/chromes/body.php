@@ -12,18 +12,18 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 
-$module  = $displayData['module'];
-$params  = $displayData['params'];
+$module = $displayData['module'];
+$params = $displayData['params'];
 
 if ($module->content) :
 	$id = $module->id;
 
 	// Permission checks
-	$user    = Factory::getUser();
-	$canEdit = $user->authorise('core.edit', 'com_modules.module.' . $id) && $user->authorise('core.manage', 'com_modules');
-	$canChange  = $user->authorise('core.edit.state', 'com_modules.module.' . $id) && $user->authorise('core.manage', 'com_modules');
+	$user      = Factory::getUser();
+	$canEdit   = $user->authorise('core.edit', 'com_modules.module.' . $id) && $user->authorise('core.manage', 'com_modules');
+	$canChange = $user->authorise('core.edit.state', 'com_modules.module.' . $id) && $user->authorise('core.manage', 'com_modules');
 
-	$moduleTag   = $params->get('module_tag', 'div');
+	$moduleTag      = $params->get('module_tag', 'div');
 	$bootstrapSize  = (int) $params->get('bootstrap_size', 6);
 	$moduleClass    = ($bootstrapSize) ? 'col-md-' . $bootstrapSize : 'col-md-12';
 	$headerTag      = htmlspecialchars($params->get('header_tag', 'h2'));
@@ -42,6 +42,10 @@ if ($module->content) :
 						<span class="fas fa-cog" aria-hidden="true"></span>
 						<span class="sr-only"><?php echo Text::_('JACTION_EDIT') . ' ' . $module->title; ?></span>
 					</button>
+					<a class="btn btn-link handle">
+						<span class="fas fa-arrows-alt handle" aria-hidden="true"></span>
+						<span class="sr-only"><?php echo Text::_('JLIB_HTML_BEHAVIOR_DRAG_TO_MOVE') . ' ' . $module->title; ?></span>
+					</a>
 					<div class="dropdown-menu dropdown-menu-<?php echo $dropdownPosition; ?>" aria-labelledby="dropdownMenuButton-<?php echo $id; ?>">
 						<?php if ($canEdit) : ?>
 							<?php $uri = Uri::getInstance(); ?>
