@@ -1,0 +1,112 @@
+// Bootstrap core
+@import "../../../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../../../media/vendor/bootstrap/scss/variables";
+@import "../bootstrap/mixins";
+
+// Bettum Variables and mixins
+@import "../../mixins";
+@import "../../variables";
+
+
+$alert-colors: (
+  primary: $blue-bg,
+  success: $green-bg,
+  info: $blue-bg,
+  warning: $orange-bg,
+  danger: $red-bg,
+);
+
+
+// Alert variants
+@mixin alert-variant($color) {
+  color: #fff;
+  background-color: $color;
+  border-color: lighten($color, 15%);
+
+  hr {
+    border-top-color: darken($color, 15%);
+  }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+joomla-alert {
+  display: block;
+  min-width: 250px;
+  max-width: 90vw;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+
+  &.joomla-alert--show {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .joomla-alert--close, .joomla-alert-button--close {
+    position: relative;
+    top: -$alert-padding-y;
+    right: -$alert-padding-x;
+    padding: .2rem 1rem;
+    color: #fff;
+    float: right;
+    background: transparent;
+    border: 0;
+
+    @include hover-focus {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .joomla-alert--close {
+    font-size: $close-font-size;
+    font-weight: $close-font-weight;
+    line-height: 1;
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+  // scss-lint:disable QualifyingElement
+  button.joomla-alert-button--close {
+    padding-top: .75rem;
+    font-size: 100%;
+    line-height: 1.15;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+// Alternate styles
+@each $color, $value in $alert-colors {
+  joomla-alert[type="#{$color}"] {
+    @include alert-variant($value);
+  }
+}
+
+// RTL overrides
+html[dir=rtl] joomla-alert {
+  .joomla-alert--close,
+  .joomla-alert-button--close {
+    right: auto;
+    left: -1.25rem;
+    float: left;
+  }
+}

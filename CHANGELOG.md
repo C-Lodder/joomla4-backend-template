@@ -2,6 +2,8 @@
 
 ## WIP
 - Use handle for Drag & Drop
+- Less obtrusive alerts
+- Improve alert accessibility (thanks @crystalenka)
 
 ## 0.0.9
 - Add Drag and Drop support for dashboard modules
@@ -28,7 +30,7 @@
 ## 0.0.5
 - Fix some PHP errors with Menu
 - RTL improvements and fixes
-- a11y fixes - thanks @brianteeman
+- Accessibility fixes (thanks @brianteeman)
 
 ## 0.0.4
 - Add sidebar navigation (users can choose between top or sidebar)

@@ -9,11 +9,13 @@ $blue-bg:                     #0071eb;
 $red-bg:                      #cd2337;
 $green-bg:                    #1f7F37;
 $cyan-bg:                     #117c8d;
+$orange-bg:                   #c05707;
 
 $blue:                        #52a5ff;
 $red:                         #ea8591;
 $green:                       #2db950;
 $cyan:                        #19b4cc;
+$orange:                      #faa05a;
 
 $primary:                     #38383d;
 $secondary:                   #2a2a2e;
@@ -28,7 +30,7 @@ $theme-colors: (
   secondary: darken($secondary, 6%),
   success: $green-bg,
   info: $cyan-bg,
-  warning: $yellow,
+  warning: $orange-bg,
   danger: $red-bg,
   light: $tertiary,
   dark: $gray-800
