@@ -32,3 +32,17 @@
 .custom-select-danger {
   border-color: $red;
 }
+
+.module-options {
+  .controls {
+    .custom-select,
+    .form-control {
+      max-width: none;
+    }
+  }
+
+  joomla-field-fancy-select {
+    display: block;
+    width: 100%;
+  }
+}
