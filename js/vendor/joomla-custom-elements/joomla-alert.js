@@ -27,12 +27,10 @@ window.customElements.define('joomla-alert', class JoomlaAlertElement extends HT
       this.setAttribute('type', 'info')
     }
     // Default to alert
-    if (!this.role || ['alert', 'alertdialog'].indexOf(this.role) === -1) {
-      this.setAttribute('role', 'alert')
-    }
-
     if (this.type === 'success') {
       this.setAttribute('role', 'status')
+    } else if (['alert', 'alertdialog'].indexOf(this.role) === -1) {
+      this.setAttribute('role', 'alert')
     }
 
     // Append button
@@ -68,10 +66,10 @@ window.customElements.define('joomla-alert', class JoomlaAlertElement extends HT
         }
         break
       case 'role':
-        if (!newValue || (newValue && ['alert', 'alertdialog'].indexOf(newValue) === -1)) {
-          this.role = 'alert'
-        } else if (this.type === 'success') {
+        if (((oldValue !== newValue) && this.type === 'success')) {
           this.role = 'status'
+        } else if (!newValue || (newValue && this.type !== 'success')) {
+          this.role = 'alert'
         }
         break
       case 'dismiss':

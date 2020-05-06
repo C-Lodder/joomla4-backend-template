@@ -2,6 +2,7 @@
 
 ## WIP
 - Version compare styling and accessibility improvements
+- Fix recursion error with alerts
 
 ## 0.0.10
 - Add "Preview Positions" button next to module position field
