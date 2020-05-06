@@ -24,7 +24,6 @@ joomla-tab {
     list-style: outside none none;
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
   }
 
   a[role=tab] {
@@ -34,6 +33,7 @@ joomla-tab {
     position: relative;
     box-shadow: 1px 0 0 rgba($black, .05);
     text-decoration: none;
+    white-space: nowrap;
 
     &[active] {
       background-color: rgba($black, .03);
@@ -126,7 +126,6 @@ joomla-tab[orientation=vertical] {
   > ul {
     flex-direction: column;
     border-radius: .25rem;
-    white-space: normal;
   }
 }
 
