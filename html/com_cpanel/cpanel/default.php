@@ -22,6 +22,8 @@ Text::script('COM_CPANEL_UNPUBLISH_MODULE_ERROR');
 HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', ['version' => 'auto']);
 
+echo 'test';
+
 $input = Factory::getApplication()->input;
 if ($input->get('dashboard', '') === 'system')
 {

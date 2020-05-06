@@ -16,7 +16,7 @@ $user = Factory::getUser();
 
 if ($user->guest)
 {
-	require __DIR__ . '/error_login.php';
+	require __DIR__ . '/error_login.php'; 
 }
 else
 {

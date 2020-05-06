@@ -449,3 +449,18 @@ summary {
   display: list-item; // Add the correct display in all browsers
   cursor: pointer;
 }
+
+ins, del {
+  color: $gray-800;
+  border-radius: .2rem;
+}
+
+ins,
+pre.added {
+  background-color: #a6f3a6;
+}
+
+del,
+pre.removed  {
+  background-color: #f8cbcb;
+}

@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Version compare styling and accessibility improvements
+
 ## 0.0.10
 - Add "Preview Positions" button next to module position field
 - Use handle for Drag & Drop
