@@ -39,7 +39,7 @@ window.customElements.define('joomla-alert', class JoomlaAlertElement extends HT
       this.appendCloseButton()
     }
 
-    if (this.hasAttribute('auto-dismiss') || this.hasAttribute('dismiss')) {
+    if ((this.hasAttribute('auto-dismiss') || this.hasAttribute('dismiss')) && this.type === 'success') {
       this.autoDismiss()
     }
 
