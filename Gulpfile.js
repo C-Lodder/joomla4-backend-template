@@ -46,17 +46,18 @@ gulp.task('sass-rtl', () =>
 // Compile vendor and Joomla SCSS overrides
 gulp.task('sass-vendor', async() => {
 	const files = {
-		'./scss/joomla/joomla-field-media.scss' : './css/system/fields',
-		'./scss/joomla/switcher.scss' : './css/system/fields',
-		'./scss/joomla/calendar.scss' : './css/system/fields',
-		'./scss/joomla/installer.scss' : './css/com_installer',
 		'./scss/joomla/searchtools.scss' : './css/system/searchtools',
-		'./scss/vendor/minicolors.scss' : './css/vendor/minicolors',
-		'./scss/vendor/choices.scss' : './css/vendor/choicesjs',
-		'./scss/vendor/dragula.scss' : './css/vendor/dragula',
-		'./scss/vendor/custom-elements/joomla-tab.scss' : './css/vendor/joomla-custom-elements',
-		'./scss/vendor/custom-elements/joomla-alert.scss' : './css/vendor/joomla-custom-elements',
-		'./scss/pages/com_media/mediamanager.scss' : './css/com_media',
+		'./scss/media/system/fields/joomla-field-media.scss' : './css/system/fields',
+		'./scss/media/system/fields/switcher.scss' : './css/system/fields',
+		'./scss/media/system/fields/calendar.scss' : './css/system/fields',
+		'./scss/media/com_installer/installer.scss' : './css/com_installer',
+		'./scss/media/com_media/mediamanager.scss' : './css/com_media',
+		'./scss/media/plg_installer_webinstaller/client.scss' : './css/plg_installer_webinstaller',
+		'./scss/media/vendor/minicolors.scss' : './css/vendor/minicolors',
+		'./scss/media/vendor/choices.scss' : './css/vendor/choicesjs',
+		'./scss/media/vendor/dragula.scss' : './css/vendor/dragula',
+		'./scss/media/vendor/custom-elements/joomla-tab.scss' : './css/vendor/joomla-custom-elements',
+		'./scss/media/vendor/custom-elements/joomla-alert.scss' : './css/vendor/joomla-custom-elements',
 	};
 
 	return Object.entries(files).forEach(([file, dest]) =>
