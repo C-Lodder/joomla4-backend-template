@@ -88,8 +88,8 @@ joomla-alert {
     -webkit-appearance: none;
   }
 
-  .alert-link {
-    color: #fff;
+  .alert-link, a {
+    color: inherit;
     text-decoration: underline;
   }
 }

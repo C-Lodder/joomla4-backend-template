@@ -7,6 +7,10 @@
   z-index: $zindex-alerts;
 }
 
+.alert a {
+  color: inherit;
+}
+
 .alert-heading {
   margin-bottom: .5rem;
   font-weight: 700;

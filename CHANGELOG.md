@@ -2,8 +2,9 @@
 
 ## WIP
 - Version compare styling and accessibility improvements
-- Fix recursion error with alerts
 - Styling improvements for 'Install From Web'
+- Fix recursion error with alerts
+- Fix alert link colour
 
 ## 0.0.10
 - Add "Preview Positions" button next to module position field
