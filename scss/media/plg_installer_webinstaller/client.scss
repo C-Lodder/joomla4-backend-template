@@ -1,19 +1,22 @@
-// Bootstrap functions
+// Bootstrap core
 @import "../../../../../../media/vendor/bootstrap/scss/functions";
-
-// Bootstrap other
-@import "../../../../../../media/vendor/bootstrap/scss/mixins";
 @import "../../../../../../media/vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/mixins";
+
+// Bettum Variables and Mixins
+@import "../../mixins";
+@import "../../variables";
+
 
 // Extension variables
 $extension-types: (
-        "jcommercial": #f6c801,
-        "jcomponent":  #1e9e33,
-        "jlanguage":   $dark,
-        "jmodule":     #e20a0a,
-        "jplugin":     #57278e,
-        "jspecific":   #d69b34,
-        "jtool":       #333
+  "jcommercial": #f6c801,
+  "jcomponent":  #1e9e33,
+  "jlanguage":   $dark,
+  "jmodule":     #e20a0a,
+  "jplugin":     #57278e,
+  "jspecific":   #d69b34,
+  "jtool":       #333
 );
 
 .com-apps-container {
@@ -36,7 +39,7 @@ $extension-types: (
     height: 100%;
     margin-top: 5px;
     text-align: center;
-    @include gradient-y(rgba(255,255,255,0), rgba(255,255,255,1), 70%, 95%);
+    @include gradient-y(rgba($white,0), rgba($white,1), 70%, 95%);
   }
 
   .com-apps-sidebar {
@@ -59,20 +62,30 @@ $extension-types: (
 
   .grid-container {
     .card {
-      height: 400px;
-      margin-bottom: 10px;
+      height: 95%;
+      margin-bottom: 1rem;
+      background-color: $primary;
 
       &:hover {
-        background-color: $white;
+        background-color: $tertiary;
       }
     }
 
-    .card-text {
-      height: 160px;
-      overflow: hidden;
+    .card-header {
+      padding: .5rem 0;
+      background-color: transparent;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+    }
+
+    .card-text p {
+      display: none;
     }
 
     .card-body {
+      padding-top: .7rem;
       cursor: pointer;
     }
   }
@@ -89,7 +102,7 @@ $extension-types: (
       margin-bottom: 10px;
 
       &:hover {
-        background-color: #f8f8f8;
+        background-color: $secondary;
       }
 
       .row {
@@ -97,19 +110,4 @@ $extension-types: (
       }
     }
   }
-}
-
-// Disallow scrolling when overlay is active
-.ifw-busy {
-  overflow: hidden;
-}
-
-.ifw-loading-container {
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  background: url("../../system/images/ajax-loader.gif") rgba(255,255,255,.7) 50% 10px no-repeat;
-  opacity: .95;
 }
