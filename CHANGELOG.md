@@ -1,10 +1,12 @@
 # Changelog
 
-## WIP
+## 0.0.11
+- Success alerts now auto dismiss
 - Version compare styling and accessibility improvements
 - Styling improvements for 'Install From Web'
 - Fix recursion error with alerts
 - Fix alert link colour
+- Fix tab content overlapping
 
 ## 0.0.10
 - Add "Preview Positions" button next to module position field
