@@ -3,6 +3,7 @@
 ## WIP
 - Add update server
 - Fix dashboard throwing error when module is unpublished
+- Fix another recursion error with alerts
 
 ## 0.0.11
 - Success alerts now auto dismiss
