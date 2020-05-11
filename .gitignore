@@ -6,8 +6,11 @@
 .idea
 .vscode
 
-# JS/CSS Build #
+# NodeJS #
 node_modules/
+
+# Build
+.zip
 
 # CSS map files #
 .map
