@@ -2,7 +2,7 @@ const { createWriteStream } = require('fs')
 const archiver = require('archiver')
 const pkg = require('./package.json')
 
-const output = createWriteStream(`${__dirname}/tpl_bettum_v${pkg.version}.zip`)
+const output = createWriteStream(`${__dirname}/tpl_bettum-v${pkg.version}.zip`)
 
 const template = archiver('zip', {
   zlib: { level: 9 }

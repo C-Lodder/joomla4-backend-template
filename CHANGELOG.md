@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.12
 - Add update server
 - Fix dashboard throwing error when module is unpublished
 - Fix another recursion error with alerts
