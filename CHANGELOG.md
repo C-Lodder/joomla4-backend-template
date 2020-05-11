@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix dashboard throwing error when module is unpublished
+
 ## 0.0.11
 - Success alerts now auto dismiss
 - Version compare styling and accessibility improvements

@@ -25,12 +25,14 @@
     if (moduleIds !== null) {
       JSON.parse(moduleIds).forEach(module => {
         const element = document.querySelector(`[data-cpanel-module-id="${module.id}"]`)
-        if (module.cardColumn) {
-          cardColumns.append(element)
-        } else {
-          cpanelModules.append(element)
+        if (element !== null) {
+          if (module.cardColumn) {
+            cardColumns.append(element)
+          } else {
+            cpanelModules.append(element)
+          }
+          element.classList.remove('d-none')
         }
-        element.classList.remove('d-none')
       })
     } else {
       document.querySelectorAll('[data-cpanel-module-id]').forEach(module => {
