@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Add update server
 - Fix dashboard throwing error when module is unpublished
 
 ## 0.0.11
