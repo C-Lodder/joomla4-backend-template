@@ -12,6 +12,6 @@
 		<maintainer>Charlie Lodder</maintainer>
 		<maintainerurl>https://joomjunk.co.uk</maintainerurl>
 		<targetplatform name="joomla" version="4.*"/>
-		<client>1</client>
+		<client>administrator</client>
 	</update>
 </updates>
