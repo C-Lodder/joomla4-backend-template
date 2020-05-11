@@ -80,6 +80,6 @@
 	</config>
 
 	<updateservers>
-		<server type="extension" priority="1" name="Bettum - Administrator Template">https://github.com/C-Lodder/joomla4-backend-template/blob/master/updates/bettum_updates.xml</server>
+		<server type="extension" priority="1" name="Bettum - Administrator Template">https://raw.githubusercontent.com/C-Lodder/joomla4-backend-template/master/updates/bettum_updates.xml</server>
 	</updateservers>
 </extension>
