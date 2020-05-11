@@ -9,7 +9,7 @@ async function* recursiveSearch(dir) {
     const res = resolve(dir, dirent.name)
     if (dirent.isDirectory()) {
       yield* recursiveSearch(res)
-    } else {
+    } else if (!res.includes('.min.js')) {
       yield res
     }
   }
