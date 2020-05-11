@@ -12,7 +12,8 @@
     "npm": ">=6.9.0"
   },
   "scripts": {
-    "package": "node package.js"
+    "js": "node build-js.js",
+    "package": "node build-zip.js"
   },
   "browserslist": [
     "last 1 version"
@@ -27,6 +28,8 @@
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "terser": "^4.6.13"
   }
 }
