@@ -10,37 +10,26 @@
 
 // Sidebar Nav
 .sidebar {
-  background-color: $sidebar-bg;
-
-  @include media-breakpoint-down(md) {
+  nav {
     position: fixed;
-	top: 0;
-	@include position('left', 0);
-	width: $sidebar-width;
-	height: 100%;
-	z-index: 1045;
-	overflow-y: auto;
-	scrollbar-width: thin;
-	@include translate(-$sidebar-width);
-  }
+    top: 0;
+    @include position('left', 0);
+    width: $sidebar-width;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    z-index: 1045;
+	background-color: $sidebar-bg;
+	transition: .3s ease-in-out;
 
-  @include media-breakpoint-down(md) {
-    &.show {
-      transform: translateX(0);
-      transition: .3s ease-in-out;
+	@include media-breakpoint-down(md) {
+      @include translate(-$sidebar-width);
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    nav {
-      position: fixed;
-      top: 0;
-      @include position('left', 0);
-      height: 100%;
-      width: $sidebar-width;
-      overflow-y: auto;
-      scrollbar-width: thin;
-    }
+  &.show nav {
+    transform: translateX(0);
+    transition: .3s ease-in-out;
   }
 
   ul {
