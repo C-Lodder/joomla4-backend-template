@@ -37,7 +37,7 @@ gulp.task('sass-rtl', () =>
 		`./scss/template-rtl.scss`,
 		`./scss/blocks/sidebar_nav-rtl.scss`,
 	])
-		.pipe(header('$rtl: true\n'))
+		.pipe(header('$rtl: true;\n'))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcssPipe())
 		.pipe(gulp.dest(`./css`))
