@@ -2,6 +2,7 @@
 
 ## WIP
 - Fix styling for changelog modal
+- Fix toolbar dropdown animation glitch
 
 ## 0.0.12
 - Add update server
