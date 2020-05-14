@@ -10,6 +10,9 @@
 
 // Sidebar Nav
 .sidebar {
+  position: relative;
+  z-index: 1;
+
   nav {
     position: fixed;
     top: 0;
