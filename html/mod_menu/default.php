@@ -23,7 +23,7 @@ $logo = $app->getTemplate(true)->params->get('siteLogo')
 $hideLinks = $app->input->getBool('hidemainmenu');
 $href = $hideLinks ? '#' : Route::_('index.php');
 
-HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['defer' => true]);
 
 // Recurse through children of root node if they exist
 ?>

@@ -10,29 +10,28 @@
 
 // Sidebar Nav
 .sidebar {
-  position: relative;
-  z-index: 1;
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
 
-  nav {
+  @include media-breakpoint-down(md) {
     position: fixed;
     top: 0;
+    bottom: 0;
     @include position('left', 0);
-    width: $sidebar-width;
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    z-index: 1045;
-	background-color: $sidebar-bg;
-	transition: .3s ease-in-out;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
 
-	@include media-breakpoint-down(md) {
-      @include translate(-$sidebar-width);
+    &.show {
+      transform: translateX(0);
+      transition: transform .3s ease-in-out;
     }
   }
 
-  &.show nav {
-    transform: translateX(0);
-    transition: .3s ease-in-out;
+  nav {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
   }
 
   ul {

@@ -3,6 +3,7 @@
 ## WIP
 - Fix styling for changelog modal
 - Fix toolbar dropdown animation glitch
+- Fix sidebar animation bug on Firefox
 
 ## 0.0.12
 - Add update server
