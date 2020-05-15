@@ -20,6 +20,7 @@
   box-shadow: $shadow-default;
 
   > nav {
+    flex-wrap: nowrap;
     border-bottom: 1px solid $border-color;
   }
 }

@@ -4,6 +4,9 @@
 - Fix styling for changelog modal
 - Fix toolbar dropdown animation glitch
 - Fix sidebar animation bug on Firefox
+- Fix vertical tab section background colour
+- Fix several styling issues on smaller devices
+- Fix switcher disable state styling
 
 ## 0.0.12
 - Add update server

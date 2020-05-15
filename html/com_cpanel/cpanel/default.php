@@ -66,7 +66,7 @@ echo HTMLHelper::_(
 		<?php endif; ?>
 	</div>
 
-	<div id="card-columns" class="card-columns">
+	<div id="card-columns" class="cpanel-<?php echo $input->get('dashboard', ''); ?> card-columns">
 		<?php foreach ($this->modules as $module) : ?>
 			<?php echo ModuleHelper::renderModule($module, ['style' => 'cpanel']); ?>
 		<?php endforeach; ?>

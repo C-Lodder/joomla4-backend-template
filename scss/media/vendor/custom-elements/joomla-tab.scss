@@ -78,7 +78,7 @@ joomla-tab[orientation=vertical] {
 
   > ul {
     flex-direction: column;
-    min-width: 250px;
+    width: 100%;
     height: auto;
     border: 1px solid $border-color;
     border-radius: .25rem;
@@ -138,21 +138,22 @@ joomla-tab[view=accordion] {
   section {
     display: none;
     padding: 15px;
+    background-color: $secondary;
 
     &[active] {
       display: block;
       border-bottom: 1px solid $border-color;
     }
+  }
 
-    a[role=tab] {
-      border-bottom: 1px solid $border-color;
+  a[role=tab] {
+    border-bottom: 1px solid $border-color;
 
-	  &[active]::after {
-        width: 5px;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
+	&[active]::after {
+      width: 5px;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
   }
 }

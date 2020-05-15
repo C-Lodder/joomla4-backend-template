@@ -19,6 +19,14 @@ $switcher-height: 32px;
   width: 18rem;
   height: $switcher-height;
   float: left;
+
+  &.disabled {
+    opacity: .6;
+
+    input {
+      cursor: not-allowed;
+    }
+  }
 }
 
 .switcher input {

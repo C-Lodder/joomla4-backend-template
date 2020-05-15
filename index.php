@@ -100,7 +100,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 				<div class="mb-3">
 					<button type="button" class="btn btn-primary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse" data-target=".subhead"><?php echo Text::_('JTOOLBAR'); ?>
 						<span class="icon-chevron-down" aria-hidden="true"></span></button>
-					<div id="subhead" class="subhead">
+					<div id="subhead" class="subhead show">
 						<div id="container-collapse" class="container-collapse"></div>
 						<div class="row">
 							<div class="col-md-12">
