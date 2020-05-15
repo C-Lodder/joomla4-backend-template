@@ -7,6 +7,7 @@
 - Fix vertical tab section background colour
 - Fix several styling issues on smaller devices
 - Fix switcher disable state styling
+- Modal now displayed when a Joomla update is available
 
 ## 0.0.12
 - Add update server
