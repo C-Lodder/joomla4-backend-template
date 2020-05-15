@@ -10,7 +10,7 @@
   'use strict';
 
   const createUpdateModal = (version) => {
-    const html = `<div id="joomlaUpdateModal" class="modal hide fade in">
+    const html = `<div id="joomlaUpdateModal" class="modal hide fade in" aria-modal="true" role="dialog">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
