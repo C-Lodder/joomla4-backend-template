@@ -13,7 +13,7 @@
   },
   "scripts": {
     "js": "node build-js.js",
-    "package": "node build-zip.js"
+    "zip": "node build-zip.js"
   },
   "browserslist": [
     "last 1 version"

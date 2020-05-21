@@ -25,20 +25,30 @@ git clone https://github.com/C-Lodder/joomla4-backend-template.git <path>
 ```bash
 cd <path>
 ```
+- Install dependencies:
+```bash
+npm i
+```
 - Checkout a new branch:
 ```bash
 git checkout -b <branch name>
 ```
-- Install npm packages:
-```bash
-npm i
-```
 
-## Gulp build tasks:
+## Build tasks:
 
 - Compile SCSS and minify CSS
 ```bash
 gulp build
+```
+
+- Minify JS
+```bash
+npm run js
+```
+
+- Create an installation ZIP file
+```bash
+npm run zip
 ```
 
 ## Screenshots:

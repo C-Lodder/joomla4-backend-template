@@ -5,7 +5,7 @@
   "description": "Bettum is a Joomla 4 administrator template",
   "license": "GPL-2.0-or-later",
   "assets": [
-	{
+    {
       "package": "choices.js",
       "name": "choicesjs",
       "version": "9.0.0",
@@ -17,11 +17,10 @@
       "type": "style",
       "uri": "system/fields/switcher.min.css"
     },
-	{
+    {
       "name": "searchtools",
       "type": "style",
       "uri": "system/searchtools/searchtools.min.css"
     }
   ]
 }
-
