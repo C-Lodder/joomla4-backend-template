@@ -35,7 +35,6 @@ git checkout -b <branch name>
 ```
 
 ## Build tasks:
-
 - Compile SCSS and minify CSS
 ```bash
 gulp build
