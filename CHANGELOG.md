@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.13
 - Fix styling for changelog modal
 - Fix toolbar dropdown animation glitch
 - Fix sidebar animation bug on Firefox
