@@ -1,4 +1,4 @@
-const { createWriteStream, promises } = require('fs')
+const { createWriteStream } = require('fs')
 const archiver = require('archiver')
 const pkg = require('./package.json')
 
