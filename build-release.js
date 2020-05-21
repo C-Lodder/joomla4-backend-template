@@ -19,6 +19,14 @@ const updateTemplateXml = async () => {
   console.log('File "templateDetails.xml" has been updated')
 }
 
+const updateUpdateScript = async () => {
+  const file = await promises.readFile('./updates/bettum_updates.xml', 'utf8')
+  const xml = file.replace(/<version>([0-9.]+)<\/version>/g, `<version>${pkg.version}</version>`)
+
+  await promises.writeFile('./updates/bettum_updates.xml', xml)
+  console.log('File "bettum_updates.xml" has been updated')
+}
+
 const updateChangelog = async () => {
   const file = await promises.readFile('./CHANGELOG.md', 'utf8')
   const markdown = file.replace(/##\sWIP/g, `## ${pkg.version}`)
@@ -29,4 +37,5 @@ const updateChangelog = async () => {
 
 updateJoomlaAssetJson()
 updateTemplateXml()
+updateUpdateScript()
 updateChangelog()
