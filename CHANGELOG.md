@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix pagination arrow icons on RTL mode
+
 ## 0.0.13
 - Fix styling for changelog modal
 - Fix toolbar dropdown animation glitch
