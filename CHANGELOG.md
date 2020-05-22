@@ -2,6 +2,7 @@
 
 ## WIP
 - Fix pagination arrow icons on RTL mode
+- Fix global config sidebar menu toggle #29192
 
 ## 0.0.13
 - Fix styling for changelog modal
