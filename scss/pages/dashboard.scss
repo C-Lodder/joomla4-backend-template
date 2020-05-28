@@ -14,22 +14,9 @@
     box-shadow: $shadow-default;
   }
 
-  .card-header {
-    padding: 0;
-
-    h2 {
-      position: relative;
-      padding: .65rem 1rem;
-    }
-
-    .btn {
-      padding: .65rem 1rem;
-    }
-
-  }
-
-  .card-body {
-    padding: 0;
+  .card-body .list-group-flush {
+    margin-left: -$card-spacer-x;
+    margin-right: -$card-spacer-x;
   }
 
   .table {
@@ -37,9 +24,10 @@
   }
 }
 
-.cpanel-modules.cpanel-quickicons .card-body {
-  padding: $card-spacer-x;
-}
+// Can't see any reference to this styling so commenting out for now
+//.cpanel-modules.cpanel-quickicons .card-body {
+//  padding: $card-spacer-x;
+//}
 
 .card-header {
   display: flex;
@@ -52,7 +40,7 @@
   margin-bottom: 2rem;
   border: 2px dashed $tertiary;
 
-  .fa {
+  .fas {
     font-size: 40px;
   }
 }
