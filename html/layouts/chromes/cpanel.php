@@ -42,7 +42,7 @@ if ($module->content) :
 		$headerIcon = '<span class="' . htmlspecialchars($params->get('header_icon')) .  $margin . '" aria-hidden="true"></span>';
 	}
 	?>
-	<<?php echo $moduleTag; ?> class="d-none card mb-3 cpanel-modules<?php echo $moduleClassSfx; ?>" data-cpanel-module-id="<?php echo $module->id; ?>">
+	<<?php echo $moduleTag; ?> class="d-none card mb-3 cpanel-modules<?php echo $moduleClassSfx; ?> module-wrapper" data-cpanel-module-id="<?php echo $module->id; ?>">
 		<?php if ($canEdit || $canChange || $headerIcon || $module->showtitle) : ?>
 			<div class="card-header">
 				<?php if ($canEdit || $canChange) : ?>

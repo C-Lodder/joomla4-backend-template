@@ -4,6 +4,8 @@
 - Fix pagination arrow icons on RTL mode
 - Fix global config sidebar menu toggle #29192
 - Fix dashboard module padding
+- Fix dashboard not showing newly added module
+- Fix unpublishing a module from the dashboard
 
 ## 0.0.13
 - Fix styling for changelog modal

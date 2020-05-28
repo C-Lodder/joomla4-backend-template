@@ -20,7 +20,6 @@
   const renderModules = () => {
     const cpanelModules = document.getElementById('cpanel-modules')
     const cardColumns = document.getElementById('card-columns')
-
     const moduleIds = localStorage.getItem('cpanel-modules')
     if (moduleIds !== null) {
       JSON.parse(moduleIds).forEach(module => {
@@ -34,11 +33,12 @@
           element.classList.remove('d-none')
         }
       })
-    } else {
-      document.querySelectorAll('[data-cpanel-module-id]').forEach(module => {
-        module.classList.remove('d-none')
-      })
     }
+
+    // Show all the other modules
+    document.querySelectorAll('[data-cpanel-module-id]').forEach(module => {
+      module.classList.remove('d-none')
+    })
   }
 
   const onBoot = () => {
