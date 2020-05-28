@@ -19,7 +19,7 @@ HTMLHelper::_('script', 'mod_multilangstatus/admin-multilangstatus.min.js', arra
 
 <div class="multilanguage d-flex align-items-center">
 	<button class="btn-link nav-link" href="#multiLangModal" data-toggle="modal">
-		<span class="fa fa-language" aria-hidden="true"></span>
+		<span class="fas fa-language" aria-hidden="true"></span>
 		<span class="sr-only"><?php echo Text::_('MOD_MULTILANGSTATUS'); ?></span>
 	</button>
 

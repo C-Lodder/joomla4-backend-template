@@ -41,7 +41,6 @@ if (!empty($displayData['class']))
 
 // Make the class string
 $class = !empty($tmp) ? 'class="' . implode(' ', array_unique($tmp)) . '"' : '';
-
 ?>
 <?php // If it is a button with two links: make it a list ?>
 <li class="quickicon quickicon-single">
@@ -53,7 +52,7 @@ $class = !empty($tmp) ? 'class="' . implode(' ', array_unique($tmp)) . '"' : '';
 		<?php endif; ?>
 		<?php if (isset($displayData['ajaxurl'])) : ?>
 			<div class="quickicon-amount" <?php echo $dataUrl ?> aria-hidden="true">
-				<span class="fa fa-spinner" aria-hidden="true"></span>
+				<span class="fas fa-spinner" aria-hidden="true"></span>
 			</div>
 			<div class="quickicon-sr-desc sr-only"></div>
 		<?php endif; ?>

@@ -117,7 +117,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 						<?php endif; ?>
 						<p>
 							<a href="<?php echo $this->baseurl; ?>" class="btn btn-primary">
-								<span class="fa fa-dashboard" aria-hidden="true"></span>
+								<span class="fas fa-dashboard" aria-hidden="true"></span>
 								<?php echo Text::_('JGLOBAL_TPL_CPANEL_LINK_TEXT'); ?></a>
 						</p>
 					</div>

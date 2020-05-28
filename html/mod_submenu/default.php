@@ -41,7 +41,7 @@ $canChange  = $user->authorise('core.edit.state', 'com_modules.module.' . $id) &
 							<?php $dropdownPosition = Factory::getLanguage()->isRTL() ? 'left' : 'right'; ?>
 							<div class="module-actions dropdown">
 								<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-link" id="dropdownMenuButton-<?php echo $id; ?>">
-									<span class="fa fa-cog" aria-hidden="true"></span>
+									<span class="fas fa-cog" aria-hidden="true"></span>
 									<span class="sr-only"><?php echo Text::_('JACTION_EDIT') . ' ' . $module->title; ?></span>
 								</button>
 								<div class="dropdown-menu dropdown-menu-<?php echo $dropdownPosition; ?>" aria-labelledby="dropdownMenuButton-<?php echo $id; ?>">
@@ -57,7 +57,7 @@ $canChange  = $user->authorise('core.edit.state', 'com_modules.module.' . $id) &
 							</div>
 						<?php endif; ?>
 						<h2>
-							<?php if ($child->icon) : ?><span class="fa fa-<?php echo $child->icon; ?>" aria-hidden="true"></span><?php endif; ?>
+							<?php if ($child->icon) : ?><span class="fas fa-<?php echo $child->icon; ?>" aria-hidden="true"></span><?php endif; ?>
 							<?php echo Text::_($child->title); ?>
 						</h2>
 					</div>
@@ -97,7 +97,7 @@ $canChange  = $user->authorise('core.edit.state', 'com_modules.module.' . $id) &
 										?>
 										<?php if (!$permission || $user->authorise($permission, $scope)) : ?>
 											<a href="<?php echo $link; ?>">
-												<span class="fa fa-<?php echo $icon; ?> fa-xs" title="<?php echo htmlentities($title); ?>" aria-hidden="true"></span>
+												<span class="fas fa-<?php echo $icon; ?> fa-xs" title="<?php echo htmlentities($title); ?>" aria-hidden="true"></span>
 												<span class="sr-only"><?php echo  htmlentities($sronly); ?></span>
 											</a>
 										<?php endif; ?>

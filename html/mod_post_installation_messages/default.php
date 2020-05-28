@@ -16,7 +16,7 @@ $hideLinks = $app->input->getBool('hidemainmenu');
 <div class="dropdown d-none d-lg-flex align-items-center">
 	<button class="btn-link nav-link dropdown-toggle d-flex align-items-center <?php echo ($hideLinks ? 'disabled' : ''); ?>" data-toggle="dropdown" href="#" <?php echo ($hideLinks ? 'disabled' : ''); ?>
 		title="<?php echo Text::_('MOD_POST_INSTALLATION_MESSAGES'); ?>">
-		<span class="fa fa-bell" aria-hidden="true"></span>
+		<span class="fas fa-bell" aria-hidden="true"></span>
 		<div class="sr-only">
 			<?php echo Text::_('MOD_POST_INSTALLATION_MESSAGES'); ?>
 		</div>

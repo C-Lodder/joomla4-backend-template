@@ -18,8 +18,8 @@ $route = 'index.php?option=com_messages&view=messages&id=' . $app->getIdentity()
 $app   = Factory::getApplication();
 ?>
 
-<a class="d-none d-lg-flex nav-link align-items-center<?php echo ($hideLinks ? ' disabled' : ''); ?>" href="<?php echo Route::_($route); ?> title="<?php echo Text::_('MOD_MESSAGES_PRIVATE_MESSAGES'); ?>">
-	<span class="fa fa-envelope" aria-hidden="true"></span>
+<a class="d-none d-lg-flex nav-link align-items-center<?php echo ($hideLinks ? ' disabled' : ''); ?>" href="<?php echo Route::_($route); ?>" title="<?php echo Text::_('MOD_MESSAGES_PRIVATE_MESSAGES'); ?>">
+	<span class="fas fa-envelope" aria-hidden="true"></span>
 	<div class="sr-only">
 		<?php echo Text::_('MOD_MESSAGES_PRIVATE_MESSAGES'); ?>
 	</div>

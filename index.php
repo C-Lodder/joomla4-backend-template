@@ -86,7 +86,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 						<jdoc:include type="modules" name="title" />
 						<div class="d-flex justify-content-end px-3 top-nav">
 							<jdoc:include type="modules" name="status" style="none" />
-							<button id="navbar-toggler" class="btn-link nav-link d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+							<button id="navbar-toggler" class="btn-link nav-link d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars" aria-hidden="true"></span></button>
 						</div>
 					</nav>
 				</div>
