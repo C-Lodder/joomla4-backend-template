@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Update to Bootstrap 4.5.0
 - Fix pagination arrow icons on RTL mode
 - Fix global config sidebar menu toggle #29192
 - Fix dashboard module padding
