@@ -121,8 +121,9 @@ body {
 }
 
 @include media-breakpoint-up(lg) {
-  body {
+  .bettum-grid {
     display: grid;
-    grid-template-columns: 0 $sidebar-width minmax($sidebar-width, 1fr);
+    height: 100%;
+    grid-template-columns: $sidebar-width minmax($sidebar-width, 1fr);
   }
 }

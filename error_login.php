@@ -39,6 +39,8 @@ foreach (array_keys($this->_styleSheets) as $style)
 	unset($this->_styleSheets[$style]);
 }
 
+$isSidebarNav = $this->params->get('menu', 1) ? true : false;
+
 $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl' ? '-rtl' : '') . '.css');
 ?>
 <!DOCTYPE html>
@@ -49,23 +51,29 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 	<jdoc:include type="styles" />
 </head>
 <body class="admin">
-	<?php // Header ?>
-	<header id="header" class="header">
-		<jdoc:include type="modules" name="menu" style="none" />
+	<?php if (!$isSidebarNav) : ?>
+		<?php // Header ?>
+		<header id="header" class="header">
+			<jdoc:include type="modules" name="menu" style="none" />
+			<div class="nav-scroller">
+				<nav class="nav nav-underline justify-content-between mb-3">
+					<jdoc:include type="modules" name="title" />
+					<div class="d-flex justify-content-end px-3 top-nav">
+						<jdoc:include type="modules" name="status" style="none" />
+					</div>
+				</nav>
+			</div>
+		</header>
+	<?php endif; ?>
 
-		<div class="nav-scroller">
-			<nav class="nav nav-underline justify-content-between mb-3">
-				<jdoc:include type="modules" name="title" />
-				<div class="d-flex align-items-center justify-content-end px-3">
-					<jdoc:include type="modules" name="status" style="none" />
-				</div>
-			</nav>
+	<?php if ($isSidebarNav) : ?>
+		<div id="bettum-sidebar" class="sidebar">
+			<jdoc:include type="modules" name="menu" style="none" />
 		</div>
-	</header>
+	<?php endif; ?>
 
 	<?php // Wrapper ?>
 	<div id="wrapper" class="d-flex">
-
 		<?php // container-fluid ?>
 		<div class="container-fluid container-main">
 			<section id="content" class="content h-100">

@@ -10,6 +10,8 @@
 - Fix dashboard not showing newly added module
 - Fix unpublishing a module from the dashboard
 - Fix fetching template params in module overrides
+- Fix broken layout when Skip To Nagivation is disabled
+- Fix sidebar menu on error page
 
 ## 0.0.13
 - Fix styling for changelog modal
