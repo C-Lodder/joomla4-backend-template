@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;

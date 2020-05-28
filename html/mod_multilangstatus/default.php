@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  mod_multilangstatus
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -14,9 +12,9 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 
 HTMLHelper::_('bootstrap.framework');
-HTMLHelper::_('script', 'mod_multilangstatus/admin-multilangstatus.min.js', array('version' => 'auto', 'relative' => true));
-?>
+HTMLHelper::_('script', 'mod_multilangstatus/admin-multilangstatus.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 
+?>
 <div class="multilanguage d-flex align-items-center">
 	<button class="btn-link nav-link" href="#multiLangModal" data-toggle="modal">
 		<span class="fas fa-language" aria-hidden="true"></span>

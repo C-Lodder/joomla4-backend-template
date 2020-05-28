@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -20,11 +20,11 @@ $lang  = $app->getLanguage();
 $input = $app->input;
 
 // Detecting Active Variables
-$option     = $input->get('option', '');
-$view       = $input->get('view', '');
-$layout     = $input->get('layout', 'default');
-$task       = $input->get('task', 'display');
-$cpanel     = $option === 'com_cpanel';
+$option = $input->get('option', '');
+$view   = $input->get('view', '');
+$layout = $input->get('layout', 'default');
+$task   = $input->get('task', 'display');
+$cpanel = $option === 'com_cpanel';
 
 HTMLHelper::_('bootstrap.framework');
 

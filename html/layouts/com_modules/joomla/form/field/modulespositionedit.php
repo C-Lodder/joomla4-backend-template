@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  com_modules
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;
@@ -50,19 +48,19 @@ extract($displayData);
  * @var   array    $positions       Array of the positions
  */
 
-$attributes = array(
+$attributes = [
 	'class="' . $class . '"',
 	' allow-custom',
 	' search-placeholder="' . $this->escape(Text::_('JGLOBAL_TYPE_OR_SELECT_SOME_OPTIONS')) . '" ',
-);
+];
 
-$selectAttr = array(
+$selectAttr = [
 	$disabled ? 'disabled' : '',
 	$readonly ? 'readonly' : '',
 	strlen($hint) ? 'placeholder="' . $this->escape($hint) . '"' : '',
 	$onchange ? ' onchange="' . $onchange . '"' : '',
 	$autofocus ? ' autofocus' : '',
-);
+];
 
 if ($required)
 {
@@ -84,11 +82,11 @@ $client = $module->client_id === 1 ? 'administrator/' : '';
 ?>
 <div class="d-flex align-items-center">
 	<joomla-field-fancy-select <?php echo implode(' ', $attributes); ?>><?php
-		echo HTMLHelper::_('select.groupedlist', $positions, $name, array(
+		echo HTMLHelper::_('select.groupedlist', $positions, $name, [
 				'id'          => $id,
 				'list.select' => $value,
 				'list.attr'   => implode(' ', $selectAttr),
-			)
+			]
 		);
 	?></joomla-field-fancy-select>
 	<a href="<?php echo Uri::root() . $client . 'index.php?tp=1'; ?>" target="_blank" class="btn btn-link">

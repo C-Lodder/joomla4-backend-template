@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -15,8 +15,8 @@ use Joomla\CMS\Uri\Uri;
 HTMLHelper::_('behavior.core');
 HTMLHelper::_('behavior.formvalidator');
 HTMLHelper::_('behavior.keepalive');
-HTMLHelper::_('script', 'system/fields/passwordview.min.js', ['version' => 'auto', 'relative' => true]);
-HTMLHelper::_('script', 'mod_login/admin-login.min.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('script', 'system/fields/passwordview.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
+HTMLHelper::_('script', 'mod_login/admin-login.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 
 Text::script('JSHOW');
 Text::script('JHIDE');

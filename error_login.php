@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -15,16 +15,10 @@ use Joomla\CMS\Uri\Uri;
 
 /** @var JDocumentHtml $this */
 
-$app   = Factory::getApplication();
-$lang  = $app->getLanguage();
-$input = $app->input;
+$lang = Factory::getApplication()->getLanguage();
 
 // Detecting Active Variables
-$option     = $input->get('option', '');
-$view       = $input->get('view', '');
-$layout     = $input->get('layout', 'default');
-$task       = $input->get('task', 'display');
-$logo       = $this->params->get('loginLogo')
+$logo = $this->params->get('loginLogo')
 	? Uri::root() . $this->params->get('loginLogo')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
@@ -54,7 +48,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout; ?>">
+<body class="admin">
 	<?php // Header ?>
 	<header id="header" class="header">
 		<jdoc:include type="modules" name="menu" style="none" />

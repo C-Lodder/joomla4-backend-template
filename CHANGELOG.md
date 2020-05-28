@@ -2,12 +2,14 @@
 
 ## WIP
 - Update to Bootstrap 4.5.0
+- Javascript loaded from Bettum is now deferred
+- Simplify PIM notifications
 - Fix pagination arrow icons on RTL mode
 - Fix global config sidebar menu toggle #29192
 - Fix dashboard module padding
 - Fix dashboard not showing newly added module
 - Fix unpublishing a module from the dashboard
-- Simplify PIM notifications
+- Fix fetching template params in module overrides
 
 ## 0.0.13
 - Fix styling for changelog modal

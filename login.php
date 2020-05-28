@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -15,21 +15,12 @@ use Joomla\CMS\Uri\Uri;
 
 /** @var JDocumentHtml $this */
 
-$app   = Factory::getApplication();
-$lang  = $app->getLanguage();
-$input = $app->input;
+$lang = Factory::getApplication()->getLanguage();
 
 // Detecting Active Variables
-$option     = $input->get('option', '');
-$view       = $input->get('view', '');
-$layout     = $input->get('layout', 'default');
-$task       = $input->get('task', 'display');
-$logo       = $this->params->get('loginLogo')
+$logo = $this->params->get('loginLogo')
 	? Uri::root() . $this->params->get('loginLogo')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
-
-// Load specific template related JS
-HTMLHelper::_('script', 'template.es6.js', ['version' => 'auto', 'relative' => true]);
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
@@ -55,7 +46,7 @@ $css = file_get_contents(__DIR__ . '/css/login.css');
 	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
-<body class="admin h-100 <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
+<body class="admin h-100">
 	<main class="content d-flex align-items-center justify-content-center h-100">
 		<div class="login">
 			<div class="main-brand text-center">

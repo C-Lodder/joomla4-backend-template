@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  com_cpanel
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -19,7 +17,7 @@ HTMLHelper::_('behavior.core');
 Text::script('COM_CPANEL_UNPUBLISH_MODULE_SUCCESS');
 Text::script('COM_CPANEL_UNPUBLISH_MODULE_ERROR');
 
-HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('script', 'com_cpanel/admin-cpanel-default.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/dashboard.css', ['version' => 'auto']);
 
 $input = Factory::getApplication()->input;
@@ -29,13 +27,13 @@ if ($input->get('dashboard', '') === 'system')
 }
 
 $user = Factory::getUser();
-HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('script', 'com_cpanel/admin-add_module.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 
 // Dragula
 if ($input->get('dashboard', '') === '')
 {
-	HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto'], ['defer' => true]);
-	HTMLHelper::_('script', 'com_cpanel/admin-cpanel-dnd.min.js', ['version' => 'auto', 'relative' => true], ['defer' => true]);
+	HTMLHelper::_('script', 'media/vendor/dragula/js/dragula.min.js', ['version' => 'auto'], ['type' => 'module']);
+	HTMLHelper::_('script', 'com_cpanel/admin-cpanel-dnd.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 	HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/vendor/dragula/dragula.css', ['version' => 'auto']);
 }
 

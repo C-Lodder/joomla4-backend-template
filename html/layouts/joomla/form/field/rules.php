@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  Layout
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;
@@ -17,11 +15,7 @@ use Joomla\CMS\Layout\LayoutHelper;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Session\Session;
 
-
 extract($displayData);
-
-// Get some system objects.
-$document = Factory::getDocument();
 
 /**
  * Layout variables
@@ -100,7 +94,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 	<?php // Initial Active Pane ?>
 		<?php foreach ($groups as $group) : ?>
 			<?php $active = (int) $group->value === 1 ? ' active' : ''; ?>
-			<section class="tab-pane<?php echo $active; ?>" name="<?php echo htmlentities(LayoutHelper::render('joomla.html.treeprefix', array('level' => $group->level + 1)), ENT_COMPAT, 'utf-8') . $group->text; ?>" id="permission-<?php echo $group->value; ?>">
+			<section class="tab-pane<?php echo $active; ?>" name="<?php echo htmlentities(LayoutHelper::render('joomla.html.treeprefix', ['level' => $group->level + 1]), ENT_COMPAT, 'utf-8') . $group->text; ?>" id="permission-<?php echo $group->value; ?>">
 				<table class="table">
 					<thead>
 						<tr>
@@ -165,7 +159,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 								</td>
 
 								<td headers="aclaction-th<?php echo $group->value; ?>">
-									<?php $result = array(); ?>
+									<?php $result = []; ?>
 									<?php // Get the group, group parent id, and group global config recursive calculated permission for the chosen action. ?>
 									<?php $inheritedGroupRule 	= Access::checkGroup((int) $group->value, $action->name, $assetId);
 									$inheritedGroupParentAssetRule = !empty($parentAssetId) ? Access::checkGroup($group->value, $action->name, $parentAssetId) : null;

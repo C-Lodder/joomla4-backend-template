@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Bettum
- * @copyright   Copyright (C) 2019 Charlie Lodder. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -14,8 +14,8 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 
-$app  = Factory::getApplication();
-$params = Factory::getApplication();
+$app = Factory::getApplication();
+$params = $app->getTemplate(true)->params;
 $sidebar = $params->get('menu', 1) ? true : false;
 $logo = $params->get('siteLogo')
 	? Uri::root() . $params->get('siteLogo')
@@ -24,7 +24,7 @@ $logo = $params->get('siteLogo')
 $hideLinks = $app->input->getBool('hidemainmenu');
 $href = $hideLinks ? '#' : Route::_('index.php');
 
-HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['defer' => true]);
+HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 
 // Recurse through children of root node if they exist
 ?>
@@ -40,7 +40,8 @@ HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'rel
 	</nav>
 <?php elseif (!$sidebar && $root->hasChildren()) : ?>
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu"
+			aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
 		<a class="navbar-brand" href="<?php echo $href; ?>">
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
 		</a>

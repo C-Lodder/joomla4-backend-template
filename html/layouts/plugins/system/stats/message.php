@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Plugin
- * @subpackage  System.stats
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;
@@ -20,8 +18,8 @@ extract($displayData);
  * @var  \Joomla\Registry\Registry  $pluginParams  Plugin parameters
  * @var  array                      $statsData     Array containing the data that will be sent to the stats server
  */
-?>
 
+?>
 <joomla-alert type="info" class="js-pstats-alert" role="alertdialog">
 	<div class="alert-heading"><?php echo Text::_('PLG_SYSTEM_STATS_LABEL_MESSAGE_TITLE'); ?></div>
 	<div>

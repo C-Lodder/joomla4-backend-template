@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  Layout
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package    Bettum
+ * @copyright  Copyright (C) 2020 Charlie Lodder. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;
@@ -12,14 +10,13 @@ defined('JPATH_BASE') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 
-$app    = Factory::getApplication();
-$form   = $displayData->getForm();
-$input  = $app->input;
+$form  = $displayData->getForm();
+$input = Factory::getApplication()->input;
 
-$fields = $displayData->get('fields') ?: array(
-	array('parent', 'parent_id'),
-	array('published', 'state', 'enabled'),
-	array('category', 'catid'),
+$fields = $displayData->get('fields') ?: [
+	['parent', 'parent_id'],
+	['published', 'state', 'enabled'],
+	['category', 'catid'],
 	'featured',
 	'sticky',
 	'access',
@@ -27,9 +24,9 @@ $fields = $displayData->get('fields') ?: array(
 	'tags',
 	'note',
 	'version_note',
-);
+];
 
-$hiddenFields = $displayData->get('hidden_fields') ?: array();
+$hiddenFields = $displayData->get('hidden_fields') ?: [];
 
 if (!ModuleHelper::isAdminMultilang())
 {
@@ -37,7 +34,7 @@ if (!ModuleHelper::isAdminMultilang())
 	$form->setFieldAttribute('language', 'default', '*');
 }
 
-$html   = array();
+$html   = [];
 $html[] = '<fieldset class="form-vertical module-options">';
 
 foreach ($fields as $field)
