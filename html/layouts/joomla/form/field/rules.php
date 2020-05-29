@@ -112,7 +112,6 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 						</tr>
 					</thead>
 					<tbody>
-
 						<?php // Check if this group has super user permissions ?>
 						<?php $isSuperUserGroup = Access::checkGroup($group->value, 'core.admin'); ?>
 						<?php foreach ($actions as $action) : ?>
@@ -152,12 +151,10 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 											<?php echo Text::_('JLIB_RULES_ALLOWED'); ?></option>
 											<option value="0" <?php echo ($assetRule === false ? ' selected="selected"' : ''); ?>>
 											<?php echo Text::_('JLIB_RULES_DENIED'); ?></option>
-
 										</select>&#160;
 										<span id="icon_<?php echo $id; ?>_<?php echo $action->name; ?>_<?php echo $group->value; ?>"></span>
 									</div>
 								</td>
-
 								<td headers="aclaction-th<?php echo $group->value; ?>">
 									<?php $result = []; ?>
 									<?php // Get the group, group parent id, and group global config recursive calculated permission for the chosen action. ?>
@@ -169,7 +166,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 									if ($isSuperUserGroup)
 									{
 										$result['class'] = 'badge badge-success';
-										$result['text']  = '<span class="fas fa-lock icon-white" aria-hidden="true"></span>' . Text::_('JLIB_RULES_ALLOWED_ADMIN');
+										$result['text']  = '<span class="fas fa-lock icon-white" aria-hidden="true"></span> ' . Text::_('JLIB_RULES_ALLOWED_ADMIN');
 									}
 									else
 									{
@@ -226,7 +223,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 										elseif ($inheritedGroupParentAssetRule === false || $inheritedParentGroupRule === false)
 										{
 											$result['class'] = 'badge badge-danger';
-											$result['text']  = '<span class="fas fa-lock icon-white" aria-hidden="true"></span>'. Text::_('JLIB_RULES_NOT_ALLOWED_LOCKED');
+											$result['text']  = '<span class="fas fa-lock icon-white" aria-hidden="true"></span> '. Text::_('JLIB_RULES_NOT_ALLOWED_LOCKED');
 										}
 									}
 									?>
