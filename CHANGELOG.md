@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix Drag and Drop handle cursor
+
 ## 0.0.14
 - Update to Bootstrap 4.5.0
 - Javascript loaded from Bettum is now deferred
