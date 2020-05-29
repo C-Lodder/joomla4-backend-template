@@ -44,3 +44,7 @@
 .btn-primary {
   border-color: $border-color;
 }
+
+.nav-sm .nav-link {
+  padding: $nav-link-padding-y / 2 $nav-link-padding-x / 2;
+}
