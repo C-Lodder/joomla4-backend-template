@@ -67,7 +67,14 @@ joomla-tab {
     padding: 15px;
 
     &[active] {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    > fieldset,
+    > joomla-field-send-test-mail {
+      margin-bottom: 1rem;
+      flex: 1 0 50%;
     }
   }
 }
@@ -80,10 +87,11 @@ joomla-tab[orientation=vertical] {
     flex-direction: column;
     width: 100%;
     height: auto;
+    flex: 0 0 25%;
+    overflow: hidden;
     border: 1px solid $border-color;
     border-radius: .25rem;
     box-shadow: none;
-    overflow: hidden;
   }
 
   li:last-of-type a {
@@ -132,6 +140,7 @@ joomla-tab[orientation=vertical] {
 
 joomla-tab[view=accordion] {
   ul {
+    flex: 1;
     flex-direction: column;
   }
 
