@@ -67,14 +67,7 @@ joomla-tab {
     padding: 15px;
 
     &[active] {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    > fieldset,
-    > joomla-field-send-test-mail {
-      margin-bottom: 1rem;
-      flex: 1 0 50%;
+      display: block;
     }
   }
 }
