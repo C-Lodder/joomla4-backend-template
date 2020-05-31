@@ -46,7 +46,7 @@ if ($current->type === 'separator')
 }
 else
 {
-	echo '<li ' . $class . ' role="menuitem">';
+	echo '<li ' . $class . ' role="none">';
 }
 
 // Print a link if it exists
@@ -76,19 +76,19 @@ $iconClass = ($icon != '' && $current->level == 1) ? '<span class="' . $icon . '
 
 if ($link != '' && $current->target != '')
 {
-	echo '<a' . $linkClass . $dataToggle . ' href="' . $link . '" target="' . $current->target . '">'
+	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '" target="' . $current->target . '">'
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }
 elseif ($link != '')
 {
-	echo '<a' . $linkClass . $dataToggle . ' href="' . $link . '">'
+	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '">'
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }
 elseif ($current->title != '' && $current->class !== 'separator')
 {
-	echo '<a' . $linkClass . $dataToggle . '>'
+	echo '<a role="menuitem"' . $linkClass . $dataToggle . '>'
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }

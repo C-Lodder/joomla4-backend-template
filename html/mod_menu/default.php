@@ -34,7 +34,7 @@ HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'rel
 		<a class="navbar-brand text-center" href="<?php echo $href; ?>">
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
 		</a>
-		<ul id="collapse" class="navbar-nav">
+		<ul id="collapse" class="navbar-nav" role="menu">
 			<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu_sidebar'), $root); ?>
 		</ul>
 	</nav>
@@ -46,7 +46,7 @@ HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'rel
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<div class="collapse navbar-collapse" id="topMenu">
-			<ul id="menu" class="navbar-nav mr-auto">
+			<ul id="menu" class="navbar-nav mr-auto" role="menu">
 				<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu'), $root); ?>
 			</ul>
 		</div>
