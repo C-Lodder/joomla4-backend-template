@@ -69,9 +69,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 					</nav>
 				</div>
 			</header>
-		<?php endif; ?>
-
-		<?php if ($isSidebarNav) : ?>
+		<?php else : ?>
 			<div id="bettum-sidebar" class="sidebar">
 				<jdoc:include type="modules" name="menu" style="none" />
 			</div>
