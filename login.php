@@ -26,7 +26,6 @@ $logo = $this->params->get('loginLogo')
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#38383d');
 
-HTMLHelper::_('stylesheet', 'fontawesome.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'custom.css', ['version' => 'auto', 'relative' => true]);
 HTMLHelper::_('stylesheet', 'administrator/language/' . $lang->getTag() . '/' . $lang->getTag() . '.css', ['version' => 'auto']);
 
