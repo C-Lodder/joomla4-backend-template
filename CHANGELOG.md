@@ -4,6 +4,8 @@
 - Fix Drag and Drop handle cursor
 - Fix styling for com_config side navigation
 - Fix tabs styling
+- Port some BS fixes into the template
+- Remove some unused CSS
 
 ## 0.0.14
 - Update to Bootstrap 4.5.0
