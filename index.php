@@ -26,8 +26,6 @@ $layout = $input->get('layout', 'default');
 $task   = $input->get('task', 'display');
 $cpanel = $option === 'com_cpanel';
 
-HTMLHelper::_('bootstrap.framework');
-
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#38383d');
