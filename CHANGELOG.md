@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Add search filter to "Add Module" modal
 - Fix Drag and Drop handle cursor
 - Fix styling for com_config side navigation
 - Fix tabs styling
