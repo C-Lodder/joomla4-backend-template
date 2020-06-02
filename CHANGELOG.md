@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Disable sidebar menu on edit views
+
 ## 0.0.15
 - Add search filter to "Add Module" modal
 - Fix Drag and Drop handle cursor
