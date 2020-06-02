@@ -8,7 +8,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Router\Route;
 
 /**
  * =========================================================================================================
@@ -17,7 +16,7 @@ use Joomla\CMS\Router\Route;
  * =========================================================================================================
  */
 /** @var  \Joomla\Module\Menu\Administrator\Menu\CssMenu  $this */
-$class   = '';
+$class = '';
 
 // Build the CSS class suffix
 if ($current->type === 'separator')
@@ -82,15 +81,15 @@ $linkClass = ' class="' . implode(' ', $linkClass) . '" ';
 // Get the menu link
 $link      = $current->link;
 
-if ($link != '' && $current->target != '')
+if ($link !== '' && $current->target !== '')
 {
 	echo "<a" . $linkClass . $dataToggle . " href=\"" . $link . "\" target=\"" . $current->target . "\">" . Text::_($current->title) . '</a>';
 }
-elseif ($link != '')
+elseif ($link !== '')
 {
 	echo "<a" . $linkClass . $dataToggle . " href=\"" . $link . "\">" . Text::_($current->title) . '</a>';
 }
-elseif ($current->title != '' && $current->class !== 'separator')
+elseif ($current->title !== '' && $current->class !== 'separator')
 {
 	echo "<a" . $linkClass . $dataToggle . ">" . Text::_($current->title) . '</a>';
 }

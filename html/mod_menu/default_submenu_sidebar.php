@@ -16,14 +16,10 @@ use Joomla\CMS\Language\Text;
  * =========================================================================================================
  */
 /** @var  \Joomla\Module\Menu\Administrator\Menu\CssMenu  $this */
-$class   = '';
+$class = '';
 
 // Build the CSS class suffix
-if (!$this->enabled)
-{
-	$class = 'disabled';
-}
-elseif ($current->type === 'separator')
+if ($current->type === 'separator')
 {
 	$class = $current->title ? 'menuitem-group' : 'divider';
 }
@@ -37,7 +33,7 @@ elseif ($current->hasChildren())
 
 // if the menu is help then set class to li
 $class = ($current->title == 'MOD_MENU_HELP' && $current->element === 'com_cpanel') ? 'j-help-menu' : $class;
-$class = $class == '' ? '' : 'class="' . $class . '"';
+$class = $class === '' ? '' : 'class="' . $class . '"';
 
 // Set the correct aria role and print the item
 if ($current->type === 'separator')
@@ -57,6 +53,11 @@ $iconClass  = '';
 $toggleIcon = '';
 $counter    = $this->getCounter();
 
+if (!$this->enabled)
+{
+	$linkClass[] = 'disabled';
+}
+
 if ($current->hasChildren())
 {
 	$linkClass[] = '';
@@ -72,21 +73,21 @@ $link      = $current->link;
 
 // Get the menu icon
 $icon      = $this->getIconClass($current);
-$iconClass = ($icon != '' && $current->level == 1) ? '<span class="' . $icon . '" aria-hidden="true"></span>' : '';
+$iconClass = ($icon !== '' && $current->level == 1) ? '<span class="' . $icon . '" aria-hidden="true"></span>' : '';
 
-if ($link != '' && $current->target != '')
+if ($link !== '' && $current->target !== '')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '" target="' . $current->target . '">'
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }
-elseif ($link != '')
+elseif ($link !== '')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '">'
 		. $iconClass
 		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
 }
-elseif ($current->title != '' && $current->class !== 'separator')
+elseif ($current->title !== '' && $current->class !== 'separator')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . '>'
 		. $iconClass

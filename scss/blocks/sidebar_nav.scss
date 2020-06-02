@@ -56,14 +56,19 @@
       text-decoration: none;
     }
 
+    &.disabled {
+      pointer-events: none;
+      color: $nav-link-disabled-color;
+    }
+
     .fa,
     .fas {
       margin-inline-end: 1rem;
     }
   }
 
-  .navbar-nav > li > a[aria-expanded=true],
-  .navbar-nav > li > a:hover {
+  .navbar-nav > li > a:not(.disabled)[aria-expanded=true],
+  .navbar-nav > li > a:not(.disabled):hover {
     background-color: $primary;
     transition: background-color .3s ease-in-out;
   }
@@ -79,8 +84,8 @@
     transition: background-color .3s ease-in-out; 
   }
 
-  .navbar-nav > li > a[aria-expanded=true]::before,
-  .navbar-nav > li > a:hover::before {
+  .navbar-nav > li > a:not(.disabled)[aria-expanded=true]::before,
+  .navbar-nav > li > a:not(.disabled):hover::before {
     background-color: $blue-bg;
     transition: background-color .3s ease-in-out; 
   }
