@@ -2,6 +2,7 @@
 
 ## WIP
 - Disable sidebar menu on edit views
+- Hide accessibility settings
 
 ## 0.0.15
 - Add search filter to "Add Module" modal
