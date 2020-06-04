@@ -89,13 +89,13 @@ elseif ($link !== '')
 {
 	echo "<a" . $linkClass . $dataToggle . " href=\"" . $link . "\">" . Text::_($current->title) . '</a>';
 }
-elseif ($current->title !== '' && $current->class !== 'separator')
+elseif ($current->title !== '' && $current->type !== 'separator')
 {
 	echo "<a" . $linkClass . $dataToggle . ">" . Text::_($current->title) . '</a>';
 }
 else
 {
-	echo '<span>' . Text::_($current->title) . '</span>';
+	echo '<div class="dropdown-header">' . Text::_($current->title) . '</div>';
 }
 
 // Recurse through children if they exist
