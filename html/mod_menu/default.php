@@ -28,7 +28,14 @@ $href = $hideLinks ? '#' : Route::_('index.php');
 if (!$hideLinks)
 {
 	HTMLHelper::_('bootstrap.framework');
-	HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
+
+	if ($sidebar)
+	{
+		HTMLHelper::_('script', 'mod_menu/admin-menu-sidebar.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
+	}
+	else {
+		HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
+	}
 }
 
 // Recurse through children of root node if they exist
