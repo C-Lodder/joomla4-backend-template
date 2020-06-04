@@ -38,7 +38,7 @@ if (!empty($displayData['class']))
 }
 
 // Make the class string
-$class = !empty($tmp) ? 'class="' . implode(' ', array_unique($tmp)) . '"' : '';
+$class = !empty($tmp) ? ' class="' . implode(' ', array_unique($tmp)) . '"' : '';
 ?>
 <?php // If it is a button with two links: make it a list ?>
 <li class="quickicon quickicon-single">
