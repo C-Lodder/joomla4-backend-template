@@ -65,6 +65,16 @@
 					<option value="0">TPL_BETTUM_NAVIGATION_TOP</option>
 					<option value="1">TPL_BETTUM_NAVIGATION_SIDEBAR</option>
 				</field>
+				<field
+					name="toolbar"
+					type="radio"
+					label="TPL_BETTUM_TOOLBAR_SAVE_BUTTONS"
+					layout="joomla.form.field.radio.switcher"
+					default="dropdown"
+					>
+					<option value="inline">TPL_BETTUM_TOOLBAR_SAVE_BUTTONS_INLINE</option>
+					<option value="dropdown">TPL_BETTUM_TOOLBAR_SAVE_BUTTONS_DROPDOWN</option>
+				</field>
 			</fieldset>
 			<fieldset name="logos" label="TPL_BETTUM_SETTINGS_LOGOS">
 				<field

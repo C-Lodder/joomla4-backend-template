@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Add option for inlined toolbar save buttons
 - Disable sidebar menu on edit views
 - Hide accessibility settings
 - Fix quickicons markup (thanks @Quy)
