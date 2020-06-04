@@ -3,6 +3,7 @@
 ## WIP
 - Disable sidebar menu on edit views
 - Hide accessibility settings
+- Fix quickicons markup (thanks @Quy)
 
 ## 0.0.15
 - Add search filter to "Add Module" modal
