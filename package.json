@@ -24,7 +24,7 @@
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.1",
+    "gulp-cli": "^2.3.0",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
