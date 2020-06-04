@@ -33,7 +33,8 @@ if (!$hideLinks)
 	{
 		HTMLHelper::_('script', 'mod_menu/admin-menu-sidebar.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 	}
-	else {
+	else
+	{
 		HTMLHelper::_('script', 'mod_menu/admin-menu.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
 	}
 }
