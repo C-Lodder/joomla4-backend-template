@@ -10,6 +10,7 @@
 - Fix sidebar on RTL
 - Fix some margin issues with icons on RTL
 - Fix switcher position on RTL
+- Fix some styling issues on the Media Manager
 
 ## 0.0.15
 - Add search filter to "Add Module" modal
