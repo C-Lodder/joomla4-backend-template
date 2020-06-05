@@ -10,16 +10,17 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
-use Joomla\CMS\Uri\Uri;
 
-HTMLHelper::_('behavior.core');
-HTMLHelper::_('behavior.formvalidator');
-HTMLHelper::_('behavior.keepalive');
-HTMLHelper::_('script', 'system/fields/passwordview.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
-HTMLHelper::_('script', 'mod_login/admin-login.min.js', ['version' => 'auto', 'relative' => true], ['type' => 'module']);
+/** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
+$wa = $app->getDocument()->getWebAssetManager();
+$wa->useScript('core')
+	->useScript('form.validate')
+	->useScript('keepalive')
+	->useScript('field.passwordview')
+	->registerAndUseScript('mod_login.admin', 'mod_login/admin-login.min.js', [], ['type' => 'module'], ['core', 'form.validate']);
 
-Text::script('JSHOW');
-Text::script('JHIDE');
+Text::script('JSHOWPASSWORD');
+Text::script('JHIDEPASSWORD');
 // Load JS message titles
 Text::script('ERROR');
 Text::script('WARNING');
@@ -83,6 +84,7 @@ Text::script('MESSAGE');
 				</div>
 			</div>
 		<?php endif; ?>
+
 		<?php if (!empty($langs)) : ?>
 			<div class="form-group">
 				<label for="lang">
@@ -91,6 +93,28 @@ Text::script('MESSAGE');
 				<?php echo $langs; ?>
 			</div>
 		<?php endif; ?>
+
+		<?php foreach ($extraButtons as $button) : ?>
+		<div class="form-group">
+			<button type="button"
+			        class="btn btn-secondary btn-block mt-4 <?php echo $button['class'] ?? '' ?>"
+			        data-webauthn-form="<?php echo $button['data-webauthn-form'] ?>"
+			        data-webauthn-url="<?php echo $button['data-webauthn-url'] ?>"
+			        title="<?php echo Text::_($button['label']) ?>"
+			        id="<?php echo $button['id'] ?>"
+			>
+				<?php if (!empty($button['icon'])): ?>
+					<span class="<?php echo $button['icon'] ?>"></span>
+				<?php elseif (!empty($button['image'])): ?>
+					<?php echo HTMLHelper::_('image', $button['image'], Text::_('PLG_SYSTEM_WEBAUTHN_LOGIN_DESC'), [
+						'class' => 'icon',
+					], true); ?>
+				<?php endif; ?>
+				<?php echo Text::_($button['label']) ?>
+			</button>
+		</div>
+		<?php endforeach; ?>
+
 		<div class="form-group">
 			<button class="btn btn-primary btn-block btn-lg mt-4" id="btn-login-submit"><?php echo Text::_('JLOGIN'); ?></button>
 		</div>
