@@ -8,6 +8,7 @@
 - Fix top nav dropdown header styling
 - Fix missing WebAuthn support for login
 - Fix sidebar on RTL
+- Fix some margin issues with icons on RTL
 
 ## 0.0.15
 - Add search filter to "Add Module" modal

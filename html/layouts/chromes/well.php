@@ -35,11 +35,9 @@ if ($module->content) :
 	// Get the module icon
 	$headerIcon = '';
 
-	$margin = Factory::getLanguage()->isRtl() ? ' ml-2' : ' mr-2';
-
 	if (!empty($params->get('header_icon')))
 	{
-		$headerIcon = '<span class="' . htmlspecialchars($params->get('header_icon')) .  $margin . '" aria-hidden="true"></span>';
+		$headerIcon = '<span class="mr-2 ' . htmlspecialchars($params->get('header_icon')) . '" aria-hidden="true"></span>';
 	}
 	?>
 	<<?php echo $moduleTag; ?> class="d-none card mb-3<?php echo $moduleClassSfx; ?> module-wrapper" data-cpanel-module-id="<?php echo $module->id; ?>">
