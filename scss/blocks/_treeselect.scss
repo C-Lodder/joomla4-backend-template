@@ -7,7 +7,7 @@
 
   .nav-header {
     font-weight: $font-weight-bold;
-    color: $gray-900;
+    color: $body-color;
   }
 
   li {
@@ -16,33 +16,35 @@
     line-height: $treeselect-line-height;
     list-style: none;
 
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
-      top: 14px;
       left: ($treeselect-indent - 15px);
+      content: "";
+      background-color: $body-color;
+
+      [dir=rtl] & {
+        right: ($treeselect-indent - 15px);
+        left: auto;
+      }
+    }
+
+    &::before {
+      top: 18px;
       width: 10px;
       height: 1px;
       margin: auto;
-      content: "";
-      background-color: $body-color;
     }
 
     &::after {
-      position: absolute;
       top: 0;
       bottom: 0;
-      left: ($treeselect-indent - 15px);
       width: 1px;
       height: 100%;
-      content: "";
-      background-color: $body-color;
     }
 
-    &:last-child {
-
-      &::after {
-        height: 14px;
-      }
+    &:last-child::after {
+      height: 18px;
     }
 
     li {
@@ -86,11 +88,10 @@
   }
 
   .dropdown-toggle {
-    padding: 0 .5rem .3rem;
     margin-inline-start: .5rem;
 
     &::after {
-      margin-inline-start: 0;
+      margin: 0;
       font-size: 1rem;
       color: $body-color;
     }
