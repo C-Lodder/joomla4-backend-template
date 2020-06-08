@@ -12,6 +12,7 @@
 - Fix switcher position on RTL
 - Fix some styling issues on the Media Manager
 - Fix some Tree Select styling issues
+- Improve Media Manager modal visibility
 
 ## 0.0.15
 - Add search filter to "Add Module" modal
