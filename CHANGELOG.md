@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.16
 - Add option for inlined toolbar save buttons
 - Disable sidebar menu on edit views
 - Hide accessibility settings
