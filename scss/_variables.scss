@@ -1,6 +1,5 @@
 // Variables
 
-$enable-rounded:              false;
 $rtl:                         false !default;
 
 
@@ -17,13 +16,15 @@ $green:                       #2db950;
 $cyan:                        #19b4cc;
 $orange:                      #faa05a;
 
-$primary:                     #38383d;
-$secondary:                   #2a2a2e;
+$primary:                     #585962;
+$secondary:                   #494a53;
+$tertiary:                    #3e3d44;
+$highlight:                   #a495fe;
+$highlight-secondary:         #cbb1fe;
 $danger:                      $red;
 $success:                     $green;
-$tertiary:                    #1c1c1c;
-$border-color:                #4c4c51;
-$dark-text-color:             #ccc;
+$border-color:                #585761;
+$dark-text-color:             #fff;
 
 $theme-colors: (
   primary: $primary,
@@ -47,6 +48,11 @@ $component-active-bg:         $tertiary;
 //$yiq-text-dark:               $primary;
 //$yiq-text-light:              $white;
 
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           60px !default;
+$gutter-width: 60px;
+$grid-row-columns:            6 !default;
 
 // Headings
 $content-font-size:           .875rem;
@@ -203,5 +209,5 @@ $sidebar-width-sm:            45px;
 
 
 // Shadows
-$shadow-default:              0 .125rem .35rem rgba(0, 0, 0, .03);
+$shadow-default:              0 3px 7px -3px rgba(33,33,37,.5);
 $box-shadow-sm:               0 .125rem .25rem $primary;

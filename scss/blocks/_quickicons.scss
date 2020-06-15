@@ -25,11 +25,14 @@
   justify-content: center;
   flex-direction: column;
   min-height: 6.5rem;
+  padding: 2rem 0;
   background-color: $primary;
   color: $body-color;
   text-align: center;
   transition: all .2s ease-in-out;
   border: 1px solid $border-color;
+  border-radius: 6px;
+  box-shadow: $shadow-default;
 
   &:hover,
   &:focus {
@@ -38,13 +41,22 @@
     transition: all .2s ease-in-out;
   }
 
+  &.success,
+  &.danger {
+    .fas {
+      -webkit-text-fill-color: inherit;
+    }
+  }
+
   &.success {
     color: $success;
+    -webkit-text-fill-color: $success;
     border: 1px solid $success;
   }
 
   &.danger {
     color: $danger;
+    -webkit-text-fill-color: $danger;
     border: 1px solid $danger;
   }
 }
@@ -55,14 +67,53 @@
 }
 
 .quickicon-icon {
-  font-size: 1.8rem;
-  margin-bottom: .5rem;
+  font-size: 2.2rem;
+  margin-bottom: .75rem;
+
+  .fas {
+    background: -webkit-linear-gradient(45deg, $highlight, $highlight-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .quickicon-name,
 .quickicon-text {
   font-size: .9rem;
   line-height: 1.2;
+}
+
+.quickicon-name {
+  position: relative;
+  background-color: $secondary;
+  background-clip: padding-box; /* !importanté */
+  border: solid 1px transparent; /* !importanté */
+  border-radius: 15px;
+  padding: 4px 15px;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+  }
+  
+  &:before {
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: -webkit-linear-gradient(45deg, $highlight, $highlight-secondary);
+  }
+
+  &:after {      
+    background-color: $primary;
+    border-radius: 15px;
+    z-index: -1;
+  }
 }
 
 .quickicon-linkadd {

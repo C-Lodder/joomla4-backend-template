@@ -29,6 +29,10 @@
 //  padding: $card-spacer-x;
 //}
 
+.card {
+  box-shadow: $shadow-default;
+}
+
 .card-header {
   display: flex;
   flex-direction: row-reverse;
@@ -42,5 +46,26 @@
 
   .fas {
     font-size: 40px;
+  }
+}
+
+.card-header {
+  .btn {
+    padding: 2px;
+  }
+}
+
+.well {
+  background-color: transparent !important;
+  background-image: none;
+  box-shadow: none !important;
+
+  .card-header {
+      background-color: transparent !important;
+      padding: 8px 0px;  
+  }
+
+  .card-body {
+      padding: 0;
   }
 }
