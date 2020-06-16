@@ -21,18 +21,9 @@ $class = '';
 // Build the CSS class suffix
 if ($current->type === 'separator')
 {
-	$class = $current->title ? 'menuitem-group' : 'divider';
-}
-elseif ($current->hasChildren())
-{
-	if ($current->class === 'scrollable-menu')
-	{
-		$class = 'dropdown scrollable-menu';
-	}
+	$class = $current->title ? 'sidebar-heading' : 'divider';
 }
 
-// if the menu is help then set class to li
-$class = ($current->title == 'MOD_MENU_HELP' && $current->element === 'com_cpanel') ? 'j-help-menu' : $class;
 $class = $class === '' ? '' : 'class="' . $class . '"';
 
 // Set the correct aria role and print the item
@@ -46,11 +37,10 @@ else
 }
 
 // Print a link if it exists
-$linkClass  = [];
+$linkClass  = ['sidebar-item'];
 $dataToggle = '';
 $dataParent = '#collapse';
 $iconClass  = '';
-$toggleIcon = '';
 $counter    = $this->getCounter();
 
 if (!$this->enabled)
@@ -61,7 +51,6 @@ if (!$this->enabled)
 if ($current->hasChildren())
 {
 	$linkClass[] = '';
-	$toggleIcon = '<span class="icon-angle-down icon-toggler" area-hidden="true"></span>';
 	$dataToggle  = ' data-toggle="collapse" data-target="#collapse' . $counter . '"'; 
 }
 
@@ -79,23 +68,23 @@ if ($link !== '' && $current->target !== '')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '" target="' . $current->target . '">'
 		. $iconClass
-		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
+		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span></a>';
 }
 elseif ($link !== '')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . ' href="' . $link . '">'
 		. $iconClass
-		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
+		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span></a>';
 }
-elseif ($current->title !== '' && $current->class !== 'separator')
+elseif ($current->title !== '' && $current->type !== 'separator')
 {
 	echo '<a role="menuitem"' . $linkClass . $dataToggle . '>'
 		. $iconClass
-		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span>' . $toggleIcon . '</a>';
+		. '<span class="sidebar-item-title">' . Text::_($current->title) . '</span></a>';
 }
 else
 {
-	echo '<span>' . Text::_($current->title) . '</span>';
+	echo '<div' . $linkClass . '>' . Text::_($current->title) . '</div>';
 }
 
 if ($current->level > 1)

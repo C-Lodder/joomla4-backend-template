@@ -46,7 +46,7 @@
     list-style: none;
   }
 
-  a {
+  .sidebar-item {
     position: relative;
     display: block;
     padding: .5rem .7rem;
@@ -67,13 +67,13 @@
     }
   }
 
-  .navbar-nav > li > a:not(.disabled)[aria-expanded=true],
-  .navbar-nav > li > a:not(.disabled):hover {
+  .navbar-nav > li > .sidebar-item:not(.disabled)[aria-expanded=true],
+  .navbar-nav > li > .sidebar-item:not(.disabled):hover {
     background-color: $primary;
     transition: background-color .3s ease-in-out;
   }
 
-  .navbar-nav > li > a::before {
+  .navbar-nav > li > .sidebar-item::before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -84,8 +84,8 @@
     transition: background-color .3s ease-in-out; 
   }
 
-  .navbar-nav > li > a:not(.disabled)[aria-expanded=true]::before,
-  .navbar-nav > li > a:not(.disabled):hover::before {
+  .navbar-nav > li > .sidebar-item:not(.disabled)[aria-expanded=true]::before,
+  .navbar-nav > li > .sidebar-item:not(.disabled):hover::before {
     background-color: $blue-bg;
     transition: background-color .3s ease-in-out; 
   }
@@ -93,7 +93,7 @@
   .collapse-level-1 {
     background-color: darken($secondary, 5%);
 
-    a {
+    .sidebar-item {
       padding-inline-start: 2rem;
       font-size: .95rem;
     }
@@ -102,10 +102,14 @@
   .collapse-level-2 {
     background-color: darken($secondary, 10%);
 
-    a {
+    .sidebar-item {
       padding-inline-start: 3rem;
       font-size: .9rem;
     }
+  }
+
+  .sidebar-heading .sidebar-item {
+    color: $sidebar-heading-color;
   }
 
   .navbar-brand {
