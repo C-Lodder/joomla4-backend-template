@@ -1,6 +1,5 @@
 // Variables
 
-$enable-rounded:              false;
 $rtl:                         false !default;
 
 
@@ -16,13 +15,14 @@ $red:                         #ea8591;
 $green:                       #2db950;
 $cyan:                        #19b4cc;
 $orange:                      #faa05a;
+$purple:                      #a495fe;
 
-$primary:                     #38383d;
-$secondary:                   #2a2a2e;
+$primary:                     #2e2e31;
+$secondary:                   #252528;
+$tertiary:                    #1c1c1c;
 $danger:                      $red;
 $success:                     $green;
-$tertiary:                    #1c1c1c;
-$border-color:                #4c4c51;
+$border-color:                #424246;
 $dark-text-color:             #ddd;
 
 $theme-colors: (
@@ -46,6 +46,15 @@ $component-active-bg:         $tertiary;
 //$yiq-contrasted-threshold:    100;
 //$yiq-text-dark:               $primary;
 //$yiq-text-light:              $white;
+
+
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           60px !default;
+$gutter-width:                60px;
+$grid-row-columns:            6 !default;
+
 
 
 // Headings
@@ -202,6 +211,12 @@ $sidebar-heading-color:       #878787;
 
 
 
+// Quickicons
+$quickicon-icon-color:        $purple;
+$quickicon-hover-box-shadow:  0 3px 7px -3px rgba($primary, .85);
+
+
+
 // Shadows
-$shadow-default:              0 .125rem .35rem rgba(0, 0, 0, .03);
+$shadow-default:              0 3px 7px -3px rgba(0, 0, 0, .65);
 $box-shadow-sm:               0 .125rem .25rem $primary;

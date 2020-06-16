@@ -58,7 +58,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			<div class="nav-scroller">
 				<nav class="nav nav-underline justify-content-between mb-3">
 					<jdoc:include type="modules" name="title" />
-					<div class="d-flex justify-content-end px-3 top-nav">
+					<div class="d-flex justify-content-end top-nav">
 						<jdoc:include type="modules" name="status" style="none" />
 					</div>
 				</nav>
@@ -73,7 +73,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 	<?php // Wrapper ?>
 	<div id="wrapper" class="d-flex">
 		<?php // container-fluid ?>
-		<div class="container-fluid container-main">
+		<div class="container-fluid container-main px-5">
 			<section id="content" class="content h-100">
 				<?php // Begin Content ?>
 				<main class="d-flex justify-content-center align-items-center h-100">

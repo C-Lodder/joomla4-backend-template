@@ -12,6 +12,7 @@
 .sidebar {
   width: $sidebar-width;
   background-color: $sidebar-bg;
+  border-right: 1px solid $border-color;
 
   @include media-breakpoint-down(md) {
     position: fixed;
@@ -86,7 +87,7 @@
 
   .navbar-nav > li > .sidebar-item:not(.disabled)[aria-expanded=true]::before,
   .navbar-nav > li > .sidebar-item:not(.disabled):hover::before {
-    background-color: $blue-bg;
+    background-color: $purple;
     transition: background-color .3s ease-in-out; 
   }
 

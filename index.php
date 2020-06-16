@@ -61,7 +61,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 				<div class="nav-scroller">
 					<nav class="nav nav-underline justify-content-between mb-3">
 						<jdoc:include type="modules" name="title" />
-						<div class="d-flex justify-content-end px-3 top-nav">
+						<div class="d-flex justify-content-end top-nav">
 							<jdoc:include type="modules" name="status" style="none" />
 						</div>
 					</nav>
@@ -81,7 +81,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 					<div class="nav-scroller">
 						<nav class="nav nav-underline justify-content-between mb-3">
 							<jdoc:include type="modules" name="title" />
-							<div class="d-flex justify-content-end px-3 top-nav">
+							<div class="d-flex justify-content-end top-nav">
 								<jdoc:include type="modules" name="status" style="none" />
 								<button id="navbar-toggler" class="btn-link nav-link d-inline-block d-lg-none" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars" aria-hidden="true"></span></button>
 							</div>
@@ -91,7 +91,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			<?php endif; ?>
 
 			<?php // container-fluid ?>
-			<div class="container-fluid container-main">
+			<div class="container-fluid container-main px-4">
 				<?php if (!$cpanel) : ?>
 					<?php // Subheader ?>
 					<div class="mb-3">
