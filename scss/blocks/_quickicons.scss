@@ -71,8 +71,8 @@
   margin-bottom: .75rem;
 
   .fas {
-    background: -webkit-linear-gradient(45deg, $highlight, $highlight-secondary);
-    -webkit-background-clip: text;
+    background: linear-gradient(45deg, $highlight, $highlight-secondary);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -106,7 +106,7 @@
     z-index: -1;
     margin: -1px;
     border-radius: inherit;
-    background: -webkit-linear-gradient(45deg, $highlight, $highlight-secondary);
+    background: gradient(45deg, $highlight, $highlight-secondary);
   }
 
   &:after {      
