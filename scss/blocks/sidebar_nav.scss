@@ -112,6 +112,11 @@
     color: $sidebar-heading-color;
   }
 
+  .divider {
+    height: 1px;
+    background-color: darken($border-color, 12%);
+  }
+
   .navbar-brand {
     display: block;
     padding: 1rem;
