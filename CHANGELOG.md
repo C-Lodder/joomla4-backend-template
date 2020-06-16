@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Repaint! (thanks @ciar4n)
 - Keep the active dropdown shown on page load
 - Fix sidebar heading colour contrast
 
