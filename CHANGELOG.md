@@ -2,7 +2,7 @@
 
 ## WIP
 - Fix sidebar heading colour contrast
-
+- Keep the active dropdown shown on page load
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons
