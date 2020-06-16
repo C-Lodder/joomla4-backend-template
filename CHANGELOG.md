@@ -1,6 +1,10 @@
 # Changelog
 
 ## WIP
+- Keep the active dropdown shown on page load
+- Fix sidebar heading colour contrast
+
+## 0.0.16
 - Add option for inlined toolbar save buttons
 - Disable sidebar menu on edit views
 - Hide accessibility settings
@@ -9,6 +13,10 @@
 - Fix missing WebAuthn support for login
 - Fix sidebar on RTL
 - Fix some margin issues with icons on RTL
+- Fix switcher position on RTL
+- Fix some styling issues on the Media Manager
+- Fix some Tree Select styling issues
+- Improve Media Manager modal visibility
 
 ## 0.0.15
 - Add search filter to "Add Module" modal

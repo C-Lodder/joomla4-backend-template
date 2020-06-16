@@ -1,7 +1,4 @@
 #media-form {
-  .form-control {
-    max-width: 100%;
-  }
   .control-group {
     display: flex;
     flex-direction: column;
@@ -17,9 +14,6 @@
   }
   .spacer hr {
     width: 100%;
-  }
-  .custom-select {
-    min-width: 100%;
   }
 }
 

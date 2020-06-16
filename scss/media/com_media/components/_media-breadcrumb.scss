@@ -1,7 +1,8 @@
 .media-breadcrumb {
   display: flex;
   padding: 0;
-  margin: 0 auto 0 0;
+  margin: 0;
+  margin-inline-end: auto;
   font-size: .9rem;
   line-height: $toolbar-height;
   background: transparent;
@@ -20,7 +21,9 @@
 }
 
 .media-breadcrumb-item {
-  padding: 0 8px 0 22px;
+  padding: 0;
+  padding-inline-end: 8px;
+  padding-inline-start: 22px;
   background-color: $breadcrumbs-bg;
   &:first-of-type {
     padding-inline-start: 16px;
@@ -41,7 +44,9 @@
 
 .media-breadcrumb-item {
   position: relative;
-  &::before, &::after {
+
+  &::before,
+  &::after {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -61,6 +66,15 @@
   }
   &::after {
     border-inline-start-color: $breadcrumbs-bg;
+  }
+}
+
+// RTL overrides
+html[dir=rtl] .media-breadcrumb-item {
+  &::before,
+  &::after {
+    left: 0;
+    right: 100%;
   }
 }
 
