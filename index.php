@@ -91,7 +91,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			<?php endif; ?>
 
 			<?php // container-fluid ?>
-			<div class="container-fluid container-main px-5">
+			<div class="container-fluid container-main px-4">
 				<?php if (!$cpanel) : ?>
 					<?php // Subheader ?>
 					<div class="mb-3">

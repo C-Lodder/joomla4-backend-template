@@ -3,7 +3,7 @@
 .quick-icons {
   display: grid;
   padding: 0;
-  grid-template-columns: repeat( auto-fit, minmax(180px, 1fr ) );
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr ));
   grid-gap: 1rem;
 
   li {
@@ -26,38 +26,37 @@
   flex-direction: column;
   min-height: 6.5rem;
   padding: 2rem 0;
-  background-color: $primary;
+  background-color: $secondary;
   color: $body-color;
   text-align: center;
   transition: all .2s ease-in-out;
-  border: 1px solid $border-color;
+  border: 1px solid $primary;
   border-radius: 6px;
   box-shadow: $shadow-default;
 
   &:hover,
   &:focus {
-    box-shadow: $box-shadow-sm;
+    box-shadow: $quickicon-hover-box-shadow;
     text-decoration: none;
     transition: all .2s ease-in-out;
   }
 
-  &.success,
-  &.danger {
-    .fas {
-      -webkit-text-fill-color: inherit;
+  &.success {
+    border: 1px solid $success;
+
+    .quickicon-icon,
+    .quickicon-text {
+      color: $success;
     }
   }
 
-  &.success {
-    color: $success;
-    -webkit-text-fill-color: $success;
-    border: 1px solid $success;
-  }
-
   &.danger {
-    color: $danger;
-    -webkit-text-fill-color: $danger;
     border: 1px solid $danger;
+
+    .quickicon-icon,
+    .quickicon-text {
+      color: $danger;
+    }
   }
 }
 
@@ -69,51 +68,13 @@
 .quickicon-icon {
   font-size: 2.2rem;
   margin-bottom: .75rem;
-
-  .fas {
-    background: linear-gradient(45deg, $highlight, $highlight-secondary);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  color: $quickicon-icon-color;
 }
 
 .quickicon-name,
 .quickicon-text {
   font-size: .9rem;
   line-height: 1.2;
-}
-
-.quickicon-name {
-  position: relative;
-  background-color: $secondary;
-  background-clip: padding-box; /* !importanté */
-  border: solid 1px transparent; /* !importanté */
-  border-radius: 15px;
-  padding: 4px 15px;
-  z-index: 1;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0;
-  }
-  
-  &:before {
-    z-index: -1;
-    margin: -1px;
-    border-radius: inherit;
-    background: linear-gradient(45deg, $highlight, $highlight-secondary);
-  }
-
-  &:after {      
-    background-color: $primary;
-    border-radius: 15px;
-    z-index: -1;
-  }
 }
 
 .quickicon-linkadd {

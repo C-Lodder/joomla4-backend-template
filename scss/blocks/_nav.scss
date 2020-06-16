@@ -16,7 +16,8 @@
 }
 
 .nav-scroller {
-  background: $secondary;
+  background-color: $primary;
+  box-shadow: $shadow-default;
 
   > nav {
     flex-wrap: nowrap;
