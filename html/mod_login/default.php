@@ -94,19 +94,27 @@ Text::script('MESSAGE');
 			</div>
 		<?php endif; ?>
 
-		<?php foreach ($extraButtons as $button) : ?>
+		<?php foreach($extraButtons as $button) :
+			$dataAttributeKeys = array_filter(array_keys($button), function ($key) {
+				return substr($key, 0, 5) == 'data-';
+			});
+			?>
 		<div class="form-group">
 			<button type="button"
-			        class="btn btn-secondary btn-block mt-4 <?php echo $button['class'] ?? '' ?>"
-			        data-webauthn-form="<?php echo $button['data-webauthn-form'] ?>"
-			        data-webauthn-url="<?php echo $button['data-webauthn-url'] ?>"
-			        title="<?php echo Text::_($button['label']) ?>"
-			        id="<?php echo $button['id'] ?>"
+				class="btn btn-primary btn-block <?php echo $button['class'] ?? '' ?>"
+				<?php foreach ($dataAttributeKeys as $key) : ?>
+					<?php echo $key ?>="<?php echo $button[$key]; ?>"
+				<?php endforeach; ?>
+				<?php if ($button['onclick']) : ?>
+					onclick="<?php echo $button['onclick']; ?>"
+				<?php endif; ?>
+				title="<?php echo Text::_($button['label']); ?>"
+				id="<?php echo $button['id']; ?>"
 			>
 				<?php if (!empty($button['icon'])): ?>
 					<span class="<?php echo $button['icon'] ?>"></span>
 				<?php elseif (!empty($button['image'])): ?>
-					<?php echo HTMLHelper::_('image', $button['image'], Text::_('PLG_SYSTEM_WEBAUTHN_LOGIN_DESC'), [
+					<?php echo HTMLHelper::_('image', $button['image'], Text::_($button['tooltip'] ?? ''), [
 						'class' => 'icon',
 					], true); ?>
 				<?php endif; ?>
@@ -116,7 +124,7 @@ Text::script('MESSAGE');
 		<?php endforeach; ?>
 
 		<div class="form-group">
-			<button class="btn btn-primary btn-block btn-lg mt-4" id="btn-login-submit"><?php echo Text::_('JLOGIN'); ?></button>
+			<button class="btn btn-success btn-block btn-lg" id="btn-login-submit"><?php echo Text::_('JLOGIN'); ?></button>
 		</div>
 		<input type="hidden" name="option" value="com_login">
 		<input type="hidden" name="task" value="login">

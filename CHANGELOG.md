@@ -1,8 +1,8 @@
 # Changelog
 
 ## WIP
-- Fix sidebar heading colour contrast
 - Keep the active dropdown shown on page load
+- Fix sidebar heading colour contrast
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons
