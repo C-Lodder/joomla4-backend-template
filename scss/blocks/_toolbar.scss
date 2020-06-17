@@ -23,5 +23,5 @@ joomla-toolbar-button + .dropdown-toggle-split {
 }
 
 .btn-group joomla-toolbar-button:not(:last-child) > .btn:not(.dropdown-toggle) {
-  @include border-right-radius(0 !important);
+  @include border-right-radius(0);
 }
