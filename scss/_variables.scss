@@ -42,12 +42,6 @@ $link-hover-color:            lighten($body-color, 10%);
 $component-active-bg:         $tertiary;
 
 
-// Customize the light and dark text colors for use in the YIQ color contrast function
-//$yiq-contrasted-threshold:    100;
-//$yiq-text-dark:               $primary;
-//$yiq-text-light:              $white;
-
-
 
 // Grid columns
 $grid-columns:                12 !default;
@@ -67,6 +61,11 @@ $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 $headings-color:              $body-color;
 $headings-margin-bottom:      0;
+
+
+
+// Form
+$meter-max-width:               240px;
 
 
 

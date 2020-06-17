@@ -4,6 +4,7 @@
 - Repaint! (thanks @ciar4n)
 - Keep the active dropdown shown on page load
 - Fix sidebar heading colour contrast
+- Fix meter element width
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons
