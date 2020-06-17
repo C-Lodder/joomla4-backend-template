@@ -17,3 +17,11 @@
 .subhead .btn.dropdown-toggle {
   @extend .btn-primary;
 }
+
+joomla-toolbar-button + .dropdown-toggle-split {
+  @include border-right-radius($border-radius !important);
+}
+
+.btn-group joomla-toolbar-button:not(:last-child) > .btn:not(.dropdown-toggle) {
+  @include border-right-radius(0 !important);
+}
