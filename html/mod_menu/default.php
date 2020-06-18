@@ -22,7 +22,7 @@ $logo = $params->get('siteLogo')
 	: Uri::root(true) . '/administrator/templates/' . $app->getTemplate() . '/images/logo-sm.svg';
 
 $hideLinks = $app->input->getBool('hidemainmenu');
-$href = $hideLinks ? '#' : Route::_('index.php');
+$href = $hideLinks ? '' : ' href="' . Route::_('index.php') . '"';
 
 // Only load the JS if the menu is allowed to be used
 if (!$hideLinks)
@@ -44,7 +44,7 @@ if (!$hideLinks)
 <?php if ($sidebar && $root->hasChildren()) : ?>
 	<?php HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/sidebar_nav' . (Factory::getDocument()->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto']); ?>
 	<nav aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
-		<a class="navbar-brand text-center" href="<?php echo $href; ?>">
+		<a class="navbar-brand text-center"<?php echo $href; ?>>
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<ul id="collapse" class="navbar-nav" role="menu">
@@ -55,7 +55,7 @@ if (!$hideLinks)
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu"
 			aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
-		<a class="navbar-brand" href="<?php echo $href; ?>">
+		<a class="navbar-brand"<?php echo $href; ?>>
 			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<div class="collapse navbar-collapse" id="topMenu">

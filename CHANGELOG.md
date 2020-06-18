@@ -6,6 +6,7 @@
 - Fix sidebar heading colour contrast
 - Fix meter element width
 - Fix missing language string
+- Fix logo appearing clickable on edit views
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons
