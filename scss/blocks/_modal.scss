@@ -1,12 +1,17 @@
 // Modal
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   @for $i from 10 through 100 {
     @if $i % 10 == 0 {
-      .jviewport-height#{$i} { height: #{$i}vh; }
       .modal-dialog.jviewport-width#{$i} { width: #{$i}vw; max-width: none; }
     }  
   }
+}
+
+@for $i from 10 through 100 {
+  @if $i % 10 == 0 {
+    .jviewport-height#{$i} { height: #{$i}vh; }
+  }  
 }
 
 [class*=jviewport-height] iframe {

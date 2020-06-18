@@ -34,17 +34,19 @@ foreach (array_keys($this->_styleSheets) as $style)
 	<jdoc:include type="head" />
 </head>
 <body class="contentpane component">
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
+	<div class="container-fluid">
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
 
-	<script>
-		const styles = <?php echo $cachesStyleSheets; ?>;
+		<script>
+			const styles = <?php echo $cachesStyleSheets; ?>;
 
-		styles.forEach(file => {
-			const link = document.body.appendChild(document.createElement('link'));
-			link.rel = 'stylesheet';
-			link.href = file;
-		});
-	</script>
+			styles.forEach(file => {
+				const link = document.body.appendChild(document.createElement('link'));
+				link.rel = 'stylesheet';
+				link.href = file;
+			});
+		</script>
+	</div>
 </body>
 </html>

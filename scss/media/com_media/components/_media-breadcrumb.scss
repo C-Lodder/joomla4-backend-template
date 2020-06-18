@@ -1,5 +1,5 @@
 .media-breadcrumb {
-  display: flex;
+  display: none;
   padding: 0;
   margin: 0;
   margin-inline-end: auto;
@@ -7,6 +7,10 @@
   line-height: $toolbar-height;
   background: transparent;
   border-inline-start: 1px solid $border-color;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
 
   ol {
     display: flex;

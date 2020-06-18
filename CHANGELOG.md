@@ -7,6 +7,8 @@
 - Fix meter element width
 - Fix missing language string
 - Fix logo appearing clickable on edit views
+- Fix toolbar bottom spacing
+- Media Manager styling fixes and improvements
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons

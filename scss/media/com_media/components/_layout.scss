@@ -2,8 +2,8 @@
 .media-container {
   display: flex;
   flex-wrap: wrap;
-  margin-inline-end: -($col-gutter-width / 2);
-  margin-inline-start: -($col-gutter-width / 2);
+  margin-inline-end: -($col-gutter-width);
+  margin-inline-start: -($col-gutter-width);
 }
 
 .media-col-main-panel {
