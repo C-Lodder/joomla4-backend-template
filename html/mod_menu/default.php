@@ -45,7 +45,7 @@ if (!$hideLinks)
 	<?php HTMLHelper::_('stylesheet', 'administrator/templates/bettum/css/sidebar_nav' . (Factory::getDocument()->direction === 'rtl' ? '-rtl' : '') . '.css', ['version' => 'auto']); ?>
 	<nav aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
 		<a class="navbar-brand text-center" href="<?php echo $href; ?>">
-			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
+			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<ul id="collapse" class="navbar-nav" role="menu">
 			<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu_sidebar'), $root); ?>
@@ -56,7 +56,7 @@ if (!$hideLinks)
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu"
 			aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
 		<a class="navbar-brand" href="<?php echo $href; ?>">
-			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_ALTTEXT_SITE_LOGO_LABEL'); ?>">
+			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
 		</a>
 		<div class="collapse navbar-collapse" id="topMenu">
 			<ul id="menu" class="navbar-nav mr-auto" role="menu">
