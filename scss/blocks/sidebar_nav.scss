@@ -11,8 +11,8 @@
 // Sidebar Nav
 .sidebar {
   width: $sidebar-width;
-  background-color: $sidebar-bg;
-  border-right: 1px solid $border-color;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
 
   @include media-breakpoint-down(md) {
     position: fixed;
@@ -27,6 +27,10 @@
       transform: translateX(0);
       transition: transform .3s ease-in-out;
     }
+  }
+
+  a {
+    color: var(--sidebar-color);
   }
 
   nav {
@@ -70,7 +74,7 @@
 
   .navbar-nav > li > .sidebar-item:not(.disabled)[aria-expanded=true],
   .navbar-nav > li > .sidebar-item:not(.disabled):hover {
-    background-color: $primary;
+    background-color: var(--primary);
     transition: background-color .3s ease-in-out;
   }
 
@@ -81,18 +85,19 @@
     @include position('left', 0);
     width: 3px;
     content: "";
-    background-color: $sidebar-bg;
+    background-color: var(--sidebar-bg);
     transition: background-color .3s ease-in-out; 
   }
 
   .navbar-nav > li > .sidebar-item:not(.disabled)[aria-expanded=true]::before,
   .navbar-nav > li > .sidebar-item:not(.disabled):hover::before {
-    background-color: $purple;
+    background-color: var(--purple);
     transition: background-color .3s ease-in-out; 
   }
 
   .collapse-level-1 {
-    background-color: darken($secondary, 5%);
+    background-color: var(--tertiary);
+    border-right: 1px solid var(--border-color);
 
     .sidebar-item {
       padding-inline-start: 2rem;
@@ -101,7 +106,7 @@
   }
 
   .collapse-level-2 {
-    background-color: darken($secondary, 10%);
+    background-color: var(--tertiary);
 
     .sidebar-item {
       padding-inline-start: 3rem;
@@ -110,12 +115,12 @@
   }
 
   .sidebar-heading .sidebar-item {
-    color: $sidebar-heading-color;
+    color: var(--sidebar-heading-color);
   }
 
   .divider {
     height: 1px;
-    background-color: darken($border-color, 12%);
+    background-color: var(--border-color);
   }
 
   .navbar-brand {
@@ -128,7 +133,7 @@
 .navbar-toggler {
   position: relative;
   z-index: 1045;
-  color: $body-color;
+  color: var(--body-color);
 }
 
 html,

@@ -1,10 +1,10 @@
 // Global
 
 body {
-  background-color: $tertiary;
+  background-color: var(--body-bg-color);
 
   &.component {
-    background: $secondary;
+    background: var(--secondary);
   }
 }
 

@@ -1,9 +1,9 @@
 // Background
 
 .bg-danger {
-  background-color: $red-bg !important;
+  background-color: var(--danger) !important;
 }
 
 .bg-success {
-  background-color: $green-bg !important;
+  background-color: var(--success) !important;
 }

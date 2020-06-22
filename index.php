@@ -49,10 +49,19 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="metas" />
+	<?php
+	/**<link href="/administrator/templates/<?php echo $this->template; ?>/css/template.css" rel="preload" as="style" media="(prefers-color-scheme: no-preference)">
+	<link href="/administrator/templates/<?php echo $this->template; ?>/css/template.css" rel="stylesheet" media="(prefers-color-scheme: no-preference)">
+	<link href="/administrator/templates/<?php echo $this->template; ?>/css/template-light.css" rel="preload" as="style" media="(prefers-color-scheme: light)">
+	<link href="/administrator/templates/<?php echo $this->template; ?>/css/template-light.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+	<link href="/administrator/templates/<?php echo $this->template; ?>/css/template.css" rel="preload" as="style" media="(prefers-color-scheme: dark)">
+	<link href="/administrator/templates/<?php echo $this->template; ?>/css/template.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+	*/
+	?>
 	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
+<body class="admin tpl-bettum <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
 	<div class="bettum-grid">
 		<?php if (!$isSidebarNav) : ?>
 			<?php // Header ?>

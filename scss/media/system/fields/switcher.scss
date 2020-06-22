@@ -9,15 +9,15 @@
 
 
 // Switcher
-$off-background-colour: #f0f0f0;
-$on-background-colour: $green;
-$switcher-width:  62px;
-$switcher-height: 32px;
-
 .switcher {
+  --switcher-off-background-colour: #f0f0f0;
+  --switcher-on-background-colour: var(--green);
+  --switcher-width: 62px;
+  --switcher-height: 32px;
+
   position: relative;
   width: 18rem;
-  height: $switcher-height;
+  height: var(--switcher-height);
 
   &.disabled {
     opacity: .6;
@@ -34,8 +34,8 @@ $switcher-height: 32px;
   z-index: 2;
   opacity: 0;
   cursor: pointer;
-  height: $switcher-height;
-  width: $switcher-width;
+  height: var(--switcher-height);
+  width: var(--switcher-width);
   margin: 0;
   left: 0;
 
@@ -63,7 +63,7 @@ $switcher-height: 32px;
 }
 
 .switcher label {
-  line-height: $switcher-height;
+  line-height: var(--switcher-height);
   display: inline-block;
   width: auto;
   min-width: 6rem;
@@ -85,9 +85,9 @@ $switcher-height: 32px;
   height: 100%;
   overflow: hidden;
   transition: .2s ease all;
-  background: $off-background-colour;
+  background: var(--switcher-off-background-colour);
   position: absolute;
-  width: $switcher-width;
+  width: var(--switcher-width);
   box-sizing: border-box;
   border: 1px solid rgba($black, .18);
   border-radius: 2rem;
@@ -100,13 +100,13 @@ $switcher-height: 32px;
 }
 
 .switcher input ~ input:checked ~ .toggle-outside{
-  background: $on-background-colour;
+  background: var(--switcher-on-background-colour);
 }
 
 .switcher .toggle-inside {
-  height: $switcher-height - 4;
-  width: ($switcher-width - 6) / 2;
-  background: $secondary;
+  height: calc(var(--switcher-height) - 4px);
+  width: calc((var(--switcher-width) - 6px) / 2);
+  background: var(--secondary);
   position: absolute;
   top: 1px;
   left: 1px;
@@ -115,7 +115,7 @@ $switcher-height: 32px;
 }
 
 .switcher input ~ input:checked ~ .toggle-outside .toggle-inside {
-  left: $switcher-width / 2;
+  left: calc(var(--switcher-width) / 2);
   background: $white;
 }
 

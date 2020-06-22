@@ -35,8 +35,8 @@
   position: relative;
   height: calc(100vh - 160px);
   overflow: hidden;
-  background-color: $secondary;
-  border: 1px solid $border-color;
+  background-color: var(--secondary);
+  border: 1px solid var(--border-color);
   border-radius: $border-radius;
   box-shadow: $col-box-shadow;
 }

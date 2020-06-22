@@ -54,7 +54,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
+<body class="admin tpl-bettum <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : ''); ?>">
 	<div class="bettum-grid">
 		<?php if (!$isSidebarNav) : ?>
 			<?php // Header ?>

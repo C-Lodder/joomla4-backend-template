@@ -6,7 +6,7 @@
   font-size: .9rem;
   line-height: $toolbar-height;
   background: transparent;
-  border-inline-start: 1px solid $border-color;
+  border-inline-start: 1px solid var(--border-color);
 
   @include media-breakpoint-up(md) {
     display: flex;
@@ -66,7 +66,7 @@
     border-inline-start: 10px solid transparent;
   }
   &::before {
-    border-inline-start-color: $border-color;
+    border-inline-start-color: var(--border-color);
   }
   &::after {
     border-inline-start-color: $breadcrumbs-bg;

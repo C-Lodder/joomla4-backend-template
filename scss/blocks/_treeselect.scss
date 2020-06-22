@@ -7,7 +7,7 @@
 
   .nav-header {
     font-weight: $font-weight-bold;
-    color: $body-color;
+    color: var(--body-color);
   }
 
   li {
@@ -21,7 +21,7 @@
       position: absolute;
       left: ($treeselect-indent - 15px);
       content: "";
-      background-color: $body-color;
+      background-color: var(--body-color);
 
       [dir=rtl] & {
         right: ($treeselect-indent - 15px);
@@ -93,7 +93,7 @@
     &::after {
       margin: 0;
       font-size: 1rem;
-      color: $body-color;
+      color: var(--body-color);
     }
   }
 }

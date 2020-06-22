@@ -3,12 +3,14 @@
 ## WIP
 - Repaint! (thanks @ciar4n)
 - Keep the active dropdown shown on page load
+- Start moving to CSS variables where possible
+- Media Manager styling fixes and improvements
 - Fix sidebar heading colour contrast
 - Fix meter element width
 - Fix missing language string
 - Fix logo appearing clickable on edit views
 - Fix toolbar bottom spacing
-- Media Manager styling fixes and improvements
+- Fix a11y settings not being hidden with latest Joomla changes
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons

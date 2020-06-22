@@ -64,10 +64,10 @@ $extension-types: (
     .card {
       height: 95%;
       margin-bottom: 1rem;
-      background-color: $primary;
+      background-color: var(--primary);
 
       &:hover {
-        background-color: $tertiary;
+        background-color: var(--tertiary);
       }
     }
 
@@ -102,7 +102,7 @@ $extension-types: (
       margin-bottom: 10px;
 
       &:hover {
-        background-color: $secondary;
+        background-color: var(--secondary);
       }
 
       .row {

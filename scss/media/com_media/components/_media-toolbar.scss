@@ -3,7 +3,7 @@
   display: flex;
   padding: 0;
   background-color: $toolbar-bg;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--border-color);
   border-radius: $border-radius $border-radius 0 0;
 
   input {
@@ -29,7 +29,7 @@
   text-align: center;
   background-color: transparent;
   border: 0;
-  border-inline-start: 1px solid $border-color;
+  border-inline-start: 1px solid var(--border-color);
   &:hover {
     background-color: $toolbar-icon-bg-hover;
     box-shadow: none;

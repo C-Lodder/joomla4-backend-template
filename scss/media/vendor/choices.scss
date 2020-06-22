@@ -30,7 +30,7 @@ joomla-field-fancy-select {
   &.is-disabled {
     .choices__inner,
 	.choices__input {
-      background-color: $primary;
+      background-color: var(--primary);
       cursor: not-allowed;
       user-select: none;
     }
@@ -51,8 +51,8 @@ joomla-field-fancy-select {
       display: block;
       width: 100%;
       padding: 10px;
-      border-bottom: 1px solid $border-color;
-      background-color: $primary;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--primary);
       margin: 0;
     }
 
@@ -85,7 +85,7 @@ joomla-field-fancy-select {
       height: 0;
       width: 0;
       border-style: solid;
-      border-color: $border-color transparent transparent transparent;
+      border-color: var(--border-color) transparent transparent transparent;
       border-width: 5px;
       position: absolute;
       right: 11.5px;
@@ -95,7 +95,7 @@ joomla-field-fancy-select {
     }
 
     &.is-open::after {
-      border-color: transparent transparent $border-color transparent;
+      border-color: transparent transparent var(--border-color) transparent;
       margin-top: -7.5px;
     }
 
@@ -152,20 +152,21 @@ joomla-field-fancy-select {
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  background-color: $primary;
+  background-color: var(--primary);
   padding: $input-padding-y $input-padding-x;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
   font-size: 1rem;
   min-height: $input-height;
   overflow: hidden;
+  @include border-radius($border-radius);
 }
 
 .is-focused .choices__inner {
-  border-color: $border-color;
+  border-color: var(--border-color);
 }
 
 .is-open .choices__inner {
-  border-color: $border-color;
+  border-color: var(--border-color);
 }
 
 .choices__list {
@@ -213,12 +214,12 @@ joomla-field-fancy-select {
 
 .choices__list--multiple .choices__item.is-highlighted {
   background-color: #00a5bb;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
 }
 
 .is-disabled .choices__list--multiple .choices__item {
   background-color: #aaaaaa;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
 }
 
 .choices__list--dropdown {
@@ -226,8 +227,8 @@ joomla-field-fancy-select {
   z-index: 3;
   position: absolute;
   width: auto;
-  background-color: $primary;
-  border: 1px solid $border-color;
+  background-color: var(--primary);
+  border: 1px solid var(--border-color);
   top: 100%;
   margin-top: -1px;
   overflow: hidden;
@@ -319,7 +320,7 @@ joomla-field-fancy-select {
   font-weight: 600;
   font-size: 12px;
   padding: 10px;
-  border-bottom: 1px solid $body-color;
+  border-bottom: 1px solid var(--body-color);
   color: $link-color;
 }
 
@@ -341,7 +342,7 @@ joomla-field-fancy-select {
 .choices__input {
   display: inline-block;
   vertical-align: baseline;
-  background-color: $primary;
+  background-color: var(--primary);
   font-size: 1rem;
   border: 0;
   max-width: 100%;

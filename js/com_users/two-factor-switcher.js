@@ -26,13 +26,11 @@
   document.addEventListener('DOMContentLoaded', () => {
     Joomla.twoFactorMethodChange = () => {
       const method = document.getElementById('jform_twofactor_method')
-
       if (method) {
         const selectedPane = `com_users_twofactor_${method.value}`
         const twoFactorForms = document.querySelectorAll('#com_users_twofactor_forms_container > div')
-        twoFactorForms.forEach(value => {
+        twoFactorForms.forEach((value) => {
           const { id } = value
-
           if (id !== selectedPane) {
             document.getElementById(id).classList.add('hidden')
           } else {

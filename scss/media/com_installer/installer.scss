@@ -20,19 +20,19 @@
 }
 
 #dragarea {
-  background-color: $secondary;
-  border: 1px dashed $border-color;
+  background-color: var(--secondary);
+  border: 1px dashed var(--border-color);
   padding: 4rem 0;
   transition: all .2s ease 0s;
 
   #upload-icon,
   p.lead {
-    color: $body-color;
+    color: var(--body-color);
   }
 
   &.hover {
-    border-color: $dark-text-color;
-    background-color: $primary;
+    border-color: $text-color;
+    background-color: var(--primary);
   }
 
   &[data-state=pending] {
@@ -59,7 +59,7 @@
 
 #upload-icon {
   font-size: 3rem;
-  color: $body-color;
+  color: var(--body-color);
   transition: all .2s;
 }
 

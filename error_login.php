@@ -50,7 +50,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 	<style><?php echo $css; ?></style>
 	<jdoc:include type="styles" />
 </head>
-<body class="admin">
+<body class="admin tpl-bettum">
 	<?php if (!$isSidebarNav) : ?>
 		<?php // Header ?>
 		<header id="header" class="header">

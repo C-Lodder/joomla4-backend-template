@@ -20,17 +20,17 @@
 
 .form-control-feedback {
   display: block;
-  color: $danger;
+  color: var(--danger);
 }
 
 
 // Custom select modifiers
 .custom-select-success {
-  border-color: $green;
+  border-color: var(--green);
 }
 
 .custom-select-danger {
-  border-color: $red;
+  border-color: var(--red);
 }
 
 .module-options {

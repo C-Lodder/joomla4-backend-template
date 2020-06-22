@@ -26,11 +26,11 @@
   flex-direction: column;
   min-height: 6.5rem;
   padding: 2rem 0;
-  background-color: $secondary;
-  color: $body-color;
+  background-color: var(--quickicon-bg);
+  color: var(--body-color);
   text-align: center;
   transition: all .2s ease-in-out;
-  border: 1px solid $primary;
+  border: 1px solid var(--quickicon-border-color);
   border-radius: 6px;
   box-shadow: $shadow-default;
 
@@ -42,20 +42,20 @@
   }
 
   &.success {
-    border: 1px solid $success;
+    border: 1px solid var(--green);
 
     .quickicon-icon,
     .quickicon-text {
-      color: $success;
+      color: var(--green);
     }
   }
 
   &.danger {
-    border: 1px solid $danger;
+    border: 1px solid var(--red);
 
     .quickicon-icon,
     .quickicon-text {
-      color: $danger;
+      color: var(--red);
     }
   }
 }

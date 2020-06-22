@@ -1,7 +1,7 @@
 // Variables
 
 .btn-group .dropdown-menu {
-  background: $secondary;
+  background: var(--secondary);
   min-width: 100%;
 
   [class^='icon-'],
@@ -35,13 +35,13 @@
 .table thead td,
 .table thead th {
   font-size: .85rem;
-  color: $body-color;
+  color: var(--body-color);
   border: 0;
   white-space: nowrap;
 }
 
 .btn-primary {
-  border-color: $border-color;
+  border-color: var(--border-color);
 }
 
 .nav-sm .nav-link {

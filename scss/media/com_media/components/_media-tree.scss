@@ -20,7 +20,7 @@ ul.media-tree {
 .media-drive {
   overflow-x: auto;
   background-color: $sidebar-drive-bg;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
   + .media-drive {
     border-top: 0;
   }

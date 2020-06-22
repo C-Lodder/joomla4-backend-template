@@ -8,7 +8,7 @@
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
-  color: $body-color;
+  color: var(--body-color);
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   vertical-align: middle;
@@ -19,7 +19,7 @@
   @include transition($btn-transition);
 
   @include hover() {
-    color: $body-color;
+    color: var(--body-color);
     text-decoration: none;
   }
 
@@ -61,7 +61,7 @@ fieldset:disabled a.btn {
 // Alternate buttons
 //
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $button-colors {
   .btn-#{$color},
   .btn-outline-#{$color} {
     @include button-variant($value, $value);

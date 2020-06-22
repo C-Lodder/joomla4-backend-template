@@ -1,7 +1,7 @@
 // Table
 
 .table tbody tr:nth-of-type(#{$table-striped-order}) {
-  background-color: $table-accent-bg;
+  background-color: var(--table-accent-bg);
 }
 
 .tbody-icon {
@@ -17,8 +17,8 @@
     height: 26px;
     font-size: 1rem;
     line-height: 22px;
-    color: $body-color;
-    border: 1px solid $border-color;
+    color: var(--body-color);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
   }
 
@@ -33,17 +33,17 @@
   .icon-home,
   .icon-color-featured {
     color: $yellow !important;
-    border-color: $yellow !important;
+    border-color: var(--yellow) !important;
   }
 
   .icon-unpublish,
   .icon-checkedout {
     color: $red !important;
-    border-color: $red !important;
+    border-color: var(--red) !important;
   }
 
   .icon-publish {
     color: $green !important;
-    border-color: $green !important;
+    border-color: var(--green) !important;
   }
 }

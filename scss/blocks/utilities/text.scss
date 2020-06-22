@@ -1,10 +1,10 @@
 // Text
 
-.text-left   { text-align: left !important; }
-.text-right  { text-align: right !important; }
+.text-left   { text-align: start !important; }
+.text-right  { text-align: end !important; }
 .text-center { text-align: center !important; }
 .text-muted { color: $gray-600 !important; }
 
 .text-bold { font-weight: 600; }
 
-.text-danger { color: $danger !important; }
+.text-danger { color: var(--red) !important; }

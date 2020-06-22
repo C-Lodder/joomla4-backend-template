@@ -8,7 +8,7 @@
   padding: $gutter-width;
   overflow-y: scroll;
   background-color: $info-bg;
-  border-inline-start: 1px solid $border-color;
+  border-inline-start: 1px solid var(--border-color);
 
   [dir=rtl] & {
     right: auto;
@@ -22,7 +22,7 @@
     line-height: $info-title-height;
     word-wrap: break-word;
     background-color: $info-title-bg;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
   }
 
   dl {
@@ -43,7 +43,7 @@
 
   dt {
     font-weight: normal;
-    color: $body-color;
+    color: var(--body-color);
   }
 }
 
@@ -77,7 +77,7 @@
   margin: 20px auto 15px;
   font-size: 2rem;
   line-height: calc(4rem - 4px);
-  color: $body-color;
-  border: 2px solid $border-color;
+  color: var(--body-color);
+  border: 2px solid var(--border-color);
   border-radius: 50%;
 }

@@ -14,15 +14,15 @@
 	min-width: 160px;
 	padding: 0;
 	list-style: none;
-	background-color: $tertiary;
-	border: 1px solid $border-color;
+	background-color: var(--tertiary);
+	border: 1px solid var(--border-color);
 	z-index: 1100 !important;
 }
 .calendar-container table {
 	table-layout: fixed;
 	max-width: 262px;
 	border-radius: 5px;
-	background-color: $tertiary;
+	background-color: var(--tertiary);
 	z-index: 1100 !important;
 	border-collapse: separate;
 }
@@ -43,14 +43,14 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 }
 
 .calendar-container table thead td.headrow { /* Row <TR> containing navigation buttons */
-	background: $secondary;
-	color: $body-color;
+	background: var(--secondary);
+	color: var(--border-color);
 }
 
 .calendar-container table thead td.name { /* Cells <TD> containing the day names */
-	border-bottom: 1px solid $secondary;
+	border-bottom: 1px solid var(--secondary);
 	text-align: center;
-	color: $body-color;
+	color: var(--border-color);
 }
 
 /* The body part -- contains all the days in month. */
@@ -60,7 +60,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 }
 
 .calendar-container table tbody td.wn {
-	background: $secondary;
+	background: var(--secondary);
 }
 
 .calendar-container table tbody td.day {
@@ -72,7 +72,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 
 .calendar-container table tbody td.day.wn {
 	text-align: center;
-	background-color: $secondary;
+	background-color: var(--secondary);
 }
 
 .calendar-container table tbody td.day.selected { /* Cell showing today date */
@@ -95,11 +95,11 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 		content: "";
 		height: 3px;
 		border-radius: 1.5px;
-		background-color: $green=bg;
+		background-color: var(--success);
 	}
 	
 	&.selected:after {
-		background-color: $secondary;
+		background-color: var(--secondary);
 	}
 }
 
@@ -109,12 +109,12 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 	color: $white;
 }
 .calendar-container table tbody td.day:hover:after {
-	background-color: $secondary;
+	background-color: var(--secondary);
 }
 
 .calendar-container table tbody .disabled {
 	color: #999;
-	background-color: $secondary;
+	background-color: var(--secondary);
 }
 
 .calendar-container table tbody .emptycell { /* Empty cells (the best is to hide them) */
@@ -143,13 +143,13 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 .buttons-wrapper .btn {
 	min-width: 60px;
 	color: $white;
-	border: 1px solid $border-color;
+	border: 1px solid var(--border-color);
 	margin-inline-end: .5rem;
 	padding: 0 16px;
 	line-height: 2.375rem;
 	
 	&:hover {
-		color: $body-color;
+		color: var(--border-color);
 		background: $blue-bg;
 	}
 	
@@ -159,7 +159,7 @@ div.calendar-container table td.title { /* This holds the current "month, year" 
 }
 
 .time .time-title {
-	background-image: str-replace(url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='22' height='22' fill='#{$body-color}' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1024 544v448q0 14-9 23t-23 9h-320q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224v-352q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z'/%3E%3C/svg%3E"), "#", "%23");
+	background-image: str-replace(url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='22' height='22' fill='#{$border-color}' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1024 544v448q0 14-9 23t-23 9h-320q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224v-352q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z'/%3E%3C/svg%3E"), "#", "%23");
 	background-repeat: no-repeat;
 	background-position: center;
 }
