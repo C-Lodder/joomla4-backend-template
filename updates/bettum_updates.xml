@@ -4,10 +4,10 @@
 		<description>A dark themed administrator template for Joomla 4</description>
 		<element>bettum</element>
 		<type>template</type>
-		<version>0.0.16</version>
+		<version>0.0.17</version>
 		<infourl title="Bettum Release Notes">https://github.com/C-Lodder/joomla4-backend-template/blob/master/CHANGELOG.md</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/C-Lodder/joomla4-backend-template/releases/download/v0.0.16/tpl_bettum-v0.0.16.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/C-Lodder/joomla4-backend-template/releases/download/v0.0.17/tpl_bettum-v0.0.17.zip</downloadurl>
 		</downloads>
 		<maintainer>Charlie Lodder</maintainer>
 		<maintainerurl>https://joomjunk.co.uk</maintainerurl>

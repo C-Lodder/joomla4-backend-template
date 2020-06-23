@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.17
 - Repaint! (thanks @ciar4n)
 - Keep the active dropdown shown on page load
 - Start moving to CSS variables where possible
