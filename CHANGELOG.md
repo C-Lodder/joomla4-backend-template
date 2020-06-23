@@ -11,6 +11,7 @@
 - Fix logo appearing clickable on edit views
 - Fix toolbar bottom spacing
 - Fix a11y settings not being hidden with latest Joomla changes
+- Fix ChoicesJS width 
 
 ## 0.0.16
 - Add option for inlined toolbar save buttons

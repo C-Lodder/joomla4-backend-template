@@ -5,6 +5,7 @@
 }
 
 .controls {
+  joomla-field-fancy-select,
   .custom-select,
   .form-control {
     max-width: $input-max-width;
@@ -39,10 +40,5 @@
     .form-control {
       max-width: none;
     }
-  }
-
-  joomla-field-fancy-select {
-    display: block;
-    width: 100%;
   }
 }

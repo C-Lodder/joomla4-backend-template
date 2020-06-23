@@ -9,6 +9,7 @@
 
 
 joomla-field-fancy-select {
+  width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -85,7 +86,7 @@ joomla-field-fancy-select {
       height: 0;
       width: 0;
       border-style: solid;
-      border-color: var(--border-color) transparent transparent transparent;
+      border-color: var(--body-color) transparent transparent transparent;
       border-width: 5px;
       position: absolute;
       right: 11.5px;
@@ -239,10 +240,6 @@ joomla-field-fancy-select {
   }
 }
 
-.is-open .choices__list--dropdown {
-  border-color: #b7b7b7;
-}
-
 .is-flipped .choices__list--dropdown {
   top: auto;
   bottom: 100%;
@@ -298,7 +295,7 @@ joomla-field-fancy-select {
   color: $white;
 
   &::after {
-    opacity: .5;
+    opacity: 1;
   }
 }
 
