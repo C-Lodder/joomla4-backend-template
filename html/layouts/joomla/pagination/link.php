@@ -14,30 +14,35 @@ $item = $displayData['data'];
 $display = $item->text;
 $rtl = Factory::getApplication()->getLanguage()->isRtl();
 
+$iconAngleDoubleRight = '<svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M363.8 264.5L217 412.5c-4.7 4.7-12.3 4.7-17 0l-19.8-19.8c-4.7-4.7-4.7-12.3 0-17L298.7 256 180.2 136.3c-4.7-4.7-4.7-12.3 0-17L200 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17zm-160-17L57 99.5c-4.7-4.7-12.3-4.7-17 0l-19.8 19.8c-4.7 4.7-4.7 12.3 0 17L138.7 256 20.2 375.7c-4.7 4.7-4.7 12.3 0 17L40 412.5c4.7 4.7 12.3 4.7 17 0l146.8-148c4.7-4.7 4.7-12.3 0-17z"/></svg>';
+$iconAngleDoubleLeft = '<svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M20.2 247.5L167 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L85.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L184 412.5c-4.7 4.7-12.3 4.7-17 0l-146.8-148c-4.7-4.7-4.7-12.3 0-17zm160 17l146.8 148c4.7 4.7 12.3 4.7 17 0l19.8-19.8c4.7-4.7 4.7-12.3 0-17L245.3 256l118.5-119.7c4.7-4.7 4.7-12.3 0-17L344 99.5c-4.7-4.7-12.3-4.7-17 0l-146.8 148c-4.7 4.7-4.7 12.3 0 17z"/></svg>';
+$iconAngleRight = '<svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"/></svg>';
+$iconAngleLeft = '<svg aria-hidden="true" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M4.2 247.5L151 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L69.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L168 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 264.5c-4.7-4.7-4.7-12.3 0-17z"/></svg>';
+
 switch ((string) $item->text)
 {
 	// Check for "Start" item
 	case Text::_('JLIB_HTML_START') :
-		$icon = $rtl ? 'fas fa-angle-double-right' : 'fas fa-angle-double-left';
+		$icon = $rtl ? $iconAngleDoubleRight : $iconAngleDoubleLeft;
 		$aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
 		break;
 
 	// Check for "Prev" item
 	case $item->text === Text::_('JPREV') :
 		$item->text = Text::_('JPREVIOUS');
-		$icon = $rtl ? 'fas fa-angle-right' : 'fas fa-angle-left';
+		$icon = $rtl ? $iconAngleRight : $iconAngleLeft;
 		$aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
 		break;
 
 	// Check for "Next" item
 	case Text::_('JNEXT') :
-		$icon = $rtl ? 'fas fa-angle-left' : 'fas fa-angle-right';
+		$icon = $rtl ? $iconAngleLeft : $iconAngleRight;
 		$aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
 		break;
 
 	// Check for "End" item
 	case Text::_('JLIB_HTML_END') :
-		$icon = $rtl ? 'fas fa-angle-double-left' : 'fas fa-angle-double-right';
+		$icon = $rtl ? $iconAngleDoubleLeft : $iconAngleDoubleRight;
 		$aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
 		break;
 
@@ -49,7 +54,7 @@ switch ((string) $item->text)
 
 if ($icon !== null)
 {
-	$display = '<span class="' . $icon . '" aria-hidden="true"></span>';
+	$display = $icon;
 }
 
 if ($displayData['active'])

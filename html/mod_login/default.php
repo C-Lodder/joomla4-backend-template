@@ -133,7 +133,7 @@ Text::script('MESSAGE');
 	</fieldset>
 </form>
 <div class="text-center">
-	<a href="<?php echo Text::_('MOD_LOGIN_CREDENTIALS_LINK'); ?>" target="_blank" rel="nofollow">
+	<a href="<?php echo Text::_('MOD_LOGIN_CREDENTIALS_LINK'); ?>" target="_blank" rel="noopener nofollow">
 		<?php echo Text::_('MOD_LOGIN_CREDENTIALS'); ?>
 	</a>
 </div>

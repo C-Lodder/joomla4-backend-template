@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Replace icon fonts with SVGs
+
 ## 0.0.17
 - Repaint! (thanks @ciar4n)
 - Keep the active dropdown shown on page load

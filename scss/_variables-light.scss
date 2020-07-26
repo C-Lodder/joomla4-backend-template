@@ -10,11 +10,11 @@ $green-bg:                    #1f7F37;
 $cyan-bg:                     #117c8d;
 $orange-bg:                   #c05707;
 
-$blue:                        #52a5ff;
-$red:                         #ea8591;
-$green:                       #2db950;
-$cyan:                        #19b4cc;
-$orange:                      #faa05a;
+$blue:                        #0071eb;
+$red:                         #cd2337;
+$green:                       #1f7F37;
+$cyan:                        #117c8d;
+$orange:                      #c05707;
 $purple:                      #2b2d4d;
 
 $primary:                     #2e2e31;
@@ -22,7 +22,7 @@ $secondary:                   #252528;
 $tertiary:                    #1c1c1c;
 $danger:                      $red;
 $success:                     $green;
-$border-color:                #424246;
+$border-color:                #eef0f6;
 $text-color:                  #333;
 
 $link-color:                  var(--text-color);
@@ -96,9 +96,9 @@ $meter-max-width:               240px;
 
 // Form
 $input-max-width:               240px;
-$input-bg:                      var(--primary);
-$input-disabled-bg:             var(--primary);
-$input-focus-bg:                var(--primary);
+$input-bg:                      $input-bg;
+$input-disabled-bg:             $input-disabled-bg;
+$input-focus-bg:                $input-focus-bg;
 $input-color:                   var(--body-color);
 $input-focus-color:             var(--body-color);
 $input-border-color:            var(--border-color);
@@ -111,7 +111,7 @@ $custom-select-indicator:       str-replace(url("data:image/svg+xml,%3csvg xmlns
 $custom-select-background:       $custom-select-indicator no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
 
 $input-group-addon-color:        var(--body-color);
-$input-group-addon-bg:           var(--primary);
+$input-group-addon-bg:           $input-group-addon-bg;
 $input-group-addon-border-color: var(--border-color);
 
 
@@ -124,8 +124,8 @@ $treeselect-indent:           40px;
 
 // Cards
 $card-columns-count:          2;
-$card-cap-bg:                 var(--secondary);
-$card-bg:                     var(--secondary);
+$card-cap-bg:                 #fff;
+$card-bg:                     #fff;
 $card-cap-color:              var(--body-color);
 $card-spacer-y:               .25rem;
 $card-border-color:           var(--border-color);
@@ -157,22 +157,22 @@ $dropdown-divider-bg:         var(--border-color);
 
 // List group
 $list-group-color:            var(--body-color);
-$list-group-bg:               var(--secondary);
+$list-group-bg:               #fff;
 $list-group-border-color:     var(--border-color);
 
 
 
 // Tables
-$table-bg:                    var(--secondary);
+$table-bg:                    #fff;
 $table-border-color:          var(--border-color);
 $table-color:                 var(--body-color);
-$table-accent-bg:             var(--primary);
+$table-accent-bg:             #eef0f6;
 
 
 
 // Pagination
 $pagination-color:                  $link-color;
-$pagination-bg:                     var(--secondary);
+$pagination-bg:                     #fff;
 $pagination-border-color:           var(--border-color);
 
 $pagination-hover-color:            $link-hover-color;
@@ -191,7 +191,7 @@ $pagination-disabled-border-color:  var(--border-color);
 
 // Modals
 $modal-content-color:               var(--body-color);
-$modal-content-bg:                  var(--secondary);
+$modal-content-bg:                  #fff;
 $modal-content-border-color:        var(--border-color);
 
 $modal-header-border-color:         var(--border-color);

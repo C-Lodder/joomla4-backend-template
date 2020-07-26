@@ -21,7 +21,7 @@ const postcssPipe = () =>
 gulp.task('sass-core', () =>
 	gulp.src([
 		`./scss/template.scss`,
-		//`./scss/template-light.scss`,
+		`./scss/template-light.scss`,
 		`./scss/fonts/fontawesome.scss`,
 		`./scss/pages/login.scss`,
 		`./scss/pages/dashboard.scss`,
