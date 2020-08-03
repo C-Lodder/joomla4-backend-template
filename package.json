@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "archiver": "^5.0.0",
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "^9.8.6",
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
