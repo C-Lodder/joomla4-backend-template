@@ -18,8 +18,9 @@ async function* recursiveSearch(dir) {
 async function processJs() {
   for await (const file of recursiveSearch(`${__dirname}/js/`)) {
     readFile(file, { encoding: 'utf8' })
-      .then((data) => {
-        writeFile(`${file.substr(0, file.lastIndexOf('.'))}.min.js`, Terser.minify(data, { output: { comments: false } }).code)
+      .then(async (response) => {
+        const data = await Terser.minify(response, { output: { comments: false } })
+        writeFile(`${file.substr(0, file.lastIndexOf('.'))}.min.js`, data.code)
       })
   }
 }
