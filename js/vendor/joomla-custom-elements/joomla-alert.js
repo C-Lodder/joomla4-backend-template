@@ -77,22 +77,19 @@ window.customElements.define('joomla-alert', class JoomlaAlertElement extends HT
       return
     }
 
-    const closeButton = document.createElement('button')
-
     if (this.hasAttribute('dismiss')) {
+      const closeButton = document.createElement('button')
       closeButton.classList.add('joomla-alert--close')
       closeButton.innerHTML = '<span aria-hidden="true">&times</span>'
       closeButton.setAttribute('aria-label', this.getText('JCLOSE', 'Close'))
-    }
 
-    if (this.firstChild) {
-      this.insertBefore(closeButton, this.firstChild)
-    } else {
-      this.appendChild(closeButton)
-    }
+      if (this.firstChild) {
+        this.insertBefore(closeButton, this.firstChild)
+      } else {
+        this.appendChild(closeButton)
+      }
 
-    /* Add the required listener */
-    if (closeButton) {
+      /* Add the required listener */
       closeButton.addEventListener('click', () => {
         this.close()
       })
