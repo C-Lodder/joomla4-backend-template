@@ -3,6 +3,7 @@
 ## WIP
 - Replace icon fonts with SVGs
 - Fix instances of alerts with empty button
+- Fix alert background colours
 
 ## 0.0.17
 - Repaint! (thanks @ciar4n)
