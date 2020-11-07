@@ -1,11 +1,11 @@
 // Bootstrap core
-@import "../../../../../media/vendor/bootstrap/scss/functions";
-@import "../../../../../media/vendor/bootstrap/scss/variables";
-@import "../media/vendor/bootstrap/mixins";
+@import "../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "media/vendor/bootstrap/mixins";
 
 // Bettum Variables and Mixins
-@import "../mixins";
-@import "../variables";
+@import "mixins";
+@import "variables";
 
 
 @media (max-width: 480px) {
@@ -130,10 +130,6 @@
 
       .js-stools-btn-filter {
         border-inline-end: 1px solid var(--border-color);
-
-        .fa {
-          margin-inline-start: .25rem;
-        }
       }
     }
 

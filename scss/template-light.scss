@@ -1,6 +1,6 @@
 // Bootstrap core
-@import "../../../../media/vendor/bootstrap/scss/functions";
-@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "../../../media/vendor/bootstrap/scss/functions";
+@import "../../../media/vendor/bootstrap/scss/variables";
 @import "media/vendor/bootstrap/mixins";
 
 // Bettum Variables and Mixins
@@ -10,41 +10,39 @@
 // Bootstrap
 @import "media/vendor/bootstrap/root";
 @import "media/vendor/bootstrap/reboot";
-@import "../../../../media/vendor/bootstrap/scss/type";
-@import "../../../../media/vendor/bootstrap/scss/images";
-@import "../../../../media/vendor/bootstrap/scss/code";
-@import "../../../../media/vendor/bootstrap/scss/grid";
-@import "../../../../media/vendor/bootstrap/scss/tables";
-@import "../../../../media/vendor/bootstrap/scss/forms";
+@import "../../../media/vendor/bootstrap/scss/type";
+@import "../../../media/vendor/bootstrap/scss/images";
+@import "../../../media/vendor/bootstrap/scss/code";
+@import "../../../media/vendor/bootstrap/scss/grid";
+@import "../../../media/vendor/bootstrap/scss/tables";
+@import "../../../media/vendor/bootstrap/scss/forms";
 @import "media/vendor/bootstrap/buttons";
-@import "../../../../media/vendor/bootstrap/scss/transitions";
+@import "../../../media/vendor/bootstrap/scss/transitions";
 @import "media/vendor/bootstrap/dropdown";
-@import "../../../../media/vendor/bootstrap/scss/breadcrumb";
-@import "../../../../media/vendor/bootstrap/scss/button-group";
-@import "../../../../media/vendor/bootstrap/scss/input-group";
-@import "../../../../media/vendor/bootstrap/scss/custom-forms";
-@import "../../../../media/vendor/bootstrap/scss/nav";
-@import "../../../../media/vendor/bootstrap/scss/navbar";
-@import "../../../../media/vendor/bootstrap/scss/card";
-@import "../../../../media/vendor/bootstrap/scss/pagination";
-@import "../../../../media/vendor/bootstrap/scss/badge";
-@import "../../../../media/vendor/bootstrap/scss/alert";
-@import "../../../../media/vendor/bootstrap/scss/progress";
-@import "../../../../media/vendor/bootstrap/scss/media";
+@import "../../../media/vendor/bootstrap/scss/breadcrumb";
+@import "../../../media/vendor/bootstrap/scss/button-group";
+@import "../../../media/vendor/bootstrap/scss/input-group";
+@import "../../../media/vendor/bootstrap/scss/custom-forms";
+@import "../../../media/vendor/bootstrap/scss/nav";
+@import "../../../media/vendor/bootstrap/scss/navbar";
+@import "../../../media/vendor/bootstrap/scss/card";
+@import "../../../media/vendor/bootstrap/scss/pagination";
+@import "../../../media/vendor/bootstrap/scss/badge";
+@import "../../../media/vendor/bootstrap/scss/alert";
+@import "../../../media/vendor/bootstrap/scss/progress";
+@import "../../../media/vendor/bootstrap/scss/media";
 @import "media/vendor/bootstrap/list-group";
-@import "../../../../media/vendor/bootstrap/scss/close";
-@import "../../../../media/vendor/bootstrap/scss/modal";
-@import "../../../../media/vendor/bootstrap/scss/tooltip";
+@import "../../../media/vendor/bootstrap/scss/close";
+@import "../../../media/vendor/bootstrap/scss/modal";
+@import "../../../media/vendor/bootstrap/scss/tooltip";
 @import "media/vendor/bootstrap/popover";
 @import "media/vendor/bootstrap/utilities";
-@import "../../../../media/vendor/bootstrap/scss/utilities/clearfix";
-@import "../../../../media/vendor/bootstrap/scss/utilities/display";
-@import "../../../../media/vendor/bootstrap/scss/utilities/flex";
-@import "../../../../media/vendor/bootstrap/scss/utilities/overflow";
-@import "../../../../media/vendor/bootstrap/scss/utilities/screenreaders";
+@import "../../../media/vendor/bootstrap/scss/utilities/clearfix";
+@import "../../../media/vendor/bootstrap/scss/utilities/display";
+@import "../../../media/vendor/bootstrap/scss/utilities/flex";
+@import "../../../media/vendor/bootstrap/scss/utilities/overflow";
+@import "../../../media/vendor/bootstrap/scss/utilities/screenreaders";
 
-// Alert
-@import "../../../../build/media_source/system/scss/jalert";
 
 // Blocks
 @import "blocks/global";

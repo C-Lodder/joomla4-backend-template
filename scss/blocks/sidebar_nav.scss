@@ -1,11 +1,11 @@
 // Bootstrap core
-@import "../../../../../media/vendor/bootstrap/scss/functions";
-@import "../../../../../media/vendor/bootstrap/scss/variables";
-@import "../media/vendor/bootstrap/mixins";
+@import "../../../../media/vendor/bootstrap/scss/functions";
+@import "../../../../media/vendor/bootstrap/scss/variables";
+@import "media/vendor/bootstrap/mixins";
 
 // Bettum Variables and Mixins
-@import "../mixins";
-@import "../variables";
+@import "mixins";
+@import "variables";
 
 
 // Sidebar Nav
@@ -66,8 +66,10 @@
       color: $nav-link-disabled-color;
     }
 
-    .fa,
-    .fas {
+    [class^="#{$jicon-css-prefix}-"],
+    [class*=" #{$jicon-css-prefix}-"],
+    [class^="#{$fa-css-prefix}-"],
+    [class*=" #{$fa-css-prefix}-"] {
       margin-inline-end: 1rem;
     }
   }

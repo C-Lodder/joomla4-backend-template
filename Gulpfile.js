@@ -2,20 +2,41 @@
  * Build scripts
  */
 
-const gulp         = require('gulp')
-const postcss      = require('gulp-postcss')
-const sass         = require('gulp-sass')
-const header       = require('gulp-header')
+const { join } = require('path')
+const gulp = require('gulp')
+const postcss = require('gulp-postcss')
+const { renderSync } = require('sass')
+const { obj } = require('through2')
+const header = require('gulp-header')
+const rename = require('gulp-rename')
 const autoprefixer = require('autoprefixer')
-const cssnano      = require('cssnano')
+const cssnano = require('cssnano')
 
-sass.compiler = require('node-sass')
+const compileScss = () =>
+	obj(async (file, enc, callback) => {
+		if (file.isBuffer()) {
+			const string = file.contents.toString('utf8');
+			const result = await renderSync({
+				data: string,
+				includePaths: [join(__dirname, '../../media/vendor/bootstrap/'), `${__dirname}/scss/`],
+			});
+ 
+			file.contents = 'from' in Buffer ? Buffer.from(result.css) : new Buffer(result.css);
+ 
+			return callback(null, file);
+		}
+	});
 
-const postcssPipe = () => 
+const postcssPipe = () =>
 	postcss([
 		autoprefixer(),
 		cssnano()
 	])
+
+const renamePipe = () =>
+	rename({
+		extname: '.css'
+	})
 
 // Compile the core template SCSS
 gulp.task('sass-core', () =>
@@ -28,8 +49,9 @@ gulp.task('sass-core', () =>
 		`./scss/pages/system.scss`,
 		`./scss/blocks/sidebar_nav.scss`,
 	])
-		.pipe(sass().on('error', sass.logError))
+		.pipe(compileScss())
 		.pipe(postcssPipe())
+		.pipe(renamePipe())
 		.pipe(gulp.dest(`./css`))
 )
 
@@ -39,8 +61,9 @@ gulp.task('sass-rtl', () =>
 		`./scss/blocks/sidebar_nav-rtl.scss`,
 	])
 		.pipe(header('$rtl: true;\n'))
-		.pipe(sass().on('error', sass.logError))
+		.pipe(compileScss())
 		.pipe(postcssPipe())
+		.pipe(renamePipe())
 		.pipe(gulp.dest(`./css`))
 )
 
@@ -63,8 +86,9 @@ gulp.task('sass-vendor', async() => {
 
 	return Object.entries(files).forEach(([file, dest]) =>
 		gulp.src(`${file}`)
-			.pipe(sass().on('error', sass.logError))
+			.pipe(compileScss())
 			.pipe(postcssPipe())
+			.pipe(renamePipe())
 			.pipe(gulp.dest(`${dest}`))
 	)
 })

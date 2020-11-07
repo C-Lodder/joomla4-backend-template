@@ -1,10 +1,15 @@
+// Bettum Variables and Mixins
+@import "mixins";
+@import "variables";
+
 // Font Awesome 5 Free
-@import "../../../../../media/vendor/fontawesome-free/scss/fontawesome";
-@import "../../../../../media/vendor/fontawesome-free/scss/solid";
-@import "../../../../../media/vendor/fontawesome-free/scss/brands";
+@import "../../../media/vendor/fontawesome-free/scss/fontawesome";
+@import "../../../media/vendor/fontawesome-free/scss/solid";
+@import "../../../media/vendor/fontawesome-free/scss/regular";
+@import "../../../media/vendor/fontawesome-free/scss/brands";
 
 // B/C for Icomoon
-@import "icomoon";
+@import "fonts/icomoon";
 
 // RTL override
 html[dir=rtl] .pull-right {

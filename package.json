@@ -25,9 +25,10 @@
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1",
+    "gulp-rename": "^2.0.0",
     "postcss": "^8.1.4",
-    "terser": "^5.3.8"
+    "sass": "^1.29.0",
+    "terser": "^5.3.8",
+    "through2": "^4.0.2"
   }
 }

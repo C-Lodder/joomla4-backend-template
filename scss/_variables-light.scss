@@ -1,7 +1,8 @@
 // Variables
 
 $rtl:                         false !default;
-
+$jicon-css-prefix:            icon;
+$fa-css-prefix:               fa;
 
 // Colours
 $blue-bg:                     #0071eb;
@@ -32,14 +33,14 @@ $link-hover-color:            #d7d7d7;
 $component-active-bg:         $purple;
 
 $colors: (
-  blue: $blue,
-  red: $red,
-  green: $green,
-  cyan: $cyan,
-  teal: $teal,
-  orange: $orange,
-  yellow: $yellow,
-  purple: $purple,
+  "blue": $blue,
+  "red": $red,
+  "green": $green,
+  "cyan": $cyan,
+  "teal": $teal,
+  "orange": $orange,
+  "yellow": $yellow,
+  "purple": $purple,
   body-color: $body-color,
   border-color: $border-color,
   text-color: $text-color,
