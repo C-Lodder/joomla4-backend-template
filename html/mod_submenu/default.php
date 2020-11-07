@@ -93,7 +93,7 @@ $canChange  = $user->authorise('core.edit.state', 'com_modules.module.' . $id) &
 							<?php endif; ?>
 							<?php if ($item->ajaxbadge) : ?>
 								<span class="menu-badge">
-									<span class="fa fa-spin fa-spinner mt-1 system-counter" data-url="<?php echo $item->ajaxbadge; ?>"></span>
+									<span class="icon-spin icon-spinner mt-1 system-counter" data-url="<?php echo $item->ajaxbadge; ?>"></span>
 								</span>
 							<?php endif; ?>
 						</a>
