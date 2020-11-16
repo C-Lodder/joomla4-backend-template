@@ -28,7 +28,7 @@
     "gulp-rename": "^2.0.0",
     "postcss": "^8.1.7",
     "sass": "^1.29.0",
-    "terser": "^5.3.8",
+    "terser": "^5.4.0",
     "through2": "^4.0.2"
   }
 }
