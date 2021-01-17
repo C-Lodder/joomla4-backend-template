@@ -3,45 +3,45 @@
 // Used in conjunction with global variables to enable certain theme features.
 
 // Vendor
-@import "../../../../../../../media/vendor/bootstrap/scss/vendor/rfs";
+@import "../../../bootstrap/vendor/rfs";
 
 // Deprecate
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/deprecate";
+@import "../../../bootstrap/mixins/deprecate";
 
 // Utilities
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/breakpoints";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/hover";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/image";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/badge";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/resize";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/screen-reader";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/size";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/reset-text";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/text-emphasis";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/text-hide";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/text-truncate";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/visibility";
+@import "../../../bootstrap/mixins/breakpoints";
+@import "../../../bootstrap/mixins/hover";
+@import "../../../bootstrap/mixins/image";
+@import "../../../bootstrap/mixins/badge";
+@import "../../../bootstrap/mixins/resize";
+@import "../../../bootstrap/mixins/screen-reader";
+@import "../../../bootstrap/mixins/size";
+@import "../../../bootstrap/mixins/reset-text";
+@import "../../../bootstrap/mixins/text-emphasis";
+@import "../../../bootstrap/mixins/text-hide";
+@import "../../../bootstrap/mixins/text-truncate";
+@import "../../../bootstrap/mixins/visibility";
 
 // // Components
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/alert";
+@import "../../../bootstrap/mixins/alert";
 @import "mixins/buttons";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/caret";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/pagination";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/lists";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/list-group";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/nav-divider";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/forms";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/table-row";
+@import "../../../bootstrap/mixins/caret";
+@import "../../../bootstrap/mixins/pagination";
+@import "../../../bootstrap/mixins/lists";
+@import "../../../bootstrap/mixins/list-group";
+@import "../../../bootstrap/mixins/nav-divider";
+@import "../../../bootstrap/mixins/forms";
+@import "../../../bootstrap/mixins/table-row";
 
 // // Skins
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/background-variant";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/border-radius";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/box-shadow";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/gradients";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/transition";
+@import "../../../bootstrap/mixins/background-variant";
+@import "../../../bootstrap/mixins/border-radius";
+@import "../../../bootstrap/mixins/box-shadow";
+@import "../../../bootstrap/mixins/gradients";
+@import "../../../bootstrap/mixins/transition";
 
 // // Layout
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/clearfix";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/grid-framework";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/grid";
-@import "../../../../../../../media/vendor/bootstrap/scss/mixins/float";
+@import "../../../bootstrap/mixins/clearfix";
+@import "../../../bootstrap/mixins/grid-framework";
+@import "../../../bootstrap/mixins/grid";
+@import "../../../bootstrap/mixins/float";

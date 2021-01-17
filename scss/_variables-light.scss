@@ -41,9 +41,11 @@ $colors: (
   "orange": $orange,
   "yellow": $yellow,
   "purple": $purple,
+  text-color: $text-color,
   body-color: $body-color,
   border-color: $border-color,
-  text-color: $text-color,
+  border-color-dark: $purple,
+  sidebar-border-color: $purple,
 );
 
 $theme-colors: (
@@ -97,23 +99,23 @@ $meter-max-width:               240px;
 
 // Form
 $input-max-width:               240px;
-$input-bg:                      $input-bg;
-$input-disabled-bg:             $input-disabled-bg;
+$input-bg:                      $gray-100;
+$input-disabled-bg:             $gray-300;
 $input-focus-bg:                $input-focus-bg;
 $input-color:                   var(--body-color);
 $input-focus-color:             var(--body-color);
-$input-border-color:            var(--border-color);
+$input-border-color:            var(--border-color-dark);
 
 $custom-select-bg:              $input-bg;
 $custom-select-color:           $input-color;
-$custom-select-border-color:    var(--border-color);
+$custom-select-border-color:    var(--border-color-dark);
 $custom-select-indicator-color: $text-color;
 $custom-select-indicator:       str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23");
 $custom-select-background:       $custom-select-indicator no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
 
 $input-group-addon-color:        var(--body-color);
 $input-group-addon-bg:           $input-group-addon-bg;
-$input-group-addon-border-color: var(--border-color);
+$input-group-addon-border-color: var(--border-color-dark);
 
 
 
@@ -148,12 +150,12 @@ $btn-link-color:              var(--body-color);
 
 // Dropdown
 $dropdown-bg:                 var(--secondary);
-$dropdown-border-color:       var(--border-color);
+$dropdown-border-color:       var(--border-color-dark);
 $dropdown-link-color:         var(--body-color);
 $dropdown-link-active-bg:     $component-active-bg;
 $dropdown-link-hover-bg:      var(--primary);
 $dropdown-link-hover-color:   var(--body-color);
-$dropdown-divider-bg:         var(--border-color);
+$dropdown-divider-bg:         var(--border-color-dark);
 
 
 // List group
@@ -203,7 +205,7 @@ $modal-footer-border-color:         var(--border-color);
 // Popovers
 $popover-font-size:                 $font-size-sm;
 $popover-bg:                        var(--primary);
-$popover-border-color:              var(--border-color);
+$popover-border-color:              var(--border-color-dark);
 
 $popover-header-bg:                 var(--secondary);
 $popover-header-color:              var(--body-color);

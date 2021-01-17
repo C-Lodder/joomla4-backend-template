@@ -5,27 +5,12 @@
 const { join } = require('path')
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
-const { renderSync } = require('sass')
+const sass = require('gulp-dart-sass')
 const { obj } = require('through2')
 const header = require('gulp-header')
 const rename = require('gulp-rename')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
-
-const compileScss = () =>
-	obj(async (file, enc, callback) => {
-		if (file.isBuffer()) {
-			const string = file.contents.toString('utf8');
-			const result = await renderSync({
-				data: string,
-				includePaths: [join(__dirname, '../../media/vendor/bootstrap/'), `${__dirname}/scss/`],
-			});
- 
-			file.contents = 'from' in Buffer ? Buffer.from(result.css) : new Buffer(result.css);
- 
-			return callback(null, file);
-		}
-	});
 
 const postcssPipe = () =>
 	postcss([
@@ -49,7 +34,7 @@ gulp.task('sass-core', () =>
 		`./scss/pages/system.scss`,
 		`./scss/blocks/sidebar_nav.scss`,
 	])
-		.pipe(compileScss())
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcssPipe())
 		.pipe(renamePipe())
 		.pipe(gulp.dest(`./css`))
@@ -61,7 +46,7 @@ gulp.task('sass-rtl', () =>
 		`./scss/blocks/sidebar_nav-rtl.scss`,
 	])
 		.pipe(header('$rtl: true;\n'))
-		.pipe(compileScss())
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcssPipe())
 		.pipe(renamePipe())
 		.pipe(gulp.dest(`./css`))
@@ -86,7 +71,7 @@ gulp.task('sass-vendor', async() => {
 
 	return Object.entries(files).forEach(([file, dest]) =>
 		gulp.src(`${file}`)
-			.pipe(compileScss())
+			.pipe(sass.sync().on('error', sass.logError))
 			.pipe(postcssPipe())
 			.pipe(renamePipe())
 			.pipe(gulp.dest(`${dest}`))

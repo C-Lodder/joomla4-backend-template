@@ -1,32 +1,32 @@
 // Bootstrap core
-@import "../../../../media/vendor/bootstrap/scss/functions";
-@import "../../../../media/vendor/bootstrap/scss/variables";
-@import "media/vendor/bootstrap/mixins";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../media/vendor/bootstrap/mixins";
 
 // Bettum Variables and Mixins
-@import "mixins";
-@import "variables";
+@import "../mixins";
+@import "../variables";
 
 // Bootstrap
-@import "media/vendor/bootstrap/root";
-@import "media/vendor/bootstrap/reboot";
-@import "../../../../media/vendor/bootstrap/scss/type";
-@import "../../../../media/vendor/bootstrap/scss/images";
-@import "../../../../media/vendor/bootstrap/scss/forms";
-@import "media/vendor/bootstrap/buttons";
-@import "../../../../media/vendor/bootstrap/scss/input-group";
-@import "../../../../media/vendor/bootstrap/scss/custom-forms";
-@import "../../../../media/vendor/bootstrap/scss/utilities/clearfix";
-@import "../../../../media/vendor/bootstrap/scss/utilities/display";
-@import "../../../../media/vendor/bootstrap/scss/utilities/flex";
-@import "../../../../media/vendor/bootstrap/scss/utilities/screenreaders";
+@import "../media/vendor/bootstrap/root";
+@import "../media/vendor/bootstrap/reboot";
+@import "../bootstrap/type";
+@import "../bootstrap/images";
+@import "../bootstrap/forms";
+@import "../media/vendor/bootstrap/buttons";
+@import "../bootstrap/input-group";
+@import "../bootstrap/custom-forms";
+@import "../bootstrap/utilities/clearfix";
+@import "../bootstrap/utilities/display";
+@import "../bootstrap/utilities/flex";
+@import "../bootstrap/utilities/screenreaders";
 
 // Blocks
-@import "blocks/global";
-@import "blocks/alerts";
-@import "blocks/form";
-@import "blocks/utilities/text";
-@import "blocks/utilities/height";
+@import "../blocks/global";
+@import "../blocks/alerts";
+@import "../blocks/form";
+@import "../blocks/utilities/text";
+@import "../blocks/utilities/height";
 
 
 // Login

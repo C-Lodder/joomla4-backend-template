@@ -1,18 +1,18 @@
 // Bootstrap core
-@import "../../../../media/vendor/bootstrap/scss/functions";
-@import "../../../../media/vendor/bootstrap/scss/variables";
-@import "media/vendor/bootstrap/mixins";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../media/vendor/bootstrap/mixins";
 
 // Bettum Variables and Mixins
-@import "mixins";
-@import "variables";
+@import "../mixins";
+@import "../variables";
 
 
 // Sidebar Nav
 .sidebar {
   width: $sidebar-width;
   background-color: var(--sidebar-bg);
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--sidebar-border-color);
 
   @include media-breakpoint-down(md) {
     position: fixed;

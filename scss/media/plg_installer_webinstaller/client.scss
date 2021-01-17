@@ -1,11 +1,11 @@
 // Bootstrap core
-@import "../../../media/vendor/bootstrap/scss/functions";
-@import "../../../media/vendor/bootstrap/scss/variables";
-@import "media/vendor/bootstrap/mixins";
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../vendor/bootstrap/mixins";
 
 // Bettum Variables and mixins
-@import "mixins";
-@import "variables";
+@import "../../mixins";
+@import "../../variables";
 
 
 // Extension variables

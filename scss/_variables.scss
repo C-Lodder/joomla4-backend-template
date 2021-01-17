@@ -41,9 +41,10 @@ $colors: (
   "orange": $orange,
   "yellow": $yellow,
   "purple": $purple,
+  text-color: $text-color,
   body-color: $body-color,
   border-color: $border-color,
-  text-color: $text-color,
+  sidebar-border-color: $primary,
 );
 
 $theme-colors: (

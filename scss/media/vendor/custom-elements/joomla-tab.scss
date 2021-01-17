@@ -1,11 +1,11 @@
 // Bootstrap core
-@import "../../../media/vendor/bootstrap/scss/functions";
-@import "../../../media/vendor/bootstrap/scss/variables";
-@import "media/vendor/bootstrap/mixins";
+@import "../../../bootstrap/functions";
+@import "../../../bootstrap/variables";
+@import "../bootstrap/mixins";
 
 // Bettum Variables and mixins
-@import "mixins";
-@import "variables";
+@import "../../../mixins";
+@import "../../../variables";
 
 
 joomla-tab {
@@ -31,18 +31,18 @@ joomla-tab {
     color: var(--body-color);
     padding: .75em 1em;
     position: relative;
-    box-shadow: 1px 0 0 rgba($black, .05);
+    box-shadow: 1px 0 0 rgba(0, 0, 0, .05);
     text-decoration: none;
     white-space: nowrap;
 
     &[active] {
-      background-color: rgba($black, .03);
-      background-image: linear-gradient(to bottom, transparent, rgba($black, .05) 100%);
+      background-color: rgba(0, 0, 0, .03);
+      background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .05) 100%);
       border-inline-start: 0 none;
       border-inline-end: 0 none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
+      box-shadow: 2px 0 1px -1px rgba(0, 0, 0, .08) inset, -2px 0 1px -1px rgba(0, 0, 0, .08) inset, 0 1px 0 rgba(0, 0, 0, .02) inset;
 
       &::after {
         background-color: var(--purple);
@@ -63,7 +63,7 @@ joomla-tab {
     background-color: var(--secondary);
     border: 1px solid var(--border-color);
     border-radius: 0 0 .25rem .25rem;
-    box-shadow: 0 0 3px rgba($black, .04);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .04);
     padding: 15px;
 
     &[active] {
@@ -103,9 +103,9 @@ joomla-tab[orientation=vertical] {
     &[active] {
       border-inline-start: 0 none;
       border-inline-end: 0 none;
-      background-color: rgba($black, .03);
+      background-color: rgba(0, 0, 0, .03);
       background-image: none;
-      box-shadow: 2px 0 1px -1px rgba($black, .08) inset, -2px 0 1px -1px rgba($black, .08) inset, 0 1px 0 rgba($black, .02) inset;
+      box-shadow: 2px 0 1px -1px rgba(0, 0, 0, .08) inset, -2px 0 1px -1px rgba(0, 0, 0, .08) inset, 0 1px 0 rgba(0, 0, 0, .02) inset;
 
       &::after {
         left: -1px;
