@@ -4,6 +4,8 @@
 - Replace icon fonts with SVGs
 - Fix instances of alerts with empty button
 - Fix alert background colours
+- Fix "Edit Account" URI
+- Update some template overrides with missing code
 
 ## 0.0.17
 - Repaint! (thanks @ciar4n)
