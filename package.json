@@ -28,7 +28,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-dart-sass": "^1.0.2",
     "postcss": "^8.2.4",
-    "sass": "^1.32.4",
+    "sass": "^1.32.5",
     "terser": "^5.5.1"
   }
 }
