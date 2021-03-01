@@ -1,7 +1,8 @@
 # Changelog
 
 ## WIP
-- Replace icon fonts with SVGs
+- Update to Bootstrap 5
+- Replace some icon fonts with SVGs
 - Fix instances of alerts with empty button
 - Fix alert background colours
 - Fix "Edit Account" URI
