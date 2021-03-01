@@ -1,0 +1,75 @@
+// Bootstrap core
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../../bootstrap/mixins";
+
+// Bettum Variables and mixins
+@import "../../mixins";
+@import "../../variables";
+
+
+// Installer
+#loading {
+  position: fixed;
+  background-image: url(../../system/images/ajax-loader.gif);
+  background-color: rgba($white, .8);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: .8;
+  overflow: hidden;
+}
+
+#dragarea {
+  background-color: var(--secondary);
+  border: 1px dashed var(--border-color);
+  padding: 4rem 0;
+  transition: all .2s ease 0s;
+
+  #upload-icon,
+  p.lead {
+    color: var(--body-color);
+  }
+
+  &.hover {
+    border-color: $text-color;
+    background-color: var(--primary);
+  }
+
+  &[data-state=pending] {
+    .upload-progress,
+    .install-progress {
+      display: none;
+    }
+  }
+
+  &[data-state=uploading] {
+    .install-progress,
+    .upload-actions {
+      display: none;
+    }
+  }
+
+  &[data-state=installing] {
+    .upload-progress,
+    .upload-actions {
+      display: none;
+    }
+  }
+}
+
+#upload-icon {
+  font-size: 3rem;
+  color: var(--body-color);
+  transition: all .2s;
+}
+
+.upload-progress,
+.install-progress {
+  width: 50%;
+  margin: 5px auto;
+}
+
+// Default transition (.3s) is too slow, progress will not run to 100%
+.upload-progress .progress .bar {
+  transition: width .1s;
+}

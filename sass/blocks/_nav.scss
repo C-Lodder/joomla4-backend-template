@@ -1,0 +1,67 @@
+// Nav
+
+.top-nav {
+  > * {
+    border-inline-start: 1px solid var(--border-color);
+  }
+}
+
+.navbar {
+  background-color: var(--top-navbar-background-color);
+
+  .nav-link {
+    padding-inline-start: .65rem;
+    padding-inline-end: .65rem;
+  }
+}
+
+.nav-scroller {
+  background-color: var(--navbar-background-color);
+  box-shadow: $shadow-default;
+
+  > nav {
+    flex-wrap: nowrap;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.navbar-nav .dropdown-menu {
+  margin: 0;
+
+  .dropdown-item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+}
+
+.nav-pills-sm {
+  .nav-link {
+    padding: $spacer / 5 $navbar-padding-x;
+  }
+}
+
+/**
+ * Add support for 3rd level dropdown
+ */
+.navbar-nav.navbar-hover > li > .dropdown-menu {
+  display: none;
+}
+
+.navbar-nav.navbar-hover > li:hover > .dropdown-menu,
+.dropdown-menu li:hover > ul.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+}

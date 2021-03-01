@@ -53,15 +53,17 @@ if (!$hideLinks)
 	</nav>
 <?php elseif (!$sidebar && $root->hasChildren()) : ?>
 	<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu"
-			aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
-		<a class="navbar-brand"<?php echo $href; ?>>
-			<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
-		</a>
-		<div class="collapse navbar-collapse" id="topMenu">
-			<ul id="menu" class="navbar-nav mr-auto" role="menu">
-				<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu'), $root); ?>
-			</ul>
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topMenu" aria-controls="topMenu"
+				aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
+			<a class="navbar-brand"<?php echo $href; ?>>
+				<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
+			</a>
+			<div class="collapse navbar-collapse" id="topMenu">
+				<ul id="menu" class="navbar-nav me-auto" role="menu">
+					<?php $menu->renderSubmenu(ModuleHelper::getLayoutPath('mod_menu', 'default_submenu'), $root); ?>
+				</ul>
+			</div>
 		</div>
 	</nav>
 <?php endif; ?>

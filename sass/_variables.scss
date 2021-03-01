@@ -1,0 +1,273 @@
+// Variables
+
+$rtl:                         false !default;
+$jicon-css-prefix:            icon;
+$fa-css-prefix:               fa;
+$variable-prefix:             '';
+
+// Colours
+$blue-bg:                     #0071eb;
+$red-bg:                      #cd2337;
+$green-bg:                    #1f7F37;
+$cyan-bg:                     #117c8d;
+$orange-bg:                   #c05707;
+
+$blue:                        #52a5ff;
+$red:                         #ea8591;
+$green:                       #2db950;
+$cyan:                        #19b4cc;
+$orange:                      #faa05a;
+$purple:                      #a495fe;
+
+$primary:                     #2e2e31;
+$secondary:                   #252528;
+$tertiary:                    #1c1c1c;
+$danger:                      $red;
+$success:                     $green;
+$border-color:                #424246;
+$text-color:                  #ddd;
+
+$link-color:                  var(--text-color);
+$body-bg-color:               var(--tertiary);
+$body-color:                  var(--text-color);
+$link-hover-color:            #d7d7d7;
+$component-active-bg:         $tertiary;
+
+
+// Typography
+$font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+$font-family-code:            var(--#{$variable-prefix}font-monospace);
+
+
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           60px !default;
+$gutter-width:                60px;
+$grid-row-columns:            6 !default;
+
+
+
+// Headings
+$content-font-size:           .875rem;
+$h1-font-size:                $font-size-base * 1.5;
+$h2-font-size:                $font-size-base * 1.2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+$headings-color:              var(--body-color);
+$headings-margin-bottom:      0;
+
+
+
+// Form
+$meter-max-width:               240px;
+
+
+
+// Form
+$input-max-width:               240px;
+$input-bg:                      var(--primary);
+$input-disabled-bg:             var(--primary);
+$input-focus-bg:                var(--primary);
+$input-color:                   var(--body-color);
+$input-focus-color:             var(--body-color);
+$input-border-color:            var(--border-color);
+
+$form-select-bg:              $input-bg;
+$form-select-color:           $input-color;
+$form-select-border-color:    var(--border-color);
+$form-select-indicator-color: $text-color;
+$form-select-indicator:       str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$form-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23");
+$form-select-background:      $form-select-indicator no-repeat right $form-select-padding-x center / $form-select-bg-size;
+
+$input-group-addon-color:        var(--body-color);
+$input-group-addon-bg:           var(--primary);
+$input-group-addon-border-color: var(--border-color);
+
+
+
+// Treeselect
+$treeselect-line-height:      2.2rem;
+$treeselect-indent:           40px;
+
+
+
+// Cards
+$card-columns-count:          2;
+$card-cap-bg:                 var(--secondary);
+$card-bg:                     var(--secondary);
+$card-cap-color:              var(--body-color);
+$card-spacer-y:               .25rem;
+$card-border-color:           var(--border-color);
+$card-border-width:           0;
+
+
+
+// Navs
+$top-navbar-background-color: var(--tertiary);
+$navbar-background-color:     var(--secondary);
+$nav-pills-link-active-bg:    var(--primary);
+
+
+
+// Buttons
+$btn-link-color:              var(--body-color);
+
+
+
+// Dropdown
+$dropdown-bg:                 var(--secondary);
+$dropdown-border-color:       var(--border-color);
+$dropdown-link-color:         var(--body-color);
+$dropdown-link-active-bg:     $component-active-bg;
+$dropdown-link-hover-bg:      var(--primary);
+$dropdown-link-hover-color:   var(--body-color);
+$dropdown-divider-bg:         var(--border-color);
+
+
+// List group
+$list-group-color:            var(--body-color);
+$list-group-bg:               var(--secondary);
+$list-group-border-color:     var(--border-color);
+
+
+
+// Tables
+$table-bg:                    var(--secondary);
+$table-border-color:          var(--border-color);
+$table-color:                 var(--body-color);
+$table-accent-bg:             var(--secondary);
+
+
+
+// Pagination
+$pagination-color:                  $link-color;
+$pagination-bg:                     var(--secondary);
+$pagination-border-color:           var(--border-color);
+
+$pagination-hover-color:            $link-hover-color;
+$pagination-hover-bg:               var(--primary);
+$pagination-hover-border-color:     var(--border-color);
+
+$pagination-active-color:           $component-active-color;
+$pagination-active-bg:              $blue-bg;
+$pagination-active-border-color:    var(--border-color);
+
+$pagination-disabled-color:         $link-color;
+$pagination-disabled-bg:            var(--tertiary);
+$pagination-disabled-border-color:  var(--border-color);
+
+
+
+// Modals
+$modal-content-color:               var(--body-color);
+$modal-content-bg:                  var(--secondary);
+$modal-content-border-color:        var(--border-color);
+
+$modal-header-border-color:         var(--border-color);
+$modal-footer-border-color:         var(--border-color);
+
+
+
+// Popovers
+$popover-font-size:                 $font-size-sm;
+$popover-bg:                        var(--primary);
+$popover-border-color:              var(--border-color);
+
+$popover-header-bg:                 $secondary;
+$popover-header-color:              var(--body-color);
+
+$popover-body-color:                var(--body-color);
+
+$popover-arrow-color:               var(--body-color);
+$popover-arrow-outer-color:         $popover-border-color;
+
+
+
+// Close
+$close-color:                       $text-color;
+$close-text-shadow:                 none;
+$close-font-size:                   $font-size-base * 1.5;
+$close-font-weight:                 $font-weight-bold;
+$btn-close-bg:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+
+
+
+// Alerts
+$zindex-alerts:               1080;
+
+
+
+// Breadcrumb
+$breadcrumb-bg:               var(--primary);
+
+
+
+// Sidebar
+$sidebar-width:               250px;
+$sidebar-color:               var(--text-color);
+$sidebar-heading-color:       #878787;
+
+
+
+// Quickicons
+$quickicon-bg:                var(--secondary);
+$quickicon-border-color:      var(--primary);
+$quickicon-icon-color:        var(--purple);
+$quickicon-hover-box-shadow:  0 3px 7px -3px var(--primary);
+
+
+
+// Shadows
+$shadow-default:              0 3px 7px -3px rgba(0, 0, 0, .65);
+$box-shadow-sm:               0 .125rem .25rem var(--primary);
+
+
+
+$colors: (
+  "blue": $blue,
+  "red": $red,
+  "green": $green,
+  "cyan": $cyan,
+  "teal": $teal,
+  "orange": $orange,
+  "yellow": $yellow,
+  "purple": $purple,
+  text-color: $text-color,
+  body-color: $body-color,
+  border-color: $border-color,
+
+  body-bg-color: $body-bg-color,
+  sidebar-bg: $secondary,
+  sidebar-border-color: $primary,
+  sidebar-color: $sidebar-color,
+  sidebar-heading-color: $sidebar-heading-color,
+  table-accent-bg: $table-accent-bg,
+  top-navbar-background-color: $top-navbar-background-color,
+  navbar-background-color: $navbar-background-color,
+  quickicon-bg: $quickicon-bg,
+  quickicon-border-color: $quickicon-border-color,
+);
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  success: $green-bg,
+  info: $cyan-bg,
+  warning: $orange-bg,
+  danger: $red-bg,
+  light: $tertiary,
+  dark: $gray-800
+);
+
+$button-colors: (
+  primary: $primary,
+  secondary: darken($secondary, 10%),
+  success: $green-bg,
+  info: $cyan-bg,
+  warning: $orange-bg,
+  danger: $red-bg,
+);

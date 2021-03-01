@@ -23,11 +23,12 @@
     "autoprefixer": "^10.2.1",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-dart-sass": "^1.0.2",
     "postcss": "^8.2.4",
+    "rtlcss": "^3.1.2",
     "sass": "^1.32.4",
     "terser": "^5.5.1"
   }

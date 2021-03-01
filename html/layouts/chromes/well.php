@@ -37,7 +37,7 @@ if ($module->content) :
 
 	if (!empty($params->get('header_icon')))
 	{
-		$headerIcon = '<span class="mr-2 ' . htmlspecialchars($params->get('header_icon')) . '" aria-hidden="true"></span>';
+		$headerIcon = '<span class="me-2 ' . htmlspecialchars($params->get('header_icon')) . '" aria-hidden="true"></span>';
 	}
 	?>
 	<<?php echo $moduleTag; ?> class="d-none well card mb-3<?php echo $moduleClassSfx; ?> module-wrapper" data-cpanel-module-id="<?php echo $module->id; ?>">
@@ -46,13 +46,13 @@ if ($module->content) :
 				<?php if ($canEdit || $canChange) : ?>
 					<?php $dropdownPosition = Factory::getLanguage()->isRTL() ? 'left' : 'right'; ?>
 					<div class="module-actions dropdown">
-						<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn" id="dropdownMenuButton-<?php echo $id; ?>">
+						<button type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn" id="dropdownMenuButton-<?php echo $id; ?>">
 							<svg aria-hidden="true" width="1em" height="1em"><use href="#bettum-cog"></use></svg>
-							<span class="sr-only"><?php echo Text::_('JACTION_EDIT') . ' ' . $module->title; ?></span>
+							<span class="visually-hidden"><?php echo Text::_('JACTION_EDIT') . ' ' . $module->title; ?></span>
 						</button>
 						<a class="btn btn-link handle">
 							<svg aria-hidden="true" class="handle d-inline-block" width="1em" height="1em"><use href="#bettum-drag"></use></svg>
-							<span class="sr-only"><?php echo Text::_('JLIB_HTML_BEHAVIOR_DRAG_TO_MOVE') . ' ' . $module->title; ?></span>
+							<span class="visually-hidden"><?php echo Text::_('JLIB_HTML_BEHAVIOR_DRAG_TO_MOVE') . ' ' . $module->title; ?></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-<?php echo $dropdownPosition; ?>" aria-labelledby="dropdownMenuButton-<?php echo $id; ?>">
 							<?php if ($canEdit) : ?>

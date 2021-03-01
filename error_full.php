@@ -81,7 +81,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			<div class="container-fluid container-main px-5">
 				<?php if (!$cpanel) : ?>
 					<?php // Subheader ?>
-					<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse" data-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
+					<button type="button" class="toggle-toolbar mx-auto btn btn-secondary my-2 d-md-none d-lg-none d-xl-none" data-bs-toggle="collapse" data-bs-target=".subhead"><?php echo Text::_('TPL_BETTUM_TOOLBAR'); ?>
 						<span class="icon-chevron-down" aria-hidden="true"></span></button>
 					<div id="subhead" class="subhead mb-3">
 						<div id="container-collapse" class="container-collapse"></div>
@@ -99,7 +99,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 						<div class="col-md-12">
 							<h1><?php echo Text::_('JERROR_AN_ERROR_HAS_OCCURRED'); ?></h1>
 							<blockquote class="blockquote">
-								<span class="badge badge-danger"><?php echo $this->error->getCode(); ?></span>
+								<span class="badge bg-danger"><?php echo $this->error->getCode(); ?></span>
 								<?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
 							</blockquote>
 							<?php if ($this->debug) : ?>

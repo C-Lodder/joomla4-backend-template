@@ -67,7 +67,7 @@ if ($current->level == 1)
 	
 	if ($current->hasChildren())
 	{
-		$dataToggle  = ' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
+		$dataToggle  = ' data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
 	}
 }
 else if ($current->level > 1)

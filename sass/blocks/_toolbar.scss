@@ -1,0 +1,43 @@
+// Toolbar
+
+.btn-toolbar {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  > *:not(:last-child) {
+    margin-inline-end: .5rem;
+  }
+}
+
+.btn-group .dropdown-menu {
+  background: var(--secondary);
+  min-width: 100%;
+
+  [class^='icon-'],
+  [class*=' icon-'],
+  .fas {
+    width: 20px;
+  }
+
+  joomla-toolbar-button {
+    border: none;
+  }
+}
+
+.js-filters-show {
+  display: block;
+}
+
+.subhead .btn.dropdown-toggle {
+  @extend .btn-primary;
+}
+
+joomla-toolbar-button + .dropdown-toggle-split {
+  @include border-end-radius($border-radius !important);
+}
+
+.btn-group joomla-toolbar-button:not(:last-child) > .btn:not(.dropdown-toggle) {
+  @include border-end-radius(0);
+}

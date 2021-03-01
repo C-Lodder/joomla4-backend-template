@@ -37,7 +37,7 @@ else
 }
 
 // Print a link if it exists
-$linkClass  = ['sidebar-item'];
+$linkClass  = ['sidebar-item', 'nav-link'];
 $dataToggle = '';
 $dataParent = '#collapse';
 $iconClass  = '';
@@ -51,7 +51,7 @@ if (!$this->enabled)
 if ($current->hasChildren())
 {
 	$linkClass[] = '';
-	$dataToggle  = ' data-toggle="collapse" data-target="#collapse' . $counter . '"'; 
+	$dataToggle  = ' data-bs-toggle="collapse" data-bs-target="#collapse' . $counter . '"'; 
 }
 
 // Implode out $linkClass for rendering
@@ -97,11 +97,11 @@ if ($this->enabled && $current->hasChildren())
 {
 	if ($current->level > 1)
 	{
-		echo '<ul data-parent="' . $dataParent . '" id="collapse' . $counter . '" class="collapse collapse-level-' . $current->level . '" role="menu" aria-haspopup="true">' . "\n";
+		echo '<ul data-bs-parent="' . $dataParent . '" id="collapse' . $counter . '" class="collapse collapse-level-' . $current->level . '" role="menu" aria-haspopup="true">' . "\n";
 	}
 	else
 	{
-		echo '<ul data-parent="#collapse" id="collapse' . $counter . '" class="collapse collapse-level-1" role="menu" aria-haspopup="true">' . "\n";
+		echo '<ul data-bs-parent="#collapse" id="collapse' . $counter . '" class="collapse collapse-level-1" role="menu" aria-haspopup="true">' . "\n";
 	}
 
 	// WARNING: Do not use direct 'include' or 'require' as it is important to isolate the scope for each call

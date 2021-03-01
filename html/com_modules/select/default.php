@@ -21,7 +21,7 @@ if ($function)
 ?>
 <div class="d-flex align-items-center mb-3">
 	<h2><?php echo Text::_('COM_MODULES_TYPE_CHOOSE'); ?></h2>
-	<div class="controls ml-3">
+	<div class="controls ms-3">
 		<input type="search" id="new-modules-list-search" class="form-control" placeholder="<?php echo Text::_('JSEARCH_FILTER'); ?>">
 	</div>
 </div>

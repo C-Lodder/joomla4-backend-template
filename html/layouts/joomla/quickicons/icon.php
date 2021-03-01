@@ -38,7 +38,7 @@ if (!empty($displayData['class']))
 }
 
 // Make the class string
-$class = !empty($tmp) ? ' class="' . implode(' ', array_unique($tmp)) . '"' : '';
+$class = !empty($tmp) ? ' class="nav-link ' . implode(' ', array_unique($tmp)) . '"' : 'class="nav-link"';
 ?>
 <?php // If it is a button with two links: make it a list ?>
 <li class="quickicon quickicon-single">
@@ -52,7 +52,7 @@ $class = !empty($tmp) ? ' class="' . implode(' ', array_unique($tmp)) . '"' : ''
 			<div class="quickicon-amount" <?php echo $dataUrl ?> aria-hidden="true">
 				<span class="fas fa-spinner" aria-hidden="true"></span>
 			</div>
-			<div class="quickicon-sr-desc sr-only"></div>
+			<div class="quickicon-sr-desc visually-hidden"></div>
 		<?php endif; ?>
 		<?php // Name indicates the component
 		if (isset($displayData['name'])): ?>

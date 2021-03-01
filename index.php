@@ -92,7 +92,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 							<jdoc:include type="modules" name="title" />
 							<div class="d-flex justify-content-end top-nav">
 								<jdoc:include type="modules" name="status" style="none" />
-								<button id="navbar-toggler" class="btn-link nav-link d-inline-flex d-lg-none align-items-center" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><svg aria-hidden="true" width="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+								<button id="navbar-toggler" class="btn nav-link d-inline-flex d-lg-none align-items-center" type="button" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation"><svg aria-hidden="true" width="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
 							</div>
 						</nav>
 					</div>
@@ -104,7 +104,7 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 				<?php if (!$cpanel) : ?>
 					<?php // Subheader ?>
 					<div class="mb-3">
-						<button type="button" class="btn btn-primary my-2 d-md-none d-lg-none d-xl-none" data-toggle="collapse" data-target=".subhead"><?php echo Text::_('JTOOLBAR'); ?>
+						<button type="button" class="btn btn-primary my-2 d-md-none d-lg-none d-xl-none" data-bs-toggle="collapse" data-bs-target=".subhead"><?php echo Text::_('JTOOLBAR'); ?>
 							<span class="icon-chevron-down" aria-hidden="true"></span></button>
 						<div id="subhead" class="subhead show">
 							<div id="container-collapse" class="container-collapse"></div>

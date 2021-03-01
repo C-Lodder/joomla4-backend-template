@@ -1,0 +1,15 @@
+// Bootstrap core
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+// Bettum Variables and Mixins
+@import "../mixins";
+@import "../variables";
+
+// System
+@include media-breakpoint-up(sm) {
+  .cpanel-system.card-columns {
+    column-count: 3;
+  }
+}

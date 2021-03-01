@@ -1,0 +1,93 @@
+// Bootstrap core
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../../bootstrap/mixins";
+
+// Bettum Variables
+@import "../../variables";
+
+// Defaults
+$gutter-width:                      15px;
+$highlight-color:                   $blue-bg;
+
+// Layout
+$col-main-panel-width:              83.3333%;
+$col-side-panel-width:              16.6667%;
+$col-gutter-width:                  $gutter-width;
+$col-box-shadow:                    0 0 3px rgba(0, 0, 0, .075);
+
+// Sidebar
+$sidebar-drive-bg:                  var(--primary);
+$sidebar-tree-line-color:           var(--border-color);
+$sidebar-tree-icon-color:           var(--body-color);
+$sidebar-tree-line-height:          26px;
+$sidebar-tree-folder-icon:          "\f07b";
+$sidebar-active-icon-color:         $highlight-color;
+
+// Toolbar
+$toolbar-height:                    46px;
+$toolbar-bg:                        var(--primary);
+$toolbar-icon-width:                50px;
+$toolbar-icon-color:                var(--body-color);
+$toolbar-icon-bg-hover:             var(--primary);
+$toolbar-loader-color:              linear-gradient(to right, #59afff 0, #59daff 100%);
+$toolbar-loader-height:             2px;
+
+// Breadcrumbs
+$breadcrumbs-bg:                    var(--primary);
+$breadcrumbs-current-bg:            $blue-bg;
+
+// Media Browser Grid
+$grid-gutter-width:                 $col-gutter-width;
+$grid-outside-padding:              $col-gutter-width;
+$grid-item-hover-color:             rgba(#000, .5);
+$grid-item-border-radius:           $border-radius;
+$grid-item-icon-size:               1.3rem;
+$grid-item-icon-color:              #fff;
+$grid-item-icon-bg-color:           rgba(0,0,0,.8);
+$grid-item-icon-color-hover:        rgba(0,0,0,.8);
+$grid-item-icon-bg-color-hover:     #fff;
+$grid-item-icon-warning-icon-bg:    $red-bg;
+$grid-item-no-preview-bg:           var(--primary);
+$grid-item-width-xs:                8.333%;
+$grid-item-width-sm:                12.5%;
+$grid-item-width-md:                16.666%;
+$grid-item-width-lg:                25%;
+$grid-item-width-xl:                50%;
+
+// Media Browser Table
+$table-item-height:                 30px;
+$table-item-icon-size:              1.2rem;
+$table-item-icon-color:             var(--body-color);
+$table-item-icon-bg:                var(--primary);
+$table-item-icon-color-selected:    $white;
+$table-item-icon-bg-selected:       $blue-bg;
+$table-item-bg-hover:               rgba(0, 0, 0, .03);
+
+// Media Info bar
+$info-bg:                           var(--secondary);
+$info-title-bg:                     var(--primary);
+$info-title-height:                 2rem;
+$info-dt-width:                     33.33333%;
+$info-dd-width:                     66.66667%;
+$info-close-color:                  var(--body-color);
+$info-close-color-hover:            $link-hover-color;
+
+// Table Icon Mapping
+$icon-type-default:                 "\f016";
+$icon-type-folder:                  "\f07b";
+$icon-type-images:                  "\f1c5";
+$icon-type-video:                   "\f1c8";
+$icon-type-audio:                   "\f1c7";
+$icon-type-docs:                    "\f0f6";
+$icon-type-code:                    "\f1c9";
+
+// Drag n Drop Upload
+$dnd-bg:                            var(--primary);
+$dnd-icon-color:                    var(--body-color);
+$dnd-border:                        3px dashed var(--border-color);
+
+// Modal
+$modal-backdrop-color:              rgba(0, 0, 0, .85);
+$modal-box-shadow:                  0 0 10px rgba(0, 0, 0, .5);
+$modal-preview-text-color:          var(--body-color);
