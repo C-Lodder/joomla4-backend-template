@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 0.0.18
 - Update to Bootstrap 5
 - Replace some icon fonts with SVGs
 - Fix instances of alerts with empty button
