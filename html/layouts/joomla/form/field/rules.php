@@ -5,7 +5,7 @@
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('JPATH_BASE') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Access\Access;
 use Joomla\CMS\Factory;
@@ -43,6 +43,8 @@ extract($displayData);
  * @var   boolean  $newItem         The new item.
  * @var   object   $assetRules      Rules for asset.
  * @var   integer  $parentAssetId   To calculate permissions.
+ * @var   string   $dataAttribute   Miscellaneous data attributes preprocessed for HTML output
+ * @var   array    $dataAttributes  Miscellaneous data attributes for eg, data-*.
  */
 
 // Add Javascript for permission change
@@ -98,15 +100,15 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 				<table class="table">
 					<thead>
 						<tr>
-							<th style="width: 30%" class="actions" id="actions-th<?php echo $group->value; ?>">
+							<th class="actions w-30" id="actions-th<?php echo $group->value; ?>">
 								<span class="acl-action"><?php echo Text::_('JLIB_RULES_ACTION'); ?></span>
 							</th>
 
-							<th style="width: 40%" class="settings" id="settings-th<?php echo $group->value; ?>">
+							<th class="settings w-40" id="settings-th<?php echo $group->value; ?>">
 								<span class="acl-action"><?php echo Text::_('JLIB_RULES_SELECT_SETTING'); ?></span>
 							</th>
 
-							<th style="width: 30%" id="aclaction-th<?php echo $group->value; ?>">
+							<th class="w-30" id="aclaction-th<?php echo $group->value; ?>">
 								<span class="acl-action"><?php echo Text::_('JLIB_RULES_CALCULATED_SETTING'); ?></span>
 							</th>
 						</tr>
@@ -116,7 +118,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 						<?php $isSuperUserGroup = Access::checkGroup($group->value, 'core.admin'); ?>
 						<?php foreach ($actions as $action) : ?>
 							<tr>
-								<td headers="actions-th<?php echo $group->value; ?>">
+								<td data-label="<?php echo Text::_('JLIB_RULES_ACTION'); ?>" headers="actions-th<?php echo $group->value; ?>">
 									<label for="<?php echo $id; ?>_<?php echo $action->name; ?>_<?php echo $group->value; ?>">
 										<?php echo Text::_($action->title); ?>
 									</label>
@@ -126,7 +128,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 										</div>
 									<?php endif; ?>
 								</td>
-								<td headers="settings-th<?php echo $group->value; ?>">
+								<td data-label="<?php echo Text::_('JLIB_RULES_SELECT_SETTING'); ?>" headers="settings-th<?php echo $group->value; ?>">
 									<div class="d-flex align-items-center">
 										<select data-onchange-task="permissions.apply"
 												class="form-select novalidate"
@@ -155,7 +157,7 @@ $ajaxUri = Route::_('index.php?option=com_config&task=application.store&format=j
 										<span id="icon_<?php echo $id; ?>_<?php echo $action->name; ?>_<?php echo $group->value; ?>"></span>
 									</div>
 								</td>
-								<td headers="aclaction-th<?php echo $group->value; ?>">
+								<td data-label="<?php echo Text::_('JLIB_RULES_CALCULATED_SETTING'); ?>" headers="aclaction-th<?php echo $group->value; ?>">
 									<?php $result = []; ?>
 									<?php // Get the group, group parent id, and group global config recursive calculated permission for the chosen action. ?>
 									<?php $inheritedGroupRule 	= Access::checkGroup((int) $group->value, $action->name, $assetId);
