@@ -61,6 +61,12 @@ $headings-margin-bottom:      0;
 
 
 
+// Shadows
+$shadow-default:              0 3px 7px -3px rgba(0, 0, 0, .65);
+$box-shadow-sm:               0 .125rem .25rem var(--primary);
+
+
+
 // Form
 $meter-max-width:               240px;
 
@@ -216,13 +222,15 @@ $sidebar-heading-color:       #878787;
 $quickicon-bg:                var(--secondary);
 $quickicon-border-color:      var(--primary);
 $quickicon-icon-color:        var(--purple);
+$quickicon-box-shadow:        $shadow-default;
 $quickicon-hover-box-shadow:  0 3px 7px -3px var(--primary);
 
 
 
-// Shadows
-$shadow-default:              0 3px 7px -3px rgba(0, 0, 0, .65);
-$box-shadow-sm:               0 .125rem .25rem var(--primary);
+// Tooltip
+$tooltip-bg:                  var(--primary);
+$tooltip-color:               var(--body-color);
+$tooltip-border-color:        var(--border-color);
 
 
 

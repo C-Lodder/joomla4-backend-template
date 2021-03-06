@@ -12,7 +12,7 @@
 }
 
 .btn-group .dropdown-menu {
-  background: var(--secondary);
+  background: $dropdown-bg;
   min-width: 100%;
 
   [class^='icon-'],

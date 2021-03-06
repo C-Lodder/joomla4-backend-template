@@ -30,7 +30,7 @@ $text-color:                  #333;
 $link-color:                  var(--text-color);
 $body-bg-color:               #eef0f6;
 $body-color:                  var(--text-color);
-$link-hover-color:            #d7d7d7;
+$link-hover-color:            $purple;
 $component-active-bg:         $purple;
 
 
@@ -61,6 +61,12 @@ $headings-margin-bottom:      0;
 
 
 
+// Shadows
+$shadow-default:              0 3px 5px -3px rgba(0, 0, 0, .25);
+$box-shadow-sm:               0 .125rem .25rem var(--primary);
+
+
+
 // Form
 $meter-max-width:               240px;
 
@@ -73,18 +79,18 @@ $input-disabled-bg:             $gray-300;
 $input-focus-bg:                $input-focus-bg;
 $input-color:                   var(--body-color);
 $input-focus-color:             var(--body-color);
-$input-border-color:            var(--border-color-dark);
+$input-border-color:            var(--border-color);
 
-$form-select-bg:              $input-bg;
-$form-select-color:           $input-color;
-$form-select-border-color:    var(--border-color-dark);
-$form-select-indicator-color: $text-color;
-$form-select-indicator:       str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$form-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23");
-$form-select-background:      $form-select-indicator no-repeat right $form-select-padding-x center / $form-select-bg-size;
+$form-select-bg:                $input-bg;
+$form-select-color:             $input-color;
+$form-select-border-color:      var(--border-color);
+$form-select-indicator-color:   $text-color;
+$form-select-indicator:         str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$form-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"), "#", "%23");
+$form-select-background:        $form-select-indicator no-repeat right $form-select-padding-x center / $form-select-bg-size;
 
 $input-group-addon-color:        var(--body-color);
 $input-group-addon-bg:           $input-group-addon-bg;
-$input-group-addon-border-color: var(--border-color-dark);
+$input-group-addon-border-color: var(--border-color);
 
 
 
@@ -118,13 +124,13 @@ $btn-link-color:              var(--body-color);
 
 
 // Dropdown
-$dropdown-bg:                 var(--secondary);
-$dropdown-border-color:       var(--border-color-dark);
+$dropdown-bg:                 #fff;
+$dropdown-border-color:       var(--border-color);
 $dropdown-link-color:         var(--body-color);
 $dropdown-link-active-bg:     $component-active-bg;
-$dropdown-link-hover-bg:      var(--primary);
+$dropdown-link-hover-bg:      $gray-200;
 $dropdown-link-hover-color:   var(--body-color);
-$dropdown-divider-bg:         var(--border-color-dark);
+$dropdown-divider-bg:         var(--border-color);
 
 
 // List group
@@ -138,7 +144,7 @@ $list-group-border-color:     var(--border-color);
 $table-bg:                    #fff;
 $table-border-color:          var(--border-color);
 $table-color:                 var(--body-color);
-$table-accent-bg:             #eef0f6;
+$table-accent-bg:             #fff;
 
 
 
@@ -215,13 +221,15 @@ $sidebar-heading-color:       #fff;
 $quickicon-bg:                #f9f9fb;
 $quickicon-border-color:      #e6e6f2;
 $quickicon-icon-color:        var(--purple);
-$quickicon-hover-box-shadow:  0 3px 7px -3px var(--primary);
+$quickicon-box-shadow:        $shadow-default;
+$quickicon-hover-box-shadow:  0 3px 5px -3px rgba(0, 0, 0, .45);
 
 
 
-// Shadows
-$shadow-default:              0 3px 7px -3px rgba(0, 0, 0, .65);
-$box-shadow-sm:               0 .125rem .25rem var(--primary);
+// Tooltip
+$tooltip-bg:                  #fff;
+$tooltip-color:               var(--body-color);
+$tooltip-border-color:        var(--border-color);
 
 
 
