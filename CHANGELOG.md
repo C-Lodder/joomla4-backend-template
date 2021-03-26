@@ -2,6 +2,7 @@
 
 ## WIP
 - Fix missing hidden utility
+- Fix `<meter>` width
 
 ## 0.0.18
 - Update to Bootstrap 5
