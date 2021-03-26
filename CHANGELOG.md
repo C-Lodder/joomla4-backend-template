@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix missing hidden utility
+
 ## 0.0.18
 - Update to Bootstrap 5
 - Replace some icon fonts with SVGs
