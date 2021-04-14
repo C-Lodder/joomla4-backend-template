@@ -18,7 +18,7 @@ $app = Factory::getApplication();
 $params = $app->getTemplate(true)->params;
 $sidebar = $params->get('menu', 1) ? true : false;
 $logo = $params->get('siteLogo')
-	? Uri::root() . $params->get('siteLogo')
+	? Uri::root() . htmlspecialchars($params->get('siteLogo'), ENT_QUOTES, 'UTF-8')
 	: Uri::root(true) . '/administrator/templates/' . $app->getTemplate() . '/images/logo-sm.svg';
 
 $hideLinks = $app->input->getBool('hidemainmenu');

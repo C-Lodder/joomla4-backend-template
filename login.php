@@ -19,7 +19,7 @@ $lang = Factory::getApplication()->getLanguage();
 
 // Detecting Active Variables
 $logo = $this->params->get('loginLogo')
-	? Uri::root() . $this->params->get('loginLogo')
+	? Uri::root() . htmlspecialchars($this->params->get('loginLogo'), ENT_QUOTES, 'UTF-8')
 	: $this->baseurl . '/templates/' . $this->template . '/images/logo.svg';
 
 // Set some meta data

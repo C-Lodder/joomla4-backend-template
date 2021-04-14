@@ -3,6 +3,7 @@
 ## WIP
 - Fix missing hidden utility
 - Fix `<meter>` width
+- Fix Fix inadequate escaping on the logo parameter
 
 ## 0.0.18
 - Update to Bootstrap 5
