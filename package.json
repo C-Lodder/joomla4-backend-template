@@ -27,7 +27,7 @@
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "postcss": "^8.2.12",
+    "postcss": "^8.2.13",
     "rtlcss": "^3.1.2",
     "sass": "^1.32.11",
     "terser": "^5.7.0"
