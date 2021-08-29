@@ -20,16 +20,16 @@
   ],
   "devDependencies": {
     "archiver": "^5.3.0",
-    "autoprefixer": "^10.2.5",
-    "cssnano": "^5.0.1",
+    "autoprefixer": "^10.3.3",
+    "cssnano": "^5.0.8",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "postcss": "^8.2.10",
-    "rtlcss": "^3.1.2",
-    "sass": "^1.32.8",
-    "terser": "^5.6.1"
+    "postcss": "^8.3.6",
+    "rtlcss": "^3.3.0",
+    "sass": "^1.38.1",
+    "terser": "^5.7.2"
   }
 }
