@@ -5,6 +5,7 @@
 - Fix `<meter>` width
 - Fix Fix inadequate escaping on the logo parameter
 - Fix "Edit Account" URI (again)
+- Fix PHP error with post-installation messages
 
 ## 0.0.18
 - Update to Bootstrap 5
