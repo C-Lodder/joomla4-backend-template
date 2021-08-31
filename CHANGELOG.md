@@ -8,7 +8,7 @@
 - Fix "Edit Account" URI (again)
 - Fix PHP error with post-installation messages
 - Fix PHP error in com_config
-- Fix <joomla-tab> markup and styling
+- Fix tabs markup and styling
 
 ## 0.0.18
 - Update to Bootstrap 5
