@@ -39,7 +39,7 @@ Text::script('MESSAGE');
 		<!-- End Sidebar -->
 		<!-- Begin Content -->
 		<div class="col-md-9 mt-2">
-			<?php echo HTMLHelper::_('uitab.startTabSet', 'configTabs', ['active' => 'page-site']); ?>
+			<?php echo HTMLHelper::_('uitab.startTabSet', 'configTabs', ['active' => 'page-site', 'recall' => true, 'breakpoint' => 768]); ?>
 				<?php echo HTMLHelper::_('uitab.addTab', 'configTabs', 'page-site', Text::_('JSITE')); ?>
 					<?php echo $this->loadTemplate('site'); ?>
 					<?php echo $this->loadTemplate('metadata'); ?>
