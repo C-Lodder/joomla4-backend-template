@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 1.0.0
 - Update to Bootstrap 5.1.0
 - Fix missing hidden utility
 - Fix `<meter>` width
