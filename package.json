@@ -25,11 +25,11 @@
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-header": "^2.0.9",
-    "gulp-postcss": "^9.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "postcss": "^8.3.6",
     "rtlcss": "^3.3.0",
-    "sass": "^1.38.1",
+    "sass": "^1.38.2",
     "terser": "^5.7.2"
   }
 }
