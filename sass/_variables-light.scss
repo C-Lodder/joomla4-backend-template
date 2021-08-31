@@ -27,9 +27,9 @@ $success:                     $green;
 $border-color:                #eef0f6;
 $text-color:                  #333;
 
-$link-color:                  var(--text-color);
+$link-color:                  $text-color;
 $body-bg-color:               #eef0f6;
-$body-color:                  var(--text-color);
+$body-color:                  $text-color;
 $link-hover-color:            $purple;
 $component-active-bg:         $purple;
 
@@ -112,6 +112,8 @@ $card-border-width:           0;
 
 
 // Navs
+$nav-link-color:              $text-color;
+$nav-link-hover-color:        $link-hover-color;
 $top-navbar-background-color: var(--purple);
 $navbar-background-color:     #fff;
 $nav-pills-link-active-bg:    var(--primary);

@@ -7,32 +7,34 @@
   border-radius: $border-radius $border-radius 0 0;
 
   input {
-    padding: .375rem .75rem;
-    color: $input-color;
-    border: 1px solid $input-border-color;
-    background-color: $input-bg;
+    padding: .3rem .75rem;
+  }
+
+  &-icon {
+    display: inline-block;
+    width: $toolbar-icon-width;
+    font-size: 1.3rem;
+    line-height: $toolbar-height;
+    color: $body-color;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-inline-start: 1px solid var(--border-color);
+    &:hover {
+      background-color: $toolbar-icon-bg-hover;
+      box-shadow: none;
+    }
+  }
+
+  &-select-all {
+    width: 1rem;
+    margin: 1rem;
   }
   
   @include media-breakpoint-down(lg) {
     div:last-child {
       margin-left: auto;
     }
-  }
-}
-
-.media-toolbar-icon {
-  display: inline-block;
-  width: $toolbar-icon-width;
-  font-size: 1.3rem;
-  line-height: $toolbar-height;
-  color: $body-color;
-  text-align: center;
-  background-color: transparent;
-  border: 0;
-  border-inline-start: 1px solid var(--border-color);
-  &:hover {
-    background-color: $toolbar-icon-bg-hover;
-    box-shadow: none;
   }
 }
 

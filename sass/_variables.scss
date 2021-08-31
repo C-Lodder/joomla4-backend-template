@@ -27,9 +27,9 @@ $success:                     $green;
 $border-color:                #424246;
 $text-color:                  #ddd;
 
-$link-color:                  var(--text-color);
+$link-color:                  $text-color;
 $body-bg-color:               var(--tertiary);
-$body-color:                  var(--text-color);
+$body-color:                  $text-color;
 $link-hover-color:            #d7d7d7;
 $component-active-bg:         $tertiary;
 
@@ -112,6 +112,8 @@ $card-border-width:           0;
 
 
 // Navs
+$nav-link-color:              $link-color;
+$nav-link-hover-color:        $link-hover-color;
 $top-navbar-background-color: var(--tertiary);
 $navbar-background-color:     var(--secondary);
 $nav-pills-link-active-bg:    var(--primary);
@@ -213,7 +215,7 @@ $breadcrumb-bg:               var(--primary);
 
 // Sidebar
 $sidebar-width:               250px;
-$sidebar-color:               var(--text-color);
+$sidebar-color:               $text-color;
 $sidebar-heading-color:       #878787;
 
 
@@ -269,13 +271,4 @@ $theme-colors: (
   danger: $red-bg,
   light: $tertiary,
   dark: $gray-800
-);
-
-$button-colors: (
-  primary: $primary,
-  secondary: darken($secondary, 10%),
-  success: $green-bg,
-  info: $cyan-bg,
-  warning: $orange-bg,
-  danger: $red-bg,
 );

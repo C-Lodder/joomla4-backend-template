@@ -28,8 +28,8 @@
   dl {
     display: flex;
     flex-wrap: wrap;
-    margin-inline-end: -($col-gutter-width / 2);
-    margin-inline-start: -($col-gutter-width / 2);
+    margin-inline-end: -($col-gutter-width * .5);
+    margin-inline-start: -($col-gutter-width * .5);
   }
 
   dt,
@@ -37,8 +37,8 @@
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-inline-end: ($col-gutter-width / 2);
-    padding-inline-start: ($col-gutter-width / 2);
+    padding-inline-end: ($col-gutter-width * .5);
+    padding-inline-start: ($col-gutter-width * .5);
   }
 
   dt {

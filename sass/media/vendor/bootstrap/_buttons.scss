@@ -64,7 +64,7 @@
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @include button-outline-variant($value);
+    @include button-variant($value, $value);
   }
 }
 // scss-docs-end btn-variant-loops

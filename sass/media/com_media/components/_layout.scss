@@ -2,8 +2,8 @@
 .media-container {
   display: flex;
   flex-wrap: wrap;
-  margin-inline-end: -($col-gutter-width);
-  margin-inline-start: -($col-gutter-width);
+  background-color: var(--secondary);
+  border-radius: $border-radius;
 }
 
 .media-col-main-panel {
@@ -20,8 +20,8 @@
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-inline-end: ($col-gutter-width / 2);
-  padding-inline-start: ($col-gutter-width / 2);
+  padding-inline-end: ($col-gutter-width * .5);
+  padding-inline-start: ($col-gutter-width * .5);
 }
 
 @media (min-width: var(--breakpoint-md)) {
@@ -33,6 +33,7 @@
 
 .media-main {
   position: relative;
+  flex: 1 1 600px;
   height: calc(100vh - 160px);
   overflow: hidden;
   background-color: var(--secondary);
@@ -42,6 +43,7 @@
 }
 
 .media-sidebar {
-  height: calc(100vh - 160px);
+  flex: 0 0 280px;
+  padding: 1rem;
   overflow-y: auto;
 }

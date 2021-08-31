@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Update to Bootstrap 5.1.0
 - Fix missing hidden utility
 - Fix `<meter>` width
 - Fix Fix inadequate escaping on the logo parameter

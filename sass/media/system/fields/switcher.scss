@@ -105,7 +105,7 @@
 
 .switcher .toggle-inside {
   height: calc(var(--switcher-height) - 4px);
-  width: calc((var(--switcher-width) - 6px) / 2);
+  width: calc((var(--switcher-width) - 6px) * .5);
   background: var(--secondary);
   position: absolute;
   top: 1px;
@@ -115,7 +115,7 @@
 }
 
 .switcher input ~ input:checked ~ .toggle-outside .toggle-inside {
-  left: calc(var(--switcher-width) / 2);
+  left: calc(var(--switcher-width) * .5);
   background: $white;
 }
 
