@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 1.0.1
 - Fix alerts not being shown
 
 ## 1.0.0
