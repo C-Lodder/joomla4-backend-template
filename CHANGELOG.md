@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix alerts not being shown
+
 ## 1.0.0
 - Update to Bootstrap 5.1.0
 - Fix missing hidden utility

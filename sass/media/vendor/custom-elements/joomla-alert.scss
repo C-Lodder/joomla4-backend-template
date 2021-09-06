@@ -35,13 +35,8 @@ joomla-alert {
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-
-  &.joomla-alert--show {
-    opacity: 1;
-    transition: opacity .3s ease-in-out;
-  }
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
 
   .joomla-alert--close, .joomla-alert-button--close {
     position: relative;
@@ -93,6 +88,15 @@ joomla-alert {
   joomla-alert[type="#{$color}"] {
     @include alert-variant($value);
   }
+}
+
+@keyframes joomla-alert-fade-in {
+  0% { opacity: 0; }
+}
+
+@keyframes joomla-alert-fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 // RTL overrides
