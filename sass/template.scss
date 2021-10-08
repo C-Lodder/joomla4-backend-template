@@ -52,6 +52,11 @@
 @import "blocks/toolbar";
 @import "blocks/utils";
 
+
+// START TEMPORARY
+@import "pages/templates"; // until https://github.com/joomla/joomla-cms/pull/35777 is merged
+// END TEMPORARY
+
 // Vendor Overrides
 @import "media/vendor/codemirror";
 

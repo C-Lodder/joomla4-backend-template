@@ -18,6 +18,9 @@
   "browserslist": [
     "last 1 version"
   ],
+  "dependencies": {
+    "bootstrap": "^5.1.2"
+  },
   "devDependencies": {
     "archiver": "^5.3.0",
     "autoprefixer": "^10.3.7",

@@ -1,5 +1,9 @@
 # Changelog
 
+## WIP
+- Update to Bootstrap 5.1.2
+- Fix menu assignment styling
+
 ## 1.0.1
 - Fix alerts not being shown
 
