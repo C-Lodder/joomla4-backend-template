@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 1.0.2
 - Update to Bootstrap 5.1.3
 - Fix menu assignment styling
 
