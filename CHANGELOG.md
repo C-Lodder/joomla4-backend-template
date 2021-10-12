@@ -2,6 +2,8 @@
 
 ## WIP
 - Fix toolbar dropdown layout
+- Fix accordion styling
+- Fix list-group styling
 
 ## 1.0.2
 - Update to Bootstrap 5.1.3
