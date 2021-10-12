@@ -15,7 +15,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
 
 $app = Factory::getApplication();
-$direction = Factory::getLanguage()->isRtl() ? 'dropdown-menu-right' : '';
+$direction = Factory::getLanguage()->isRtl() ? 'dropdown-menu-end' : '';
 $saveStyle = $app->getTemplate(true)->params->get('toolbar', 'dropdown');
 
 if ($saveStyle === 'inline')
@@ -40,7 +40,7 @@ if ($saveStyle === 'inline')
 extract($displayData, EXTR_OVERWRITE);
 ?>
 <?php if ($hasButtons && trim($button) !== ''): ?>
-	<?php HTMLHelper::_('bootstrap.framework'); ?>
+	<?php HTMLHelper::_('bootstrap.dropdown', '.dropdown'); ?>
 	<div id="<?php echo $id; ?>" class="btn-group dropdown-<?php echo $name ?? ''; ?>" role="group">
 		<?php echo $button; ?>
 
