@@ -1,6 +1,6 @@
 # Changelog
 
-## WIP
+## 1.0.3
 - Fix toolbar dropdown layout
 - Fix accordion styling
 - Fix list-group styling
