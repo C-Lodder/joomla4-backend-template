@@ -1,5 +1,8 @@
 # Changelog
 
+## WIP
+- Fix sample data installation JS error
+
 ## 1.0.3
 - Fix toolbar dropdown layout
 - Fix accordion styling
