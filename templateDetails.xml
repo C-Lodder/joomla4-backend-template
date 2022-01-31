@@ -50,6 +50,8 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_bettum.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_bettum.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_bettum.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_bettum.sys.ini</language>
 	</languages>
 
 	<config>
