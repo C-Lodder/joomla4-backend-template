@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Add French translations (thanks @MATsxm)
 - Fix sample data installation JS error
 
 ## 1.0.3
