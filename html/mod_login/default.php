@@ -63,26 +63,6 @@ Text::script('MESSAGE');
 			</div>
 		</div>
 
-		<?php if (count($twofactormethods) > 1): ?>
-			<div class="mb-3">
-				<label for="mod-login-secretkey">
-					<span class="label"><?php echo Text::_('JGLOBAL_SECRETKEY'); ?></span>
-					<span class="text-end">
-						<?php echo Text::_('COM_LOGIN_TWOFACTOR'); ?>
-					</span>
-				</label>
-				<div class="input-group">
-					<input
-						name="secretkey"
-						autocomplete="one-time-code"
-						id="mod-login-secretkey"
-						type="text"
-						class="form-control"
-					>
-				</div>
-			</div>
-		<?php endif; ?>
-
 		<?php if (!empty($langs)) : ?>
 			<div class="mb-3">
 				<label for="lang">

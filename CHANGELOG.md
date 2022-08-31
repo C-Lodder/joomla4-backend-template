@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Fix error on Joomla 4.2+
 - Add French translations (thanks @MATsxm)
 - Fix sample data installation JS error
 
