@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Update to Bootstrap 5.2
 - Fix error on Joomla 4.2+
 - Add French translations (thanks @MATsxm)
 - Fix sample data installation JS error

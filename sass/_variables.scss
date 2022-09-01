@@ -3,7 +3,8 @@
 $rtl:                         false !default;
 $jicon-css-prefix:            icon;
 $fa-css-prefix:               fa;
-$variable-prefix:             '';
+$variable-prefix:             ''; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix;
 
 // Colours
 $blue-bg:                     #0071eb;
@@ -67,6 +68,11 @@ $box-shadow-sm:               0 .125rem .25rem var(--primary);
 
 
 
+// zindex-stack
+$zindex-dropdown:               1021;
+
+
+
 // Form
 $meter-max-width:               240px;
 
@@ -102,8 +108,8 @@ $treeselect-indent:           40px;
 
 // Cards
 $card-columns-count:          2;
-$card-cap-bg:                 var(--secondary);
-$card-bg:                     var(--secondary);
+$card-cap-bg:                 $secondary;
+$card-bg:                     $secondary;
 $card-cap-color:              var(--body-color);
 $card-spacer-y:               .25rem;
 $card-border-color:           var(--border-color);
@@ -115,7 +121,7 @@ $card-border-width:           0;
 $nav-link-color:              $link-color;
 $nav-link-hover-color:        $link-hover-color;
 $top-navbar-background-color: var(--tertiary);
-$navbar-background-color:     var(--secondary);
+$navbar-background-color:     $secondary;
 $nav-pills-link-active-bg:    var(--primary);
 
 
@@ -126,7 +132,7 @@ $btn-link-color:              var(--body-color);
 
 
 // Dropdown
-$dropdown-bg:                 var(--secondary);
+$dropdown-bg:                 $secondary;
 $dropdown-border-color:       var(--border-color);
 $dropdown-link-color:         var(--body-color);
 $dropdown-link-active-bg:     $component-active-bg;
@@ -139,7 +145,7 @@ $dropdown-divider-bg:         var(--border-color);
 $list-group-color:                var(--body-color);
 $list-group-action-hover-color:   $link-hover-color;
 $list-group-action-active-color:  $link-hover-color;
-$list-group-bg:                   var(--secondary);
+$list-group-bg:                   $secondary;
 $list-group-hover-bg:             var(--primary);
 $list-group-action-active-bg:     var(--primary);
 $list-group-border-color:         var(--border-color);
@@ -147,17 +153,17 @@ $list-group-border-color:         var(--border-color);
 
 
 // Tables
-$table-bg:                    var(--secondary);
+$table-bg:                    $secondary;
 $table-border-color:          var(--border-color);
 $table-color:                 var(--body-color);
-$table-accent-bg:             var(--secondary);
+$table-accent-bg:             $secondary;
 $table-group-separator-color: var(--border-color);
 
 
 
 // Pagination
 $pagination-color:                  $link-color;
-$pagination-bg:                     var(--secondary);
+$pagination-bg:                     $secondary;
 $pagination-border-color:           var(--border-color);
 
 $pagination-hover-color:            $link-hover-color;
@@ -176,7 +182,7 @@ $pagination-disabled-border-color:  var(--border-color);
 
 // Modals
 $modal-content-color:               var(--body-color);
-$modal-content-bg:                  var(--secondary);
+$modal-content-bg:                  $secondary;
 $modal-content-border-color:        var(--border-color);
 
 $modal-header-border-color:         var(--border-color);
@@ -186,7 +192,7 @@ $modal-footer-border-color:         var(--border-color);
 
 // Accordion
 $accordion-color:                   var(--body-color);
-$accordion-bg:                      var(--secondary);
+$accordion-bg:                      $secondary;
 $accordion-border-color:            var(--border-color);
 $accordion-button-color:            $accordion-color;
 $accordion-button-active-color:     var(--body-color);
@@ -241,7 +247,7 @@ $sidebar-heading-color:       #878787;
 
 
 // Quickicons
-$quickicon-bg:                var(--secondary);
+$quickicon-bg:                $secondary;
 $quickicon-border-color:      var(--primary);
 $quickicon-icon-color:        var(--purple);
 $quickicon-box-shadow:        $shadow-default;
@@ -279,6 +285,7 @@ $colors: (
   navbar-background-color: $navbar-background-color,
   quickicon-bg: $quickicon-bg,
   quickicon-border-color: $quickicon-border-color,
+  btn-hover-border-color: transparent,
 );
 
 $theme-colors: (

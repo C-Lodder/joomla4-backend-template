@@ -3,7 +3,8 @@
 $rtl:                         false !default;
 $jicon-css-prefix:            icon;
 $fa-css-prefix:               fa;
-$variable-prefix:             '';
+$variable-prefix:             ''; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix;
 
 // Colours
 $blue-bg:                     #0071eb;
@@ -64,6 +65,11 @@ $headings-margin-bottom:      0;
 // Shadows
 $shadow-default:              0 3px 5px -3px rgba(0, 0, 0, .25);
 $box-shadow-sm:               0 .125rem .25rem var(--primary);
+
+
+
+// zindex-stack
+$zindex-dropdown:               1021;
 
 
 

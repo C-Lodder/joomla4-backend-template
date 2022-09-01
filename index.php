@@ -103,10 +103,10 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			<div class="container-fluid container-main px-4">
 				<?php if (!$cpanel) : ?>
 					<?php // Subheader ?>
-					<div class="mb-3">
+					<div class="mb-3 d-unset">
 						<button type="button" class="btn btn-primary my-2 d-md-none d-lg-none d-xl-none" data-bs-toggle="collapse" data-bs-target=".subhead"><?php echo Text::_('JTOOLBAR'); ?>
 							<span class="icon-chevron-down" aria-hidden="true"></span></button>
-						<div id="subhead" class="subhead show">
+						<div id="subhead" class="subhead sticky-top show">
 							<div id="container-collapse" class="container-collapse"></div>
 							<div class="row">
 								<div class="col-md-12">

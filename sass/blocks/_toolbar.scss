@@ -1,5 +1,9 @@
 // Toolbar
 
+.d-unset {
+  display: unset;
+}
+
 .btn-toolbar {
   display: flex;
   margin-bottom: 1rem;
@@ -30,8 +34,12 @@
   display: block;
 }
 
-.subhead .btn.dropdown-toggle {
-  @extend .btn-primary;
+.subhead {
+   background-color: var(--body-bg-color);
+
+  .btn.dropdown-toggle {
+    @extend .btn-primary;
+  }
 }
 
 joomla-toolbar-button + .dropdown-toggle-split {
