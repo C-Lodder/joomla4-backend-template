@@ -7,6 +7,7 @@
 	<authorEmail>admin@joomjunk.co.uk</authorEmail>
 	<copyright>Copyright (C) 2020 Charlie Lodder. All rights reserved.</copyright>
 	<description>TPL_BETTUM_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
 
 	<files>
 		<filename>component.php</filename>
