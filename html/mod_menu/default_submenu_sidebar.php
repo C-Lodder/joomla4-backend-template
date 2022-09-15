@@ -17,6 +17,7 @@ use Joomla\CMS\Language\Text;
  */
 /** @var  \Joomla\Module\Menu\Administrator\Menu\CssMenu  $this */
 $class = '';
+$currentParams = $current->getParams();
 
 // Build the CSS class suffix
 if ($current->type === 'separator')
@@ -41,6 +42,7 @@ $linkClass  = ['sidebar-item', 'nav-link'];
 $dataToggle = '';
 $dataParent = '#collapse';
 $iconClass  = '';
+$collapseId = mt_rand();
 $counter    = $this->getCounter();
 
 if (!$this->enabled)
@@ -51,7 +53,7 @@ if (!$this->enabled)
 if ($current->hasChildren())
 {
 	$linkClass[] = '';
-	$dataToggle  = ' data-bs-toggle="collapse" data-bs-target="#collapse' . $counter . '"'; 
+	$dataToggle  = ' data-bs-toggle="collapse" data-bs-target="#collapse' . $collapseId . '"'; 
 }
 
 // Implode out $linkClass for rendering
@@ -60,9 +62,16 @@ $linkClass = ' class="' . implode(' ', $linkClass) . '" ';
 // Get the menu link
 $link      = $current->link;
 
+// Get the menu image class
+$itemIconClass = $currentParams->get('menu_icon');
+
 // Get the menu icon
 $icon      = $this->getIconClass($current);
 $iconClass = ($icon !== '' && $current->level == 1) ? '<span class="' . $icon . '" aria-hidden="true"></span>' : '';
+
+if ($icon === null && $itemIconClass) {
+    $iconClass = '<span class="' . $itemIconClass . '" aria-hidden="true"></span>';
+}
 
 if ($link !== '' && $current->target !== '')
 {
@@ -89,7 +98,7 @@ else
 
 if ($current->level > 1)
 {
-	$dataParent = '#collapse' . $counter;
+	$dataParent = '#collapse' . $collapseId;
 }
 
 // Recurse through children if they exist
@@ -97,11 +106,11 @@ if ($this->enabled && $current->hasChildren())
 {
 	if ($current->level > 1)
 	{
-		echo '<ul data-bs-parent="' . $dataParent . '" id="collapse' . $counter . '" class="collapse collapse-level-' . $current->level . '" role="menu" aria-haspopup="true">' . "\n";
+		echo '<ul data-bs-parent="' . $dataParent . '" id="collapse' . $collapseId . '" class="collapse collapse-level-' . $current->level . '" role="menu" aria-haspopup="true">' . "\n";
 	}
 	else
 	{
-		echo '<ul data-bs-parent="#collapse" id="collapse' . $counter . '" class="collapse collapse-level-1" role="menu" aria-haspopup="true">' . "\n";
+		echo '<ul data-bs-parent="#menu" id="collapse' . $collapseId . '" class="collapse collapse-level-1" role="menu" aria-haspopup="true">' . "\n";
 	}
 
 	// WARNING: Do not use direct 'include' or 'require' as it is important to isolate the scope for each call

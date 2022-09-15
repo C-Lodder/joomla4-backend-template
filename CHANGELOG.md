@@ -1,5 +1,9 @@
 # Changelog
 
+## WIP
+- Fix custom menu overlapping
+- Fix custom menu icons not displaying
+
 ## 1.1.0
 - Update to Bootstrap 5.2
 - Add French translations (thanks @MATsxm)

@@ -11,15 +11,19 @@
 // Sidebar Nav
 .sidebar {
   width: $sidebar-width;
+  height: 100%;
   background-color: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border-color);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 
   @include media-breakpoint-down(lg) {
     position: fixed;
     top: 0;
     bottom: 0;
     @include position('left', 0);
-    z-index: 1000;
+    z-index: 1025;
     @include translate(-100%);
     transition: transform .3s ease-in-out;
 
@@ -34,14 +38,7 @@
   }
 
   nav {
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: thin;
-
     @include media-breakpoint-up(lg) {
-      position: fixed;
-      top: 0;
-      @include position('left', 0);
       width: $sidebar-width;
     }
   }

@@ -26,6 +26,13 @@ $layout = $input->get('layout', 'default');
 $task   = $input->get('task', 'display');
 $cpanel = $option === 'com_cpanel';
 
+$hideLinks = $app->input->getBool('hidemainmenu');
+$href = $hideLinks ? '' : ' href="' . Route::_('index.php') . '"';
+
+$logo = $this->params->get('siteLogo')
+	? Uri::root() . htmlspecialchars($this->params->get('siteLogo'), ENT_QUOTES, 'UTF-8')
+	: Uri::root(true) . '/administrator/templates/' . $this->template . '/images/logo-sm.svg';
+
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetaData('theme-color', '#38383d');
@@ -66,7 +73,16 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 		<?php if (!$isSidebarNav) : ?>
 			<?php // Header ?>
 			<header id="header" class="header">
-				<jdoc:include type="modules" name="menu" style="none" />
+				<nav class="navbar navbar-expand-lg navbar-dark" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
+					<div class="container-fluid">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topMenu" aria-controls="topMenu"
+							aria-expanded="false" aria-label="<?php echo Text::_('JTOGGLE_SIDEBAR_MENU'); ?>"><span class="navbar-toggler-icon"></span></button>
+						<a class="navbar-brand"<?php echo $href; ?>>
+							<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
+						</a>
+						<jdoc:include type="modules" name="menu" style="none" />
+					</div>
+				</nav>
 				<div class="nav-scroller">
 					<nav class="nav nav-underline justify-content-between mb-3">
 						<jdoc:include type="modules" name="title" />
@@ -78,7 +94,12 @@ $css = file_get_contents(__DIR__ . '/css/template' . ($this->direction === 'rtl'
 			</header>
 		<?php else : ?>
 			<div id="bettum-sidebar" class="sidebar">
-				<jdoc:include type="modules" name="menu" style="none" />
+				<nav id="menu" aria-label="<?php echo Text::_('MOD_MENU_ARIA_MAIN_MENU'); ?>">
+					<a class="navbar-brand text-center"<?php echo $href; ?>>
+						<img src="<?php echo $logo; ?>" alt="<?php echo Text::_('TPL_BETTUM_SITE_LOGO_LABEL'); ?>">
+					</a>
+					<jdoc:include type="modules" name="menu" style="none" />
+				</nav>
 			</div>
 		<?php endif; ?>
 
