@@ -18,11 +18,11 @@
     "last 1 version"
   ],
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.1"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.9",
     "cssnano": "^5.1.13",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
@@ -32,7 +32,7 @@
     "gulp-sass": "^5.1.0",
     "postcss": "^8.4.16",
     "rtlcss": "^3.3.0",
-    "sass": "^1.54.7",
+    "sass": "^1.54.9",
     "terser": "^5.15.0"
   }
 }
