@@ -1,6 +1,7 @@
 # Changelog
 
 ## WIP
+- Update to Bootstrap 5.2.1
 - Fix custom menu overlapping
 - Fix custom menu icons not displaying
 
