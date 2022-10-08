@@ -18,7 +18,7 @@
     "last 1 version"
   ],
   "dependencies": {
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.2"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
