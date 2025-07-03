@@ -28,7 +28,7 @@
     "gulp-dart-sass": "^1.1.0",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^10.0.0",
-    "gulp-rename": "^2.0.0",
+    "gulp-rename": "^2.1.0",
     "gulp-sass": "^5.1.0",
     "postcss": "^8.5.4",
     "rtlcss": "^3.3.0",
