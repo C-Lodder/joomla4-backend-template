@@ -23,7 +23,7 @@
   "devDependencies": {
     "archiver": "^8.0.0",
     "autoprefixer": "^10.5.4",
-    "cssnano": "^8.0.7",
+    "cssnano": "^9.0.1",
     "gulp": "^5.0.1",
     "gulp-dart-sass": "^1.1.0",
     "gulp-header": "^2.0.12",
